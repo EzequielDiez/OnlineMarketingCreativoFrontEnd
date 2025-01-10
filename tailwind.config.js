@@ -13,9 +13,10 @@ export default {
         // secondary: '#00FF00',
       },
       fontFamily: {
-        // Aquí puedes agregar fuentes personalizadas
-        // Ejemplo:
-        // sans: ['TuFuente', 'sans-serif'],
+        'helvetica-lt': ['"Helvetica LT Std"', 'sans-serif'],
+        'acumin': ['"Acumin Variable"', 'sans-serif'],
+        'akira': ['"Akira Expanded"', 'sans-serif'],
+        'perfect': ['"Perfect Dream"', 'sans-serif'],
       },
     },
   },

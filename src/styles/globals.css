@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Helvetica LT Std';
+  src: url('/fonts/HelveticaLTStd-Roman.woff2') format('woff2'),
+       url('/fonts/HelveticaLTStd-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Variable';
+  src: url('/fonts/AcuminVariableConcept.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('/fonts/AkiraExpandedDemo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Perfect Dream';
+  src: url('/fonts/PerfectDream-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+} 

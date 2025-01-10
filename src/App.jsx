@@ -1,10 +1,13 @@
 import { useRef, useEffect } from 'react';
-import Navbar from './components/Navbar'
+import Header from './components/Header';
+import Footer from './components/Footer';
 import StorySection from './components/StorySection'
 import story1 from './assets/images/story1.jpg'
 import story2 from './assets/images/story2.jpg'
 import story3 from './assets/images/story3.jpg'
 import coffeeCup from './assets/images/coffee-cup.png'
+import iceLeft from './assets/images/ice-left.png'
+import iceRight from './assets/images/ice-right.png'
 
 function App() {
   const cupRef = useRef(null);
@@ -60,11 +63,16 @@ function App() {
 
   return (
     <div className="relative">
-      <Navbar />
+      <Header />
 
       {/* Hero Section */}
-      <div className="h-screen w-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/src/assets/images/bg.jpg')" }}>
+      <div className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
+        style={{ backgroundImage: "url('/src/assets/images/portada.jpg')" }}>
+        <img
+          src="/src/assets/images/logo-portada.svg"
+          alt="Logo Portada"
+          className="max-w-xl"
+        />
       </div>
 
       {/* Taza fija */}
@@ -84,8 +92,6 @@ function App() {
           className="w-full h-full object-contain"
         />
       </div>
-
-      <iframe src="https://www.behance.net/embed/project/110094931?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
 
       {/* Container para las story sections con altura fija */}
       <div
@@ -110,6 +116,39 @@ function App() {
           </div>
         ))}
       </div>
+
+      {/* Nueva sección después de stories */}
+      <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-[#F0E6DC] text-black py-20">
+        <div className="flex flex-col items-center">
+          <p className="font-perfect text-6xl">Hagamos que tu marca</p>
+          <p className="font-akira text-8xl text-transparent -mt-4" style={{
+            WebkitTextStroke: '3px black'
+          }}>CREZCA</p>
+        </div>
+
+        {/* Nuevo contenedor para el botón y el hielo */}
+        <div className="relative group w-[400px] h-[250px] flex items-center justify-center">
+          <img
+            src="/src/assets/images/button-contactanos.png"
+            alt="Contactanos"
+            className="relative z-10 w-[250px] h-auto opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
+          />
+          <img
+            src={iceLeft}
+            alt="Ice Left"
+            className="absolute -left-10 z-20 w-[65%] h-full object-contain object-right transition-transform duration-300 group-hover:-translate-x-full"
+          />
+          <img
+            src={iceRight}
+            alt="Ice Right"
+            className="absolute -right-10 -top-3 z-20 w-[65%] h-full object-contain object-left transition-transform duration-300 group-hover:translate-x-full"
+          />
+        </div>
+
+        <p className="font-acumin text-5xl">ROMPAMOS EL HIELO</p>
+      </div>
+
+      <Footer />
     </div>
   )
 }
