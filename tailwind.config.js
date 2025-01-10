@@ -5,7 +5,19 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Aquí puedes extender los colores de tu marca
+        // Ejemplo:
+        // primary: '#FF0000',
+        // secondary: '#00FF00',
+      },
+      fontFamily: {
+        // Aquí puedes agregar fuentes personalizadas
+        // Ejemplo:
+        // sans: ['TuFuente', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
