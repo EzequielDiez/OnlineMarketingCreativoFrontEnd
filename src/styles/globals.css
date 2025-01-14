@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Helvetica LT Std';
   src: url('/fonts/HelveticaLTStd-Roman.woff2') format('woff2'),
-       url('/fonts/HelveticaLTStd-Roman.woff') format('woff');
+    url('/fonts/HelveticaLTStd-Roman.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,4 +25,11 @@
   src: url('/fonts/PerfectDream-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
-} 
+}
+
+@font-face {
+  font-family: 'Sweetie Pie';
+  src: url('/fonts/SweetiePie.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -25,10 +25,16 @@ function SobreNosotros() {
                 <div className="relative">
                     <img src={feliImage} alt="Feli Imagen" className="w-[1185px]" />
                     <p className="absolute bottom-64 left-1/3 text-5xl font-acumin">FELICITAS</p>
+                    <p className="absolute bottom-64 left-1/2 text-5xl font-sweetie">(FELI, FE, FELA)</p>
+                    <br />
+                    <p className="absolute bottom-48 left-1/3 text-xl font-acumin max-w-2xl">Somos un conjunto de profesionales en diversas áreas, desde diseño gráfico, programación, community management, y social.</p>
                 </div>
-                <div className="relative">
-                    <img src={nanoImage} alt="Nano Imagen" className="w-[1185px]" />
-                    <p className="absolute bottom-8 left-8 text-2xl font-bold">NANO</p>
+                <div className="relative -mt-96">
+                    <img src={nanoImage} alt="Nano Imagen" className="w-[1285px]" />
+                    <p className="absolute bottom-64 left-1/3 text-5xl font-acumin">EZEQUIEL</p>
+                    <p className="absolute bottom-64 left-1/2 text-5xl font-sweetie">(NANO, EZE, NONONANO)</p>
+                    <br />
+                    <p className="absolute bottom-48 left-1/3 text-xl font-acumin max-w-2xl">Somos un conjunto de profesionales en diversas áreas, desde diseño gráfico, programación, community management, y social.</p>
                 </div>
             </div>
         </>

@@ -17,6 +17,7 @@ export default {
         'acumin': ['"Acumin Variable"', 'sans-serif'],
         'akira': ['"Akira Expanded"', 'sans-serif'],
         'perfect': ['"Perfect Dream"', 'sans-serif'],
+        'sweetie': ['"Sweetie Pie"', 'sans-serif'],
       },
     },
   },
