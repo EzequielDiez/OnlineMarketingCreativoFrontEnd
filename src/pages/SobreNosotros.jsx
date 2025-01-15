@@ -59,7 +59,7 @@ function SobreNosotros() {
                 <div className="relative -mt-24">
                     <img src={luluImage} alt="Lulu Imagen" className="w-[1185px] -ml-[52px]" />
                     <p className="absolute bottom-64 left-1/3 text-5xl font-acumin">LOURDES</p>
-                    <p className="absolute bottom-64 left-1/2 text-5gixl font-sweetie">(LOLO, LULU, LULO, LU, NENITA)</p>
+                    <p className="absolute bottom-64 left-1/2 text-5xl font-sweetie">(LOLO, LULU, LULO, LU, NENITA)</p>
                     <br />
                     <p className="absolute bottom-44 left-1/3 text-xl font-acumin max-w-2xl">Somos un conjunto de profesionales en diversas áreas, desde diseño gráfico, programación, community management, y social.</p>
                 </div>

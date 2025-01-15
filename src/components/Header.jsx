@@ -1,25 +1,32 @@
-import { Link } from 'react-router-dom';
-import logo from '../assets/images/logo-navbar.svg'
+import { Link, useLocation } from 'react-router-dom';
+import { navigationLinks } from '../config/navigation';
+import logo from '../assets/images/logo-navbar.svg';
 
 function Header() {
-    const navLinks = [
-        { path: '/sobre-nosotros', label: 'QUIÉNES SOMOS' },
-        { path: '/servicios', label: 'SERVICIOS' },
-        { path: '/portfolio', label: 'PORTFOLIO' },
-        { path: '/contacto', label: 'CONTACTO' }
-    ];
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
 
     return (
-        <nav className="w-full fixed top-0 z-50">
+        <nav className={`w-full fixed top-0 z-50 bg-transparent`}>
             <div className="max-w-[95%] mx-auto px-4">
                 <div className="flex items-center justify-between h-28">
                     <Link to="/" className="flex-shrink-0 pl-0">
-                        <img className="h-14 w-auto" src={logo} alt="Logo" />
+                        <img
+                            className={`h-14 w-auto ${!isHomePage ? '[filter:brightness(0)_saturate(100%)_invert(12%)_sepia(0%)_saturate(1%)_hue-rotate(314deg)_brightness(95%)_contrast(88%)]' : ''}`}
+                            src={logo}
+                            alt="Logo"
+                        />
                     </Link>
 
                     <div className="flex space-x pr-0">
-                        {navLinks.map(({ path, label }) => (
-                            <NavLink key={path} to={path}>{label}</NavLink>
+                        {navigationLinks.map(({ path, label }) => (
+                            <NavLink
+                                key={path}
+                                to={path}
+                                isHomePage={isHomePage}
+                            >
+                                {label}
+                            </NavLink>
                         ))}
                     </div>
                 </div>
@@ -28,16 +35,19 @@ function Header() {
     )
 }
 
-function NavLink({ to, children }) {
+function NavLink({ to, children, isHomePage }) {
     return (
         <Link
             to={to}
-            className="bg-[#F1F0F0] text-black px-4 py-2 rounded-full text-base font-normal 
-                 transition-all uppercase hover:bg-white hover:scale-105 font-acumin"
+            className={`px-2 py-2 rounded-full text-xl font-normal transition-all uppercase font-acumin w-[193.39px] text-center
+                ${isHomePage
+                    ? 'bg-[#F1F0F0] text-black hover:bg-white hover:scale-105'
+                    : 'bg-[#1E1E1E] text-white hover:bg-[#E2A07E] hover:text-white'
+                }`}
         >
             {children}
         </Link>
     )
 }
 
-export default Header 
+export default Header; 
