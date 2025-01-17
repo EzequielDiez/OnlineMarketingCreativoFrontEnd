@@ -17,12 +17,12 @@ const Footer = () => {
                     </div>
 
                     {/* Enlaces - Centro */}
-                    <div className="flex flex-col md:flex-row gap-6 text-xl justify-center">
+                    <div className="flex flex-col md:flex-row gap-6 justify-center">
                         {navigationLinks.map(({ path, label }) => (
                             <Link
                                 key={path}
                                 to={path}
-                                className="hover:text-gray-600"
+                                className="hover:text-gray-600 font-acumin text-[25px] lowercase first-letter:uppercase"
                             >
                                 {label}
                             </Link>
