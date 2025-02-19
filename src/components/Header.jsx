@@ -39,7 +39,9 @@ function NavLink({ to, children, isHomePage }) {
     return (
         <Link
             to={to}
-            className={`px-2 py-2 rounded-full text-xl font-normal transition-all uppercase font-acumin w-[193.39px] text-center
+            className={`flex items-center justify-center rounded-full font-normal transition-all uppercase font-acumin 
+                w-[13.43vw] min-w-[150px] max-w-[193px] h-[4.2vh] min-h-[35px] max-h-[38px] text-center
+                text-[1.04vw] min-text-[16px] max-text-[18px] leading-[1.25] tracking-normal
                 ${isHomePage
                     ? 'bg-[#F1F0F0] text-black hover:bg-white hover:scale-105'
                     : 'bg-[#1E1E1E] text-white hover:bg-[#E2A07E] hover:text-white'

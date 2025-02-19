@@ -12,19 +12,21 @@ import ayluImage from "../assets/images/aylu2.png";
 function SobreNosotros() {
     return (
         <>
-            <div className="min-h-screen flex flex-col items-center bg-[#F0E6DC] pt-56">
-                <h1 className="text-9xl font-acumin text-center relative">
-                    QUIENES SOMOS
-                    <img src={onlineIdImage} alt="Online ID" className="absolute max-w-[294px] h-auto top-16 -right-5" />
-                </h1>
-                <div className="max-w-3xl ml-[-280px] pt-20">
-                    <p className="mt-4 text-acumin text-2xl">
-                        Somos un conjunto de profesionales en diversas áreas, desde diseño gráfico, programación, community management, y social media management, hasta análisis digital, fotografía y videografía. Cada miembro de nuestro equipo aporta su conocimiento y habilidades únicas para ofrecer resultados excepcionales.
-                    </p>
-                    <br />
-                    <p className="mt-4 text-acumin text-2xl">
-                        Con creatividad, experiencia y dedicación, nos especializamos en brindar soluciones integrales para destacar tu marca en un mundo cada vez más digital.
-                    </p>
+            <div className="h-screen w-screen flex flex-col justify-center items-center bg-[#F0E6DC] overflow-hidden">
+                <div className="w-[90vw] h-[65vh] flex flex-col items-center">
+                    <h1 className="text-[6vw] font-acumin text-center relative">
+                        QUIENES SOMOS
+                        <img src={onlineIdImage} alt="Online ID" className="absolute w-[15vw] h-auto top-[1.5em] -right-[0.5em]" />
+                    </h1>
+                    <div className="max-w-[50%] ml-[-30%] pt-[3vh]">
+                        <p className="mt-4 text-acumin text-[1.5vw]">
+                            Somos un conjunto de profesionales en diversas áreas, desde diseño gráfico, programación, community management, y social media management, hasta análisis digital, fotografía y videografía. Cada miembro de nuestro equipo aporta su conocimiento y habilidades únicas para ofrecer resultados excepcionales.
+                        </p>
+                        <br />
+                        <p className="mt-4 text-acumin text-[1.5vw]">
+                            Con creatividad, experiencia y dedicación, nos especializamos en brindar soluciones integrales para destacar tu marca en un mundo cada vez más digital.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div className="w-full bg-[#F0E6DC]">
