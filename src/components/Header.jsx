@@ -1,13 +1,33 @@
 import { Link, useLocation } from 'react-router-dom';
 import { navigationLinks } from '../config/navigation';
 import logo from '../assets/images/logo-navbar.svg';
+import { useState, useEffect } from 'react';
 
 function Header() {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
+    const [hasScrolled, setHasScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setHasScrolled(scrollPosition > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
-        <nav className={`w-full fixed top-0 z-50 bg-transparent`}>
+        <nav className={`w-full fixed top-0 z-50 transition-all duration-300
+            ${hasScrolled
+                ? 'bg-[#F0E6DC] shadow-lg'
+                : 'bg-transparent'}`}>
             <div className="max-w-[95%] mx-auto px-4">
                 <div className="flex items-center justify-between h-28">
                     <Link to="/" className="flex-shrink-0 pl-0">
@@ -18,7 +38,19 @@ function Header() {
                         />
                     </Link>
 
-                    <div className="flex space-x pr-0">
+                    {/* Hamburger button */}
+                    <button
+                        className="md:hidden p-2"
+                        onClick={toggleMenu}
+                        aria-label="Toggle menu"
+                    >
+                        <div className={`w-6 h-0.5 bg-black mb-1.5 transition-all ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
+                        <div className={`w-6 h-0.5 bg-black mb-1.5 ${isMenuOpen ? 'opacity-0' : ''}`}></div>
+                        <div className={`w-6 h-0.5 bg-black ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
+                    </button>
+
+                    {/* Desktop menu */}
+                    <div className="hidden md:flex space-x pr-0">
                         {navigationLinks.map(({ path, label }) => (
                             <NavLink
                                 key={path}
@@ -28,6 +60,22 @@ function Header() {
                                 {label}
                             </NavLink>
                         ))}
+                    </div>
+
+                    {/* Mobile menu */}
+                    <div className={`md:hidden absolute top-28 left-0 w-full bg-[#F0E6DC] transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+                        <div className="flex flex-col items-center gap-4 py-4">
+                            {navigationLinks.map(({ path, label }) => (
+                                <NavLink
+                                    key={path}
+                                    to={path}
+                                    isHomePage={isHomePage}
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {label}
+                                </NavLink>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

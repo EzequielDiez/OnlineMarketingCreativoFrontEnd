@@ -5,6 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      xs: '480px',  // Móviles pequeños
+      sm: '640px',  // Móviles grandes
+      md: '768px',  // Tablets
+      lg: '1024px', // Laptops
+      xl: '1280px', // Monitores grandes
+      '2xl': '1536px' // Pantallas extra grandes
+    },
     extend: {
       colors: {
         // Aquí puedes extender los colores de tu marca
