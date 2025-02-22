@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/OnlineMarketingCreativoFrontEnd/', // Reemplaza con el nombre de tu repositorio
+  build: {
+    outDir: 'docs'  // Cambiamos dist por docs
+  }
 })
