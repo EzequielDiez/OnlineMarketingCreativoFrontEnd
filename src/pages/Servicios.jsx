@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import servicesImage from '../assets/images/services-communitymanager.jpg';
+import arrowLeft from '../assets/images/arrow-left.svg'
+import arrowRight from '../assets/images/arrow-right.svg'
+import buttonContactanos from '../assets/images/button-contactanos.png'
 
 function Servicios() {
     const [currentService, setCurrentService] = useState(0);
@@ -101,7 +104,7 @@ function Servicios() {
                         className="hover:opacity-75 transition-opacity"
                     >
                         <img
-                            src="/src/assets/images/arrow-left.svg"
+                            src={arrowLeft}
                             alt="Previous"
                             className="w-[42px] h-[46px]"
                         />
@@ -114,7 +117,7 @@ function Servicios() {
                         className="hover:opacity-75 transition-opacity"
                     >
                         <img
-                            src="/src/assets/images/arrow-right.svg"
+                            src={arrowRight}
                             alt="Next"
                             className="w-[42px] h-[46px]"
                         />
@@ -157,7 +160,7 @@ function Servicios() {
                 {/* Botón de contacto */}
                 <div className="flex justify-center mt-[29px] mb-[129px]">
                     <img
-                        src="/src/assets/images/button-contactanos.png"
+                        src={buttonContactanos}
                         alt="Contáctanos"
                         className="w-[502px] h-[89px] cursor-pointer"
                     />

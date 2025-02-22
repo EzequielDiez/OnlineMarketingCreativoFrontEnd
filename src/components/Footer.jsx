@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { navigationLinks } from '../config/navigation';
+import logoFooter from '../assets/images/logo-online-footer.svg'
 
 const Footer = () => {
     return (
@@ -10,7 +11,7 @@ const Footer = () => {
                     {/* Logo - Izquierda */}
                     <div className="flex justify-center md:justify-start">
                         <img
-                            src="src/assets/images/logo-online-footer.svg"
+                            src={logoFooter}
                             alt="Logo Footer"
                             className="h-10"
                         />

@@ -1,11 +1,14 @@
 import { useRef, useEffect, useCallback } from 'react';
 import StorySection from '../components/StorySection';
 import story1 from '../assets/images/story1.jpg';
-import story2 from '../assets/images/story2.jpg';
+import story2 from '../assets/images/story2.jpg';    
 import story3 from '../assets/images/story3.jpg';
 import coffeeCup from '../assets/images/coffee-cup.png';
 import iceLeft from '../assets/images/ice-left.png';
 import iceRight from '../assets/images/ice-right.png';
+import logoPortada from '../assets/images/logo-portada.svg'
+import portadaImg from '../assets/images/portada.jpg'
+import buttonContactanos from '../assets/images/button-contactanos.png'
 
 function Inicio() {
     const cupRef = useRef(null);
@@ -47,9 +50,9 @@ function Inicio() {
         <>
             {/* Hero Section */}
             <div className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
-                style={{ backgroundImage: "url('/src/assets/images/portada.jpg')" }}>
+                style={{ backgroundImage: `url(${portadaImg})` }}>
                 <img
-                    src="/src/assets/images/logo-portada.svg"
+                    src={logoPortada}
                     alt="Logo Portada"
                     className="max-w-xl"
                 />
@@ -109,7 +112,7 @@ function Inicio() {
                 {/* Nuevo contenedor para el botón y el hielo */}
                 <div className="relative group w-[400px] h-[250px] flex items-center justify-center">
                     <img
-                        src="/src/assets/images/button-contactanos.png"
+                        src={buttonContactanos}
                         alt="Contactanos"
                         className="relative z-10 w-[250px] h-auto opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
                     />
