@@ -84,7 +84,7 @@ function Servicios() {
     };
 
     return (
-        <div className="bg-[#F0E6DC] min-h-screen pt-56">
+        <div className="bg-[#F0E6DC] min-h-screen pt-28 sm:pt-32 md:pt-40 lg:pt-56">
             {/* Contenedor de imagen con transición */}
             <div className="w-full overflow-hidden">
                 <img
@@ -96,9 +96,9 @@ function Servicios() {
             </div>
 
             {/* Contenedor del carrusel */}
-            <div className="w-[90.4%] mx-auto px-4 py-12">
+            <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-8 sm:py-10 md:py-12">
                 {/* Título con flechas */}
-                <div className="flex items-center justify-between mb-16">
+                <div className="flex items-center justify-between mb-8 sm:mb-12 md:mb-16">
                     <button
                         onClick={handlePrevService}
                         className="hover:opacity-75 transition-opacity"
@@ -106,10 +106,10 @@ function Servicios() {
                         <img
                             src={arrowLeft}
                             alt="Previous"
-                            className="w-[42px] h-[46px]"
+                            className="w-[30px] h-[33px] sm:w-[36px] sm:h-[40px] md:w-[42px] md:h-[46px]"
                         />
                     </button>
-                    <h1 className="text-[64px] font-acumin text-center">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-acumin text-center">
                         {services[currentService].title}
                     </h1>
                     <button
@@ -119,26 +119,27 @@ function Servicios() {
                         <img
                             src={arrowRight}
                             alt="Next"
-                            className="w-[42px] h-[46px]"
+                            className="w-[30px] h-[33px] sm:w-[36px] sm:h-[40px] md:w-[42px] md:h-[46px]"
                         />
                     </button>
                 </div>
 
                 {/* Descripción */}
-                <p className="text-[32px] font-acumin text-center mb-24">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] font-acumin text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
                     {services[currentService].description}
                 </p>
 
                 {/* Botones de servicios */}
-                <div className="flex flex-wrap gap-4 justify-center">
+                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
                     {services.map((service, index) => (
                         <button
                             key={index}
                             onClick={() => setCurrentService(index)}
                             className={`
                                 bg-[#1E1E1E] text-[#F1F0F0] 
-                                font-acumin text-[32px] uppercase 
-                                px-6 min-h-[56px]
+                                font-acumin text-sm sm:text-lg md:text-xl lg:text-[32px] uppercase 
+                                px-3 sm:px-4 md:px-5 lg:px-6 
+                                min-h-[36px] sm:min-h-[42px] md:min-h-[48px] lg:min-h-[56px]
                                 rounded-full whitespace-normal
                                 transition-all duration-300
                                 hover:bg-[#E2A07E] hover:text-[#1E1E1E]
@@ -151,18 +152,18 @@ function Servicios() {
                 </div>
 
                 {/* Texto de contacto */}
-                <div className="w-[810px] h-[87px] mx-auto mt-[129px] text-center">
-                    <p className="font-acumin text-[32px]">
+                <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[810px] mx-auto mt-16 sm:mt-20 md:mt-24 lg:mt-[129px] text-center">
+                    <p className="font-acumin text-lg sm:text-xl md:text-2xl lg:text-[32px]">
                         Si estas interesado en cualquiera de nuestros servicios <span className="font-bold">no dudes en contactarnos</span>
                     </p>
                 </div>
 
                 {/* Botón de contacto */}
-                <div className="flex justify-center mt-[29px] mb-[129px]">
+                <div className="flex justify-center mt-6 sm:mt-8 md:mt-[29px] mb-16 sm:mb-20 md:mb-24 lg:mb-[129px]">
                     <img
                         src={buttonContactanos}
                         alt="Contáctanos"
-                        className="w-[502px] h-[89px] cursor-pointer"
+                        className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[502px] h-auto cursor-pointer"
                     />
                 </div>
             </div>
