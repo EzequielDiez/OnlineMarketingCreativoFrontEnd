@@ -10,7 +10,7 @@ function Servicios() {
     const services = [
         {
             title: "COMMUNITY MANAGEMENT",
-            description: "Gestión profesional de tus redes sociales para construir y mantener una comunidad activa y comprometida.",
+            description: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
             image: servicesImage
         },
         {
@@ -84,82 +84,88 @@ function Servicios() {
     };
 
     return (
-        <div className="bg-[#F0E6DC] min-h-screen pt-28 sm:pt-32 md:pt-40 lg:pt-56">
-            {/* Contenedor de imagen con transición */}
-            <div className="w-full overflow-hidden">
-                <img
-                    key={currentService}
-                    src={services[currentService].image}
-                    alt={services[currentService].title}
-                    className="w-full h-auto animate-fadeSlide"
-                />
+        <>
+            <div className="bg-[#F0E6DC] h-screen flex flex-col">
+                {/* Contenedor de imagen con transición */}
+                <div className="w-full pt-28 sm:pt-28 md:pt-28 lg:pt-28 xl:pt-28 2xl:pt-28">
+                    <img
+                        key={currentService}
+                        src={services[currentService].image}
+                        alt={services[currentService].title}
+                        className="w-full h-full object-cover animate-fadeSlide"
+                    />
+                </div>
+
+                {/* Título con flechas */}
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 pt-16 sm:pt-20 md:pt-24 lg:pt-28 2xl:pt-24">
+                    <div className="flex items-center justify-between">
+                        <button
+                            onClick={handlePrevService}
+                            className="hover:opacity-75 transition-opacity"
+                        >
+                            <img
+                                src={arrowLeft}
+                                alt="Previous"
+                                className="w-[30px] h-[33px] sm:w-[36px] sm:h-[40px] md:w-[42px] md:h-[46px] 2xl:w-[38px] 2xl:h-[42px]"
+                            />
+                        </button>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] 2xl:text-[56px] font-acumin text-center">
+                            {services[currentService].title}
+                        </h1>
+                        <button
+                            onClick={handleNextService}
+                            className="hover:opacity-75 transition-opacity"
+                        >
+                            <img
+                                src={arrowRight}
+                                alt="Next"
+                                className="w-[30px] h-[33px] sm:w-[36px] sm:h-[40px] md:w-[42px] md:h-[46px] 2xl:w-[38px] 2xl:h-[42px]"
+                            />
+                        </button>
+                    </div>
+
+                    {/* Descripción */}
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] 2xl:text-[28px] font-acumin text-center mt-4">
+                        {services[currentService].description}
+                    </p>
+                </div>
+
+                {/* Botones de servicios en la parte inferior */}
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-8 mt-auto">
+                    <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
+                        {services.map((service, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentService(index)}
+                                className={`
+                                    bg-[#1E1E1E] text-[#F1F0F0] 
+                                    font-acumin text-sm sm:text-lg md:text-xl lg:text-[32px] 2xl:text-[28px] uppercase 
+                                    px-3 sm:px-4 md:px-5 lg:px-6 
+                                    min-h-[36px] sm:min-h-[42px] md:min-h-[48px] lg:min-h-[56px] 2xl:min-h-[50px]
+                                    rounded-full whitespace-normal
+                                    transition-all duration-300
+                                    hover:bg-[#E2A07E] hover:text-[#1E1E1E]
+                                    ${currentService === index ? 'bg-[#E2A07E] text-[#1E1E1E]' : ''}
+                                `}
+                            >
+                                {service.title}
+                            </button>
+                        ))}
+                    </div>
+                </div>
             </div>
 
-            {/* Contenedor del carrusel */}
-            <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-8 sm:py-10 md:py-12">
-                {/* Título con flechas */}
-                <div className="flex items-center justify-between mb-8 sm:mb-12 md:mb-16">
-                    <button
-                        onClick={handlePrevService}
-                        className="hover:opacity-75 transition-opacity"
-                    >
-                        <img
-                            src={arrowLeft}
-                            alt="Previous"
-                            className="w-[30px] h-[33px] sm:w-[36px] sm:h-[40px] md:w-[42px] md:h-[46px]"
-                        />
-                    </button>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-acumin text-center">
-                        {services[currentService].title}
-                    </h1>
-                    <button
-                        onClick={handleNextService}
-                        className="hover:opacity-75 transition-opacity"
-                    >
-                        <img
-                            src={arrowRight}
-                            alt="Next"
-                            className="w-[30px] h-[33px] sm:w-[36px] sm:h-[40px] md:w-[42px] md:h-[46px]"
-                        />
-                    </button>
-                </div>
-
-                {/* Descripción */}
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] font-acumin text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-                    {services[currentService].description}
-                </p>
-
-                {/* Botones de servicios */}
-                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
-                    {services.map((service, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentService(index)}
-                            className={`
-                                bg-[#1E1E1E] text-[#F1F0F0] 
-                                font-acumin text-sm sm:text-lg md:text-xl lg:text-[32px] uppercase 
-                                px-3 sm:px-4 md:px-5 lg:px-6 
-                                min-h-[36px] sm:min-h-[42px] md:min-h-[48px] lg:min-h-[56px]
-                                rounded-full whitespace-normal
-                                transition-all duration-300
-                                hover:bg-[#E2A07E] hover:text-[#1E1E1E]
-                                ${currentService === index ? 'bg-[#E2A07E] text-[#1E1E1E]' : ''}
-                            `}
-                        >
-                            {service.title}
-                        </button>
-                    ))}
-                </div>
-
+            {/* Sección de contacto separada */}
+            <div className="bg-[#F0E6DC] py-16 sm:py-20 md:py-24 lg:py-[129px]">
                 {/* Texto de contacto */}
-                <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[810px] mx-auto mt-16 sm:mt-20 md:mt-24 lg:mt-[129px] text-center">
+                <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[810px] mx-auto text-center">
                     <p className="font-acumin text-lg sm:text-xl md:text-2xl lg:text-[32px]">
                         Si estas interesado en cualquiera de nuestros servicios <span className="font-bold">no dudes en contactarnos</span>
                     </p>
                 </div>
 
                 {/* Botón de contacto */}
-                <div className="flex justify-center mt-6 sm:mt-8 md:mt-[29px] mb-16 sm:mb-20 md:mb-24 lg:mb-[129px]">
+                <div className="flex justify-center mt-6 sm:mt-8 md:mt-[29px]">
                     <img
                         src={buttonContactanos}
                         alt="Contáctanos"
@@ -167,7 +173,7 @@ function Servicios() {
                     />
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
