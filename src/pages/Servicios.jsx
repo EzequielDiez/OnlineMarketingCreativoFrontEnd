@@ -97,7 +97,7 @@ function Servicios() {
                 </div>
 
                 {/* Título con flechas */}
-                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 pt-16 sm:pt-20 md:pt-24 lg:pt-28 2xl:pt-24">
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 pt-16 sm:pt-16 md:pt-12 lg:pt-16 xl:pt-20 2xl:pt-24">
                     <div className="flex items-center justify-between">
                         <button
                             onClick={handlePrevService}
@@ -106,10 +106,10 @@ function Servicios() {
                             <img
                                 src={arrowLeft}
                                 alt="Previous"
-                                className="w-[30px] h-[33px] sm:w-[36px] sm:h-[40px] md:w-[42px] md:h-[46px] 2xl:w-[38px] 2xl:h-[42px]"
+                                className="w-[30px] h-[33px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] lg:w-[30px] lg:h-[30px] xl:w-[34px] xl:h-[34px] 2xl:w-[38px] 2xl:h-[38px]"
                             />
                         </button>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] 2xl:text-[56px] font-acumin text-center">
+                        <h1 className="text-3xl sm:text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px] 2xl:text-[56px] font-acumin text-center">
                             {services[currentService].title}
                         </h1>
                         <button
@@ -119,29 +119,29 @@ function Servicios() {
                             <img
                                 src={arrowRight}
                                 alt="Next"
-                                className="w-[30px] h-[33px] sm:w-[36px] sm:h-[40px] md:w-[42px] md:h-[46px] 2xl:w-[38px] 2xl:h-[42px]"
+                                className="w-[30px] h-[33px] sm:w-[22px] sm:h-[26px] md:w-[26px] md:h-[30px] lg:w-[30px] lg:h-[34px] xl:w-[34px] xl:h-[38px] 2xl:w-[38px] 2xl:h-[42px]"
                             />
                         </button>
                     </div>
 
                     {/* Descripción */}
-                    <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] 2xl:text-[28px] font-acumin text-center mt-4">
+                    <p className="text-lg sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] font-acumin text-center mt-4 sm:mt-8 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-16">
                         {services[currentService].description}
                     </p>
                 </div>
 
                 {/* Botones de servicios en la parte inferior */}
-                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-8 mt-auto">
-                    <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-8 mt-auto sm:mt-10 md:mt-8 lg:mt-12 xl:mt-16 2xl:mt-20">
+                    <div className="flex flex-wrap gap-2 sm:gap-2 md:gap-4 justify-center">
                         {services.map((service, index) => (
                             <button
                                 key={index}
                                 onClick={() => setCurrentService(index)}
                                 className={`
                                     bg-[#1E1E1E] text-[#F1F0F0] 
-                                    font-acumin text-sm sm:text-lg md:text-xl lg:text-[32px] 2xl:text-[28px] uppercase 
-                                    px-3 sm:px-4 md:px-5 lg:px-6 
-                                    min-h-[36px] sm:min-h-[42px] md:min-h-[48px] lg:min-h-[56px] 2xl:min-h-[50px]
+                                    font-acumin text-sm sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] uppercase 
+                                    px-3 sm:px-3 md:px-5 lg:px-6 
+                                    min-h-[36px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[40px] xl:min-h-[44px] 2xl:min-h-[50px]
                                     rounded-full whitespace-normal
                                     transition-all duration-300
                                     hover:bg-[#E2A07E] hover:text-[#1E1E1E]
@@ -156,20 +156,20 @@ function Servicios() {
             </div>
 
             {/* Sección de contacto separada */}
-            <div className="bg-[#F0E6DC] py-16 sm:py-20 md:py-24 lg:py-[129px]">
+            <div className="bg-[#F0E6DC] py-16 sm:py-[60px] md:py-[80px] lg:py-[100px] xl:py-[115px] 2xl:py-[129px]">
                 {/* Texto de contacto */}
-                <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[810px] mx-auto text-center">
-                    <p className="font-acumin text-lg sm:text-xl md:text-2xl lg:text-[32px]">
+                <div className="w-full sm:w-[90%] md:w-[600px] lg:w-[700px] xl:w-[760px] 2xl:w-[810px] mx-auto text-center">
+                    <p className="font-acumin text-lg sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[32px]">
                         Si estas interesado en cualquiera de nuestros servicios <span className="font-bold">no dudes en contactarnos</span>
                     </p>
                 </div>
 
                 {/* Botón de contacto */}
-                <div className="flex justify-center mt-6 sm:mt-8 md:mt-[29px]">
+                <div className="flex justify-center mt-6 sm:mt-6 md:mt-[20px]">
                     <img
                         src={buttonContactanos}
                         alt="Contáctanos"
-                        className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[502px] h-auto cursor-pointer"
+                        className="w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[450px] 2xl:w-[502px] h-auto cursor-pointer"
                     />
                 </div>
             </div>
