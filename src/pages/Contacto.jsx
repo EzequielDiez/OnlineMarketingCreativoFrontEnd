@@ -11,8 +11,35 @@ function Contacto() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Aquí puedes agregar la lógica para enviar el formulario
-        console.log('Datos del formulario:', formData);
+        
+        // Validar el número de teléfono
+        let phoneNumber = formData.telefono.replace(/\D/g, '');
+        
+        // Si el número empieza con 0, lo removemos
+        if (phoneNumber.startsWith('0')) {
+            phoneNumber = phoneNumber.substring(1);
+        }
+        
+        // Si el número empieza con 15, lo removemos
+        if (phoneNumber.startsWith('15')) {
+            phoneNumber = phoneNumber.substring(2);
+        }
+        
+        // Asegurarnos de que el número tenga el formato correcto para Argentina
+        // El formato final debe ser: 549 + código de área (sin 0) + número (sin 15)
+        phoneNumber = '549' + phoneNumber;
+        
+        // Crear el mensaje con los datos del formulario
+        const message = `Nuevo mensaje de contacto:\n\nNombre: ${formData.nombre}\nEmail: ${formData.email}\nTeléfono: ${formData.telefono}\nUbicación: ${formData.ubicacion}`;
+        
+        // Codificar el mensaje para la URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Crear la URL de WhatsApp
+        const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${encodedMessage}&type=phone_number&app_absent=0`;
+        
+        // Intentar abrir WhatsApp
+        window.location.href = whatsappUrl;
     };
 
     const handleChange = (e) => {
@@ -33,61 +60,63 @@ function Contacto() {
                 />
             </div>
             
-            <form onSubmit={handleSubmit} className="py-20 px-8 text-3xl md:text-4xl lg:text-5xl font-light space-y-6 w-full">
+            <form onSubmit={handleSubmit} className="py-20 px-8 text-3xl md:text-4xl lg:text-7xl font-light space-y-6 w-full max-w-7xl mx-auto">
                 <p>Hola!</p>
-                <p>
+                <p className="flex items-center">
                     Me llamo 
                     <input 
                         type="text"
                         name="nombre"
                         value={formData.nombre}
                         onChange={handleChange}
-                        className="border-b-2 border-black ml-4 bg-transparent focus:outline-none w-[60%]"
+                        className="border-b-2 border-black ml-16 bg-transparent focus:outline-none w-[50%] text-4xl"
                         required
                     />
                 </p>
-                <p>
+                <p className="flex items-center">
                     mi mail es 
                     <input 
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="border-b-2 border-black ml-4 bg-transparent focus:outline-none w-[60%]"
+                        className="border-b-2 border-black ml-16 bg-transparent focus:outline-none w-[50%] text-4xl"
                         required
                     />
                 </p>
-                <p>
+                <p className="flex items-center">
                     mi número es 
                     <input 
                         type="tel"
                         name="telefono"
                         value={formData.telefono}
                         onChange={handleChange}
-                        className="border-b-2 border-black ml-4 bg-transparent focus:outline-none w-[60%]"
+                        className="border-b-2 border-black ml-16 bg-transparent focus:outline-none w-[50%] text-4xl"
                         required
                     />
                 </p>
-                <p>
+                <p className="flex items-center">
                     vivo en 
                     <input 
                         type="text"
                         name="ubicacion"
                         value={formData.ubicacion}
                         onChange={handleChange}
-                        className="border-b-2 border-black ml-4 bg-transparent focus:outline-none w-[60%]"
+                        className="border-b-2 border-black ml-16 bg-transparent focus:outline-none w-[50%] text-4xl"
                         required
                     />
                 </p>
-                <p>y me gustaría llevar mi</p>
-                <p>marca a otro nivel :)</p>
+                <p className="font-bold">y me gustaría llevar mi</p>
+                <p className="font-bold">marca a otro nivel :)</p>
                 
-                <button 
-                    type="submit"
-                    className="mt-10 px-8 py-4 text-xl bg-black text-white rounded-full hover:bg-opacity-90 transition-all"
-                >
-                    Enviar
-                </button>
+                <div className="flex justify-center">
+                    <button 
+                        type="submit"
+                        className="mt-10 px-16 py-4 text-2xl bg-transparent border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-300 font-light tracking-wider"
+                    >
+                        Enviar
+                    </button>
+                </div>
             </form>
         </div>
     );
