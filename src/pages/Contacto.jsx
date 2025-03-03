@@ -12,22 +12,8 @@ function Contacto() {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        // Validar el número de teléfono
-        let phoneNumber = formData.telefono.replace(/\D/g, '');
-        
-        // Si el número empieza con 0, lo removemos
-        if (phoneNumber.startsWith('0')) {
-            phoneNumber = phoneNumber.substring(1);
-        }
-        
-        // Si el número empieza con 15, lo removemos
-        if (phoneNumber.startsWith('15')) {
-            phoneNumber = phoneNumber.substring(2);
-        }
-        
-        // Asegurarnos de que el número tenga el formato correcto para Argentina
-        // El formato final debe ser: 549 + código de área (sin 0) + número (sin 15)
-        phoneNumber = '549' + phoneNumber;
+        // Número fijo de WhatsApp (5491124822378)
+        const phoneNumber = '5491124822378';
         
         // Crear el mensaje con los datos del formulario
         const message = `Nuevo mensaje de contacto:\n\nNombre: ${formData.nombre}\nEmail: ${formData.email}\nTeléfono: ${formData.telefono}\nUbicación: ${formData.ubicacion}`;
