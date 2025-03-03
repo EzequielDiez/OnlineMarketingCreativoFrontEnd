@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import buttonContactanos from '../assets/images/button-contactanos.png';
 
 function Portfolio() {
-    const [activeTab, setActiveTab] = useState('Photo');
+    const [activeTab, setActiveTab] = useState(null);
 
     const tabs = [
         { id: 'Diseño', color: 'bg-white' },
@@ -60,10 +60,11 @@ function Portfolio() {
                     {/* Capa negra que se muestra cuando no hay pestaña activa */}
                     <div
                         className={`
-                            absolute top-0 left-0 w-full h-full 
+                            absolute left-0 w-full h-[calc(100%-48px)]
                             bg-black rounded-lg 
-                            transition-opacity duration-300
-                            ${activeTab ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+                            transition-all duration-300
+                            z-20
+                            ${activeTab ? 'top-12 translate-y-[23rem]' : 'top-0'}
                         `}
                     />
 
@@ -78,46 +79,50 @@ function Portfolio() {
                                     rounded-t-lg
                                     hover:opacity-100
                                     transition-all duration-300
-                                    top-0
-                                    ${activeTab === tab.id ? 'font-bold' : 'opacity-90'}
+                                    top-0 z-30
+                                    ${activeTab === tab.id
+                                        ? 'font-bold translate-y-[-100%]'
+                                        : activeTab
+                                            ? 'opacity-90 translate-y-[23rem]'
+                                            : 'opacity-90 translate-y-[-100%]'}
                                 `}
                                 style={{
                                     left: `${index * 25}%`,
-                                    transform: 'translateY(-100%)',
                                     width: '25%'
                                 }}
                             >
                                 {tab.id}
                             </button>
                             {/* Contenido de la carpeta */}
-                            {activeTab === tab.id && (
-                                <div className={`
-                                    ${tab.color}
-                                    absolute top-0 left-0 w-full
-                                    min-h-[500px] rounded-lg
-                                    transition-all duration-300
-                                `}>
-                                    <div className="p-8">
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                            {projects[tab.id].map((project, idx) => (
-                                                <div key={idx} className="w-full">
-                                                    <iframe
-                                                        src={`${project.embedUrl}?ilo0=1`}
-                                                        height="316"
-                                                        width="100%"
-                                                        allowFullScreen
-                                                        loading="lazy"
-                                                        frameBorder="0"
-                                                        allow="clipboard-write"
-                                                        referrerPolicy="strict-origin-when-cross-origin"
-                                                        title={project.title}
-                                                    />
-                                                </div>
-                                            ))}
-                                        </div>
+                            <div className={`
+                                ${tab.color}
+                                absolute top-0 left-0 w-full
+                                min-h-[500px] rounded-lg
+                                transition-all duration-300
+                                z-10
+                                opacity-0 pointer-events-none
+                                ${activeTab === tab.id ? 'opacity-100 pointer-events-auto' : ''}
+                            `}>
+                                <div className="p-8">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                        {projects[tab.id].map((project, idx) => (
+                                            <div key={idx} className="w-full">
+                                                <iframe
+                                                    src={`${project.embedUrl}?ilo0=1`}
+                                                    height="316"
+                                                    width="100%"
+                                                    allowFullScreen
+                                                    loading="lazy"
+                                                    frameBorder="0"
+                                                    allow="clipboard-write"
+                                                    referrerPolicy="strict-origin-when-cross-origin"
+                                                    title={project.title}
+                                                />
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
-                            )}
+                            </div>
                         </div>
                     ))}
                 </div>
