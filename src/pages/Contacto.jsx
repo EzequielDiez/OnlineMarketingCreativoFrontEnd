@@ -37,58 +37,60 @@ function Contacto() {
     };
 
     return (
-        <div className="min-h-screen bg-[#F0E6DC] pt-56">
-            <div className="max-w-[1130px] mx-auto">
-                <img 
-                    src={contactoImage} 
-                    alt="Contacto" 
-                    className="w-full h-[629px] object-cover"
-                />
+        <div className="min-h-screen bg-[#F0E6DC] pt-16 xs:pt-20 sm:pt-28 md:pt-32 lg:pt-44 xl:pt-56 2xl:pt-64">
+            <div className="max-w-[1130px] mx-auto px-4 xs:px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+                <div className="relative w-full aspect-[16/9] xs:aspect-[16/10] sm:aspect-[16/9] md:aspect-[16/10] lg:aspect-[16/9] xl:aspect-[16/8] 2xl:aspect-[16/7]">
+                    <img 
+                        src={contactoImage} 
+                        alt="Contacto" 
+                        className="absolute inset-0 w-full h-full object-contain xs:object-cover"
+                    />
+                </div>
             </div>
             
-            <form onSubmit={handleSubmit} className="py-20 px-8 text-3xl md:text-4xl lg:text-7xl font-light space-y-6 w-full max-w-7xl mx-auto">
+            <form onSubmit={handleSubmit} className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-18 xl:py-20 2xl:py-24 px-4 xs:px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light space-y-3 xs:space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-7 xl:space-y-8 2xl:space-y-9 w-full max-w-7xl mx-auto">
                 <p>Hola!</p>
-                <p className="flex items-center">
-                    Me llamo 
+                <p className="flex flex-col xs:flex-row xs:items-center gap-2 xs:gap-0">
+                    <span>Me llamo</span>
                     <input 
                         type="text"
                         name="nombre"
                         value={formData.nombre}
                         onChange={handleChange}
-                        className="border-b-2 border-black ml-16 bg-transparent focus:outline-none w-[50%] text-4xl"
+                        className="border-b-2 border-black xs:ml-3 sm:ml-4 md:ml-6 lg:ml-8 xl:ml-12 2xl:ml-16 bg-transparent focus:outline-none w-full xs:w-[60%] sm:w-[55%] md:w-[50%] text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
                         required
                     />
                 </p>
-                <p className="flex items-center">
-                    mi mail es 
+                <p className="flex flex-col xs:flex-row xs:items-center gap-2 xs:gap-0">
+                    <span>mi mail es</span>
                     <input 
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="border-b-2 border-black ml-16 bg-transparent focus:outline-none w-[50%] text-4xl"
+                        className="border-b-2 border-black xs:ml-3 sm:ml-4 md:ml-6 lg:ml-8 xl:ml-12 2xl:ml-16 bg-transparent focus:outline-none w-full xs:w-[60%] sm:w-[55%] md:w-[50%] text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
                         required
                     />
                 </p>
-                <p className="flex items-center">
-                    mi número es 
+                <p className="flex flex-col xs:flex-row xs:items-center gap-2 xs:gap-0">
+                    <span>mi número es</span>
                     <input 
                         type="tel"
                         name="telefono"
                         value={formData.telefono}
                         onChange={handleChange}
-                        className="border-b-2 border-black ml-16 bg-transparent focus:outline-none w-[50%] text-4xl"
+                        className="border-b-2 border-black xs:ml-3 sm:ml-4 md:ml-6 lg:ml-8 xl:ml-12 2xl:ml-16 bg-transparent focus:outline-none w-full xs:w-[60%] sm:w-[55%] md:w-[50%] text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
                         required
                     />
                 </p>
-                <p className="flex items-center">
-                    vivo en 
+                <p className="flex flex-col xs:flex-row xs:items-center gap-2 xs:gap-0">
+                    <span>vivo en</span>
                     <input 
                         type="text"
                         name="ubicacion"
                         value={formData.ubicacion}
                         onChange={handleChange}
-                        className="border-b-2 border-black ml-16 bg-transparent focus:outline-none w-[50%] text-4xl"
+                        className="border-b-2 border-black xs:ml-3 sm:ml-4 md:ml-6 lg:ml-8 xl:ml-12 2xl:ml-16 bg-transparent focus:outline-none w-full xs:w-[60%] sm:w-[55%] md:w-[50%] text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
                         required
                     />
                 </p>
@@ -98,7 +100,13 @@ function Contacto() {
                 <div className="flex justify-center">
                     <button 
                         type="submit"
-                        className="mt-10 px-16 py-4 text-2xl bg-transparent border border-black text-black rounded-full hover:bg-black hover:text-white transition-all duration-300 font-light tracking-wider"
+                        className="mt-4 xs:mt-5 sm:mt-6 md:mt-8 lg:mt-9 xl:mt-10 2xl:mt-12 
+                        px-6 xs:px-7 sm:px-8 md:px-10 lg:px-12 xl:px-14 2xl:px-16 
+                        py-2 xs:py-2.5 sm:py-3 md:py-3.5 lg:py-4 xl:py-4.5 2xl:py-5 
+                        text-base xs:text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl 
+                        bg-transparent border border-black text-black rounded-full 
+                        hover:bg-black hover:text-white transition-all duration-300 
+                        font-light tracking-wider"
                     >
                         Enviar
                     </button>
