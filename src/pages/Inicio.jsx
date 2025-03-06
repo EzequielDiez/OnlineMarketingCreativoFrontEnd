@@ -1,12 +1,12 @@
 import { useRef, useEffect, useCallback } from 'react';
 import StorySection from '../components/StorySection';
 import story1 from '../assets/images/story1.jpg';
-import story2 from '../assets/images/story2.jpg';    
+import story2 from '../assets/images/story2.jpg';
 import story3 from '../assets/images/story3.jpg';
 import coffeeCup from '../assets/images/coffee-cup.png';
 import iceLeft from '../assets/images/ice-left.png';
 import iceRight from '../assets/images/ice-right.png';
-import logoPortada from '../assets/images/logo-portada.svg'
+import logoPortada from '../assets/images/logo-online-blanco.svg'
 import portadaImg from '../assets/images/portada.jpg'
 import buttonContactanos from '../assets/images/button-contactanos.png'
 
@@ -85,16 +85,34 @@ function Inicio() {
                     transformStyle: 'preserve-3d'
                 }}
             >
-                {[story1, story2, story3].map((story, index) => (
+                {[
+                    {
+                        image: story1,
+                        title: "¿Qué tanto sabés de tu marca?",
+                        description: "A veces, por más que tengamos acceso a toda la información, puede ser dificil encontrar la forma correcta de aplicarla para recibir resultados."
+                    },
+                    {
+                        image: story2,
+                        title: "Siempre hay algo que mejorar",
+                        description: "Pero, ¿qué pasaría si te dijeran que no estás solo? Esa confusión, esa sensación de caos, es más común de lo que parece."
+                    },
+                    {
+                        image: story3,
+                        title: "Nada es imposible",
+                        description: "Nos encargamos de transformar ideas en estrategias, crear experiencias memorables y diseñar soluciones que impulsen tu marca."
+                    }
+                ].map((story, index) => (
                     <div
                         key={index}
                         ref={el => sectionsRef.current[index] = el}
                         className="sticky top-0 h-screen"
                     >
                         <StorySection
-                            image={story}
+                            image={story.image}
                             align={index % 2 === 0 ? "right" : "left"}
                             sectionId={`story${index + 1}`}
+                            title={story.title}
+                            description={story.description}
                         />
                     </div>
                 ))}

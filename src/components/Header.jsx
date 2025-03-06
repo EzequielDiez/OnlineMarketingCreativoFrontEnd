@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { navigationLinks } from '../config/navigation';
-import logo from '../assets/images/logo-navbar.svg';
+import logoBlanco from '../assets/images/logo-onlinesolo-blanco.svg';
+import logoNegro from '../assets/images/logo-onlinesolo-negro.svg';
 import { useState, useEffect } from 'react';
 
 function Header() {
@@ -32,8 +33,8 @@ function Header() {
                 <div className="flex items-center justify-between h-28">
                     <Link to="/" className="flex-shrink-0 pl-0">
                         <img
-                            className={`h-14 w-auto ${!isHomePage ? '[filter:brightness(0)_saturate(100%)_invert(12%)_sepia(0%)_saturate(1%)_hue-rotate(314deg)_brightness(95%)_contrast(88%)]' : ''}`}
-                            src={logo}
+                            className="h-14 w-auto"
+                            src={hasScrolled ? logoNegro : logoBlanco}
                             alt="Logo"
                         />
                     </Link>
