@@ -10,67 +10,67 @@ function Servicios() {
     const services = [
         {
             title: "COMMUNITY MANAGEMENT",
-            description: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+            description: "Construimos y gestionamos la comunidad de tu marca, interactuando con tu audiencia de manera auténtica y estratégica. Nos encargamos de responder mensajes, moderar comentarios y generar engagement real.",
             image: servicesImage
         },
         {
             title: "SOCIAL MEDIA MANAGER",
-            description: "Estrategias integrales para optimizar tu presencia en redes sociales y alcanzar tus objetivos de marca.",
+            description: "Planificamos, analizamos y optimizamos tu estrategia en redes sociales para que tu marca crezca con propósito. Desde la creación de contenido hasta la medición de resultados, hacemos que cada publicación cuente.",
             image: servicesImage
         },
         {
             title: "PAID MEDIA",
-            description: "Maximiza tu inversión publicitaria con estrategias de medios pagados efectivas y orientadas a resultados.",
+            description: "Maximizamos el alcance y el impacto de tus campañas publicitarias. Diseñamos estrategias de anuncios en múltiples plataformas para que tu inversión se transforme en resultados.",
             image: servicesImage
         },
         {
             title: "FACEBOOK ADS",
-            description: "Campañas publicitarias en Facebook e Instagram optimizadas para alcanzar a tu audiencia ideal.",
+            description: "Creamos y gestionamos campañas en Facebook e Instagram Ads, segmentadas para llegar al público adecuado. Más visibilidad, más conversiones, más crecimiento.",
             image: servicesImage
         },
         {
             title: "DISEÑO GRÁFICO",
-            description: "Creación de contenido visual impactante que comunica tu mensaje de marca de manera efectiva.",
+            description: "Tu identidad visual es clave. Diseñamos piezas atractivas, creativas y alineadas con tu marca para generar impacto y reconocimiento en cada plataforma.",
             image: servicesImage
         },
         {
             title: "BRANDING",
-            description: "Desarrollo y fortalecimiento de tu identidad de marca para destacar en el mercado.",
+            description: "Construimos marcas con personalidad y propósito. Desde la identidad visual hasta la comunicación, hacemos que tu marca se diferencie y conecte con su audiencia.",
             image: servicesImage
         },
         {
             title: "WEB DEVELOPMENT",
-            description: "Desarrollo de sitios web modernos, responsivos y optimizados para convertir visitantes en clientes.",
+            description: "Diseñamos y desarrollamos sitios web funcionales, atractivos y optimizados para que tu marca tenga una presencia digital sólida y efectiva.",
             image: servicesImage
         },
         {
             title: "FILMMAKING",
-            description: "Producción de contenido audiovisual profesional para contar tu historia de manera única.",
+            description: "Creamos contenido audiovisual de alta calidad para potenciar la imagen de tu marca. Desde spots publicitarios hasta contenido para redes, convertimos ideas en historias visuales.",
             image: servicesImage
         },
         {
             title: "FOTOGRAFIA",
-            description: "Servicios fotográficos profesionales para capturar la esencia de tu marca y productos.",
+            description: "Imágenes que comunican. Desde fotografía de producto hasta sesiones corporativas, capturamos la esencia de tu marca con una estética profesional y creativa.",
             image: servicesImage
         },
         {
             title: "EMAIL MARKETING",
-            description: "Estrategias de email marketing personalizadas para nutrir y convertir tu base de datos.",
+            description: "Diseñamos campañas de email marketing estratégicas para fidelizar clientes, generar ventas y mantener una comunicación efectiva con tu audiencia.",
             image: servicesImage
         },
         {
             title: "COACHING",
-            description: "Asesoramiento especializado para potenciar tu presencia digital y alcanzar tus objetivos.",
+            description: "Potenciamos tu desarrollo profesional y el de tu equipo con sesiones personalizadas para mejorar la gestión, la creatividad y la estrategia digital.",
             image: servicesImage
         },
         {
             title: "ANÁLISIS DIGITAL",
-            description: "Análisis detallado de datos para optimizar tu estrategia digital y mejorar resultados.",
+            description: "Tomamos decisiones basadas en datos. Analizamos métricas clave, identificamos oportunidades de mejora y optimizamos tu estrategia digital para lograr mejores resultados.",
             image: servicesImage
         },
         {
             title: "CONTACTO CON INFLUENCERS",
-            description: "Gestión y desarrollo de colaboraciones estratégicas con influencers alineados con tu marca.",
+            description: "Conectamos tu marca con los influencers adecuados para amplificar tu mensaje y llegar a nuevas audiencias de manera auténtica y efectiva.",
             image: servicesImage
         }
     ];
@@ -151,6 +151,60 @@ function Servicios() {
                                 {service.title}
                             </button>
                         ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Sección de Servicio Estrella */}
+            <div className="bg-[#1E1E1E] py-16 sm:py-[60px] md:py-[80px] lg:py-[100px] xl:py-[115px] 2xl:py-[120px]">
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto">
+                    {/* Título y descripción principal */}
+                    <div className="text-center mb-12">
+                        <h2 className="text-[#F0E6DC] font-acumin font-bold text-3xl sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] 2xl:text-[52px] mb-6">
+                            Gestión Integral de Marca
+                        </h2>
+                        <p className="text-[#F0E6DC] font-acumin italic text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-4">
+                            (Nuestro servicio estrella)
+                        </p>
+                        <p className="text-[#F0E6DC] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[24px] 2xl:text-[24px]">
+                            Transformamos tu marca con una estrategia 360°. Nos encargamos de TODO para que tu negocio crezca y se posicione en el mundo digital.
+                        </p>
+                    </div>
+
+                    {/* Lista de servicios incluidos */}
+                    <div className="bg-[#F0E6DC] rounded-3xl p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 2xl:p-16 max-w-[1200px] mx-auto">
+                        <p className="text-[#1E1E1E] font-acumin font-bold text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-6">
+                            Incluye:
+                        </p>
+                        <div className="space-y-4">
+                            <p className="text-[#1E1E1E] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔️ Creación y gestión de medios – Desarrollamos y administramos tus plataformas digitales.
+                            </p>
+                            <p className="text-[#1E1E1E] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔️ SEO y optimización constante – Mejoramos tu posicionamiento para que te encuentren fácilmente.
+                            </p>
+                            <p className="text-[#1E1E1E] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔️ Gestión y desarrollo de publicidad – Creamos campañas estratégicas que convierten.
+                            </p>
+                            <p className="text-[#1E1E1E] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔️ Producción audiovisual – Contenido de alto impacto para redes y web.
+                            </p>
+                            <p className="text-[#1E1E1E] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔️ Estrategias de crecimiento y ejecución total – Desde la planificación hasta la acción.
+                            </p>
+                            <p className="text-[#1E1E1E] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔️ Diseño gráfico – Identidad visual alineada con tu marca.
+                            </p>
+                            <p className="text-[#1E1E1E] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔️ Gestión de redes sociales – Community management, contenidos y más.
+                            </p>
+                            <p className="text-[#1E1E1E] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔️ Análisis y reporte de rendimiento – Decisiones basadas en datos.
+                            </p>
+                        </div>
+                        <p className="text-[#1E1E1E] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[24px] 2xl:text-[24px] mt-8 text-center font-bold">
+                            Nos ocupamos de cada detalle para que tu marca brille y crezca con resultados reales.
+                        </p>
                     </div>
                 </div>
             </div>

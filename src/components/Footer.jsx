@@ -5,7 +5,7 @@ import logoFooter from '../assets/images/logo-online-negro.svg'
 
 const Footer = () => {
     return (
-        <footer className="bg-[#F0E6DC] text-black py-8">
+        <footer className="bg-[#DBD0C6] text-black py-8">
             <div className="container mx-auto px-2">
                 <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] items-center gap-8 mb-12">
                     {/* Logo - Izquierda */}

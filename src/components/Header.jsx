@@ -27,7 +27,7 @@ function Header() {
     return (
         <nav className={`w-full fixed top-0 z-50 transition-all duration-300
             ${hasScrolled
-                ? 'bg-[#F0E6DC] shadow-lg'
+                ? 'bg-[#DBD0C6] shadow-lg'
                 : 'bg-transparent'}`}>
             <div className="max-w-[95%] mx-auto px-4">
                 <div className="flex items-center justify-between h-28">
@@ -92,7 +92,7 @@ function NavLink({ to, children, isHomePage }) {
                 w-[13.43vw] min-w-[150px] max-w-[193px] h-[4.2vh] min-h-[35px] max-h-[38px] text-center
                 text-[1.04vw] min-text-[16px] max-text-[18px] leading-[1.25] tracking-normal
                 ${isHomePage
-                    ? 'bg-[#F1F0F0] text-black hover:bg-white hover:scale-105'
+                    ? 'bg-[#fff] text-black hover:bg-white hover:scale-105'
                     : 'bg-[#1E1E1E] text-white hover:bg-[#E2A07E] hover:text-white'
                 }`}
         >

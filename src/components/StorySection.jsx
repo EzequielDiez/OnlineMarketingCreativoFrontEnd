@@ -11,7 +11,7 @@ function StorySection({
   return (
     <div
       id={sectionId}
-      className="h-screen w-full bg-[#F0E6DC]"
+      className="h-screen w-full bg-[#DBD0C6]"
     >
       <div className={`max-w-7xl mx-auto px-4 w-full h-full flex 
                 ${align === 'right' ? 'flex-row' : 'flex-row-reverse'} 

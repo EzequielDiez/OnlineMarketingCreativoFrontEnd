@@ -119,7 +119,7 @@ function Inicio() {
             </div>
 
             {/* Nueva sección después de stories */}
-            <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-[#F0E6DC] text-black py-20">
+            <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-[#DBD0C6] text-black py-20">
                 <div className="flex flex-col items-center">
                     <p className="font-perfect text-6xl">Hagamos que tu marca</p>
                     <p className="font-akira text-8xl text-transparent -mt-4" style={{

@@ -45,12 +45,16 @@ function Portfolio() {
     return (
         <div className="bg-[#F0E6DC] min-h-screen pt-28 pb-20">
             {/* Encabezado */}
-            <div className="container mx-auto px-4 mb-12">
+            <div className="container mx-auto px-4 mb-24">
                 <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-acumin text-center mb-8">
                     PORTFOLIO
                 </h1>
+                <p className="text-lg sm:text-xl md:text-2xl text-center font-acumin max-w-4xl mx-auto mb-6">
+                    Cada marca tiene una historia que contar, y nosotros nos encargamos de darle vida.
+                </p>
+
                 <p className="text-lg sm:text-xl md:text-2xl text-center font-acumin max-w-4xl mx-auto">
-                    Descubre algunos de nuestros trabajos más destacados y cómo hemos ayudado a otras marcas a alcanzar sus objetivos.
+                    Explorá algunos de nuestros proyectos y descubrí cómo transformamos ideas en estrategias, creatividad en impacto y contenido en resultados.
                 </p>
             </div>
 
