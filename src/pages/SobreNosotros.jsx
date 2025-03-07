@@ -11,7 +11,7 @@ import ayluImage from "../assets/images/aylen.png";
 function SobreNosotros() {
     return (
         <>
-            <div className="bg-[#F0E6DC] min-h-screen flex items-center justify-center px-4 py-8">
+            <div className="bg-[#DBD0C6] min-h-screen flex items-center justify-center px-4 py-8">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-acumin mb-8 md:mb-20">
                         ¿QUIÉNES SOMOS?
@@ -29,7 +29,7 @@ function SobreNosotros() {
                     </div>
                 </div>
             </div>
-            <div className="w-full bg-[#F0E6DC] pb-20 sm:pb-32">
+            <div className="w-full bg-[#DBD0C6] pb-20 sm:pb-32">
                 <div className="relative">
                     <div className="absolute top-[50%] ml-[30%] lg:ml-[20%] z-10">
                         <div className="flex items-center gap-2 sm:gap-3 md:gap-4">

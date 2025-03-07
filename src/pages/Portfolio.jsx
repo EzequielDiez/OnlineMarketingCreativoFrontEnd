@@ -43,7 +43,7 @@ function Portfolio() {
     };
 
     return (
-        <div className="bg-[#F0E6DC] min-h-screen pt-28 pb-20">
+        <div className="bg-[#DBD0C6] min-h-screen pt-28 pb-20">
             {/* Encabezado */}
             <div className="container mx-auto px-4 mb-24">
                 <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-acumin text-center mb-8">

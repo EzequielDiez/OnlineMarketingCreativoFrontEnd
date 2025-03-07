@@ -48,14 +48,16 @@ function Inicio() {
 
     return (
         <>
-            {/* Hero Section */}
-            <div className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
-                style={{ backgroundImage: `url(${portadaImg})` }}>
-                <img
-                    src={logoPortada}
-                    alt="Logo Portada"
-                    className="max-w-xl"
-                />
+            {/* Wrapper solo para la hero section */}
+            <div className="overflow-x-hidden">
+                <div className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
+                    style={{ backgroundImage: `url(${portadaImg})` }}>
+                    <img
+                        src={logoPortada}
+                        alt="Logo Portada"
+                        className="max-w-[90%] md:max-w-xl w-auto px-4"
+                    />
+                </div>
             </div>
 
             {/* Taza fija */}
@@ -76,10 +78,10 @@ function Inicio() {
                 />
             </div>
 
-            {/* Container para las story sections con altura fija */}
+            {/* Stories container sin overflow hidden */}
             <div
                 ref={storiesContainerRef}
-                className="relative h-[300vh]" // Altura fija para 3 pantallas
+                className="relative h-[300vh]"
                 style={{
                     perspective: '1000px',
                     transformStyle: 'preserve-3d'
@@ -118,35 +120,40 @@ function Inicio() {
                 ))}
             </div>
 
-            {/* Nueva sección después de stories */}
-            <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-[#DBD0C6] text-black py-20">
-                <div className="flex flex-col items-center">
-                    <p className="font-perfect text-6xl">Hagamos que tu marca</p>
-                    <p className="font-akira text-8xl text-transparent -mt-4" style={{
-                        WebkitTextStroke: '3px black'
-                    }}>CREZCA</p>
-                </div>
+            {/* Wrapper para la última sección */}
+            <div className="overflow-x-hidden">
+                <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-[#DBD0C6] text-black py-20">
+                    <div className="flex flex-col items-center">
+                        <p className="font-perfect text-3xl md:text-4xl lg:text-6xl">Hagamos que tu marca</p>
+                        <p className="font-akira text-4xl md:text-6xl lg:text-8xl text-transparent -mt-4" style={{
+                            WebkitTextStroke: '2px black',
+                            '@media (min-width: 768px)': {
+                                WebkitTextStroke: '3px black'
+                            }
+                        }}>CREZCA</p>
+                    </div>
 
-                {/* Nuevo contenedor para el botón y el hielo */}
-                <div className="relative group w-[400px] h-[250px] flex items-center justify-center">
-                    <img
-                        src={buttonContactanos}
-                        alt="Contactanos"
-                        className="relative z-10 w-[250px] h-auto opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
-                    />
-                    <img
-                        src={iceLeft}
-                        alt="Ice Left"
-                        className="absolute -left-10 z-20 w-[65%] h-full object-contain object-right transition-transform duration-300 group-hover:-translate-x-full"
-                    />
-                    <img
-                        src={iceRight}
-                        alt="Ice Right"
-                        className="absolute -right-10 -top-3 z-20 w-[65%] h-full object-contain object-left transition-transform duration-300 group-hover:translate-x-full"
-                    />
-                </div>
+                    {/* Nuevo contenedor para el botón y el hielo */}
+                    <div className="relative group w-[400px] h-[250px] flex items-center justify-center">
+                        <img
+                            src={buttonContactanos}
+                            alt="Contactanos"
+                            className="relative z-10 w-[250px] h-auto opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
+                        />
+                        <img
+                            src={iceLeft}
+                            alt="Ice Left"
+                            className="absolute -left-10 z-20 w-[65%] h-full object-contain object-right transition-transform duration-300 group-hover:-translate-x-full"
+                        />
+                        <img
+                            src={iceRight}
+                            alt="Ice Right"
+                            className="absolute -right-10 -top-3 z-20 w-[65%] h-full object-contain object-left transition-transform duration-300 group-hover:translate-x-full"
+                        />
+                    </div>
 
-                <p className="font-acumin text-5xl">ROMPAMOS EL HIELO</p>
+                    <p className="font-acumin text-5xl">ROMPAMOS EL HIELO</p>
+                </div>
             </div>
         </>
     );

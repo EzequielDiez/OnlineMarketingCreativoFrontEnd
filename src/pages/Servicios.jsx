@@ -85,7 +85,7 @@ function Servicios() {
 
     return (
         <>
-            <div className="bg-[#F0E6DC] h-screen flex flex-col">
+            <div className="bg-[#DBD0C6] h-screen flex flex-col">
                 {/* Contenedor de imagen con transición */}
                 <div className="w-full pt-28 sm:pt-28 md:pt-28 lg:pt-28 xl:pt-28 2xl:pt-24">
                     <img
@@ -160,19 +160,19 @@ function Servicios() {
                 <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto">
                     {/* Título y descripción principal */}
                     <div className="text-center mb-12">
-                        <h2 className="text-[#F0E6DC] font-acumin font-bold text-3xl sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] 2xl:text-[52px] mb-6">
+                        <h2 className="text-[#DBD0C6] font-acumin font-bold text-3xl sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] 2xl:text-[52px] mb-6">
                             Gestión Integral de Marca
                         </h2>
-                        <p className="text-[#F0E6DC] font-acumin italic text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-4">
+                        <p className="text-[#DBD0C6] font-acumin italic text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-4">
                             (Nuestro servicio estrella)
                         </p>
-                        <p className="text-[#F0E6DC] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[24px] 2xl:text-[24px]">
+                        <p className="text-[#DBD0C6] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[24px] 2xl:text-[24px]">
                             Transformamos tu marca con una estrategia 360°. Nos encargamos de TODO para que tu negocio crezca y se posicione en el mundo digital.
                         </p>
                     </div>
 
                     {/* Lista de servicios incluidos */}
-                    <div className="bg-[#F0E6DC] rounded-3xl p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 2xl:p-16 max-w-[1200px] mx-auto">
+                    <div className="bg-[#DBD0C6] rounded-3xl p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 2xl:p-16 max-w-[1200px] mx-auto">
                         <p className="text-[#1E1E1E] font-acumin font-bold text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-6">
                             Incluye:
                         </p>
@@ -210,7 +210,7 @@ function Servicios() {
             </div>
 
             {/* Sección de contacto separada */}
-            <div className="bg-[#F0E6DC] py-16 sm:py-[60px] md:py-[80px] lg:py-[100px] xl:py-[115px] 2xl:py-[120px]">
+            <div className="bg-[#DBD0C6] py-16 sm:py-[60px] md:py-[80px] lg:py-[100px] xl:py-[115px] 2xl:py-[120px]">
                 {/* Texto de contacto */}
                 <div className="w-full sm:w-[90%] md:w-[600px] lg:w-[700px] xl:w-[760px] 2xl:w-[810px] mx-auto text-center">
                     <p className="font-acumin text-lg sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px]">
