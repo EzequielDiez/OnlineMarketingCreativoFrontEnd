@@ -155,12 +155,13 @@ function Inicio() {
                 {[
                     {
                         image: story1,
-                        title: "¿Qué tanto sabés de tu marca?",
+                        title: "¿QUE TANTO SABES DE TU MARCA?",
                         description: "A veces, por más que tengamos acceso a toda la información, puede ser dificil encontrar la forma correcta de aplicarla para recibir resultados."
                     },
                     {
                         image: story2,
                         title: "Siempre hay algo que mejorar",
+                        
                         description: "Pero, ¿qué pasaría si te dijeran que no estás solo? Esa confusión, esa sensación de caos, es más común de lo que parece."
                     },
                     {
@@ -194,14 +195,14 @@ function Inicio() {
                     <div className="relative min-h-[2.4em]">
                         <TypewriterText
                             phrases={[
-                                "No vendemos café, pero si tu marca fuera un café, queremos que sea el mejor despertar para tus clientes"
+                                "No vendemos café, pero si tu marca fuera un café, queremos que sea el mejor despertar para tus clientes."
                             ]}
                             className="text-white"
                             words={[
-                                { text: "No vendemos café, pero ", font: "font-['Archivo']" },
-                                { text: "si tu marca fuera un café, ", font: "font-['Advercase']" },
-                                { text: "queremos que sea ", font: "font-['Archivo']" },
-                                { text: "el mejor despertar para tus clientes", font: "font-['Advercase']" }
+                                { text: "No vendemos café, pero ", font: "font-['Archivo'] font-thin" },
+                                { text: "si tu marca fuera un café, ", font: "font-['Archivo'] font-bold italic" },
+                                { text: "queremos que sea ", font: "font-['Archivo'] font-thin" },
+                                { text: "el mejor despertar para tus clientes.", font: "font-['Archivo'] font-bold italic" }
                             ]}
                             start={startTyping}
                         />

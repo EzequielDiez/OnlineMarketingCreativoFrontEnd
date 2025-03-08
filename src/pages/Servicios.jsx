@@ -2,9 +2,9 @@ import { useState } from 'react';
 import servicesImage from '../assets/images/services-communitymanager.jpg';
 import arrowLeft from '../assets/images/arrow-left.svg'
 import arrowRight from '../assets/images/arrow-right.svg'
-import buttonContactanos from '../assets/images/button-contactanos.png'
-import iceLeft from '../assets/images/ice-left.png'
-import iceRight from '../assets/images/ice-right.png'
+import buttonContactanos from '../assets/images/button-contactanos2.png'
+import iceLeft from '../assets/images/ice-left2.png'
+import iceRight from '../assets/images/ice-right2.png'
 
 function Servicios() {
     const [currentService, setCurrentService] = useState(0);
@@ -31,7 +31,7 @@ function Servicios() {
             image: servicesImage
         },
         {
-            title: "DISEÑO GRÁFICO",
+            title: "DISEÑO GRAFICO",
             description: "Tu identidad visual es clave. Diseñamos piezas atractivas, creativas y alineadas con tu marca para generar impacto y reconocimiento en cada plataforma.",
             image: servicesImage
         },
@@ -66,7 +66,7 @@ function Servicios() {
             image: servicesImage
         },
         {
-            title: "ANÁLISIS DIGITAL",
+            title: "ANALISIS DIGITAL",
             description: "Tomamos decisiones basadas en datos. Analizamos métricas clave, identificamos oportunidades de mejora y optimizamos tu estrategia digital para lograr mejores resultados.",
             image: servicesImage
         },
@@ -111,7 +111,7 @@ function Servicios() {
                                 className="w-[30px] h-[33px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] lg:w-[30px] lg:h-[30px] xl:w-[34px] xl:h-[34px] 2xl:w-[34px] 2xl:h-[34px]"
                             />
                         </button>
-                        <h1 className="text-3xl sm:text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px] 2xl:text-[52px] font-acumin text-center">
+                        <h1 className="text-3xl sm:text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px] 2xl:text-[52px] font-advercase text-center">
                             {services[currentService].title}
                         </h1>
                         <button
@@ -127,7 +127,7 @@ function Servicios() {
                     </div>
 
                     {/* Descripción */}
-                    <p className="text-lg sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[24px] font-acumin text-center mt-4 sm:mt-8 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-12">
+                    <p className="max-w-[1200px] mx-auto text-lg sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[24px] font-archivo font-thin text-center mt-4 sm:mt-8 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-12">
                         {services[currentService].description}
                     </p>
                 </div>
@@ -141,7 +141,7 @@ function Servicios() {
                                 onClick={() => setCurrentService(index)}
                                 className={`
                                     border-2 border-[#1E1E1E]
-                                    font-acumin text-sm sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[24px] uppercase 
+                                    font-archivo font-light text-sm sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[24px] uppercase 
                                     px-3 sm:px-3 md:px-5 lg:px-6 
                                     min-h-[36px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[40px] xl:min-h-[44px] 2xl:min-h-[44px]
                                     rounded-full whitespace-normal
@@ -164,49 +164,52 @@ function Servicios() {
                 <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto">
                     {/* Título y descripción principal */}
                     <div className="text-center mb-12">
-                        <h2 className="text-[#fff] font-acumin font-bold text-3xl sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] 2xl:text-[52px] mb-6">
-                            Gestión Integral de Marca
+                        <h2 className="text-[#fff] font-advercase text-3xl sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] 2xl:text-[52px] mb-6">
+                            GESTION INTEGRAL DE MARCA
                         </h2>
-                        <p className="text-[#fff] font-acumin italic text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-4">
+                        <p className="text-[#fff] font-archivo font-medium italic text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-4">
                             (Nuestro servicio estrella)
                         </p>
-                        <p className="text-[#fff] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[24px] 2xl:text-[24px]">
+                        <p className="text-[#fff] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[24px] 2xl:text-[24px]">
                             Transformamos tu marca con una estrategia 360°. Nos encargamos de TODO para que tu negocio crezca y se posicione en el mundo digital.
                         </p>
                     </div>
 
                     {/* Lista de servicios incluidos */}
                     <div className="bg-[#fff] rounded-3xl p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 2xl:p-16 max-w-[1200px] mx-auto">
-                        <p className="text-[#000] font-acumin font-bold text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-6">
+                        <p className="text-[#000] font-advercase text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-6">
                             Incluye:
                         </p>
                         <div className="space-y-4">
-                            <p className="text-[#000] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
-                                ✔️ Creación y gestión de medios – Desarrollamos y administramos tus plataformas digitales.
+                            <p className="text-[#000] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔ Creación y gestión de medios – Desarrollamos y administramos tus plataformas digitales.
                             </p>
-                            <p className="text-[#000] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
-                                ✔️ SEO y optimización constante – Mejoramos tu posicionamiento para que te encuentren fácilmente.
+                            <p className="text-[#000] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔ SEO y optimización constante – Mejoramos tu posicionamiento para que te encuentren fácilmente.
                             </p>
-                            <p className="text-[#000] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
-                                ✔️ Gestión y desarrollo de publicidad – Creamos campañas estratégicas que convierten.
+                            <p className="text-[#000] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔ Gestión y desarrollo de publicidad – Creamos campañas estratégicas que convierten.
                             </p>
-                            <p className="text-[#000] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
-                                ✔️ Producción audiovisual – Contenido de alto impacto para redes y web.
+                            <p className="text-[#000] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔ Producción audiovisual – Contenido de alto impacto para redes y web.
                             </p>
-                            <p className="text-[#000] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
-                                ✔️ Estrategias de crecimiento y ejecución total – Desde la planificación hasta la acción.
+                            <p className="text-[#000] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔ Estrategias de crecimiento y ejecución total – Desde la planificación hasta la acción.
                             </p>
-                            <p className="text-[#000] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
-                                ✔️ Diseño gráfico – Identidad visual alineada con tu marca.
+                            <p className="text-[#000] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔ Diseño gráfico – Identidad visual alineada con tu marca.
                             </p>
-                            <p className="text-[#000] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
-                                ✔️ Gestión de redes sociales – Community management, contenidos y más.
+                            <p className="text-[#000] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔ Gestión de redes sociales – Community management, contenidos y más.
                             </p>
-                            <p className="text-[#000] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
-                                ✔️ Análisis y reporte de rendimiento – Decisiones basadas en datos.
+                            <p className="text-[#000] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔ Análisis y reporte de rendimiento – Decisiones basadas en datos.
+                            </p>
+                            <p className="text-[#000] font-archivo font-light text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
+                                ✔ Desarrollo web – Creación y mantenimiento de sitios web profesionales y optimizados.
                             </p>
                         </div>
-                        <p className="text-[#000] font-acumin text-lg sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[24px] 2xl:text-[24px] mt-8 text-center font-bold">
+                        <p className="text-[#000] font-archivo font-medium text-lg sm:text-[16px] md:text-[18px] lg:text-[22px] xl:text-[24px] 2xl:text-[24px] mt-8 text-center">
                             Nos ocupamos de cada detalle para que tu marca brille y crezca con resultados reales.
                         </p>
                     </div>
@@ -234,16 +237,16 @@ function Servicios() {
                     <img
                         src={iceLeft}
                         alt="Ice Left"
-                        className="absolute -left-10 z-20 w-[65%] h-full object-contain object-right transition-transform duration-300 group-hover:-translate-x-full"
+                        className="absolute -left-6 z-20 w-[65%] h-full object-contain object-right transition-transform duration-300 group-hover:-translate-x-full"
                     />
                     <img
                         src={iceRight}
                         alt="Ice Right"
-                        className="absolute -right-10 -top-3 z-20 w-[65%] h-full object-contain object-left transition-transform duration-300 group-hover:translate-x-full"
+                        className="absolute -right-10 -top-1.5 z-20 w-[65%] h-full object-contain object-left transition-transform duration-300 group-hover:translate-x-full"
                     />
                 </div>
 
-                <p className="font-acumin text-5xl">ROMPAMOS EL HIELO</p>
+                <p className="font-archivo text-4xl">ROMPAMOS EL HIELO</p>
             </div>
         </>
     );

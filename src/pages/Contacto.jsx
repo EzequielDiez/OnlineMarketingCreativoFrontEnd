@@ -43,7 +43,7 @@ function Contacto() {
                     <img
                         src={contactoImage}
                         alt="Contacto"
-                        className="w-auto h-auto max-w-[90vw] max-h-[100vh] xs:max-w-[90vw] xs:max-h-[90vh] sm:max-w-[90vw] sm:max-h-[90vh] md:max-w-[90vw] md:max-h-[90vh] lg:max-w-[80vw] lg:max-h-[80vh] xl:max-w-[85vw] xl:max-h-[85vh] 2xl:max-w-[80vw] 2xl:max-h-[80vh] object-contain mx-auto"
+                        className="w-auto h-auto max-w-[90vw] max-h-[100vh] xs:max-w-[90vw] xs:max-h-[90vh] sm:max-w-[90vw] sm:max-h-[90vh] md:max-w-[90vw] md:max-h-[90vh] lg:max-w-[80vw] lg:max-h-[80vh] xl:max-w-[85vw] xl:max-h-[85vh] 2xl:max-w-[80vw] 2xl:max-h-[70vh] object-contain mx-auto"
                     />
                 </div>
             </div>

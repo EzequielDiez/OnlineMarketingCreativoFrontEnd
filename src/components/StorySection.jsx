@@ -26,14 +26,14 @@ function StorySection({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className={`max-w-7xl mx-auto w-full
+        className={`max-w-[90rem] mx-auto w-full
           flex flex-col md:flex-row 
           ${align === 'right' ? 'md:flex-row' : 'md:flex-row-reverse'} 
-          items-center gap-8 py-8 md:py-0`}
+          items-center gap-16 py-12 md:py-8`}
       >
         {/* Imagen */}
         <motion.div 
-          className="w-full md:w-1/2 relative"
+          className="w-full md:w-[55%] relative"
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
@@ -53,17 +53,17 @@ function StorySection({
 
         {/* Contenido de texto */}
         <motion.div 
-          className="w-full md:w-1/2 text-gray-800 space-y-6 text-center md:text-left"
+          className="w-full md:w-[45%] text-gray-800 space-y-8 text-center md:text-left"
           initial={{ opacity: 0, x: align === 'right' ? 50 : -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-['Advercase'] font-bold text-4xl md:text-5xl lg:text-6xl relative inline-block group">
+          <h2 className="font-['Advercase'] font-bold text-5xl md:text-6xl lg:text-6xl relative block group !leading-[1.2] mb-8">
             {title}
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-custom-beige to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
           </h2>
-          <p className="font-['Archivo'] font-medium text-base md:text-lg lg:text-xl leading-relaxed max-w-xl">
+          <p className="font-['Archivo'] font-medium text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl">
             {description}
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-custom-beige to-transparent rounded-full mx-auto md:mx-0 transform origin-left scale-x-0 animate-scaleIn" />
