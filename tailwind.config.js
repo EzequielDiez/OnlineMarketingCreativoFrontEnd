@@ -15,6 +15,7 @@ export default {
     },
     extend: {
       colors: {
+        'custom-beige': '#DBD0C6',
         // Aquí puedes extender los colores de tu marca
         // Ejemplo:
         // primary: '#FF0000',
@@ -37,10 +38,36 @@ export default {
             opacity: '1',
             transform: 'translateX(0)'
           },
+        },
+        heroLogo: {
+          '0%': {
+            opacity: '0',
+            transform: 'scale(0.8)'
+          },
+          '50%': {
+            opacity: '1',
+            transform: 'scale(1.3)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'scale(1)'
+          }
+        },
+        scaleIn: {
+          '0%': {
+            transform: 'scaleX(0)',
+            opacity: '0'
+          },
+          '100%': {
+            transform: 'scaleX(1)',
+            opacity: '1'
+          }
         }
       },
       animation: {
-        'fadeSlide': 'fadeSlide 0.5s ease-out'
+        'fadeSlide': 'fadeSlide 0.5s ease-out',
+        'heroLogo': 'heroLogo 1.5s cubic-bezier(0.4, 0, 0.2, 1)',
+        'scaleIn': 'scaleIn 0.6s ease-out forwards 0.5s'
       }
     },
   },

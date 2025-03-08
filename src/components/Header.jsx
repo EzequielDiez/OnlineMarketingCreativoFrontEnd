@@ -9,6 +9,14 @@ function Header() {
     const isHomePage = location.pathname === '/';
     const [hasScrolled, setHasScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [headerLogoOpacity, setHeaderLogoOpacity] = useState(0);
+    const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+    useEffect(() => {
+        if (isInitialLoad) {
+            setIsInitialLoad(false);
+        }
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,9 +24,25 @@ function Header() {
             setHasScrolled(scrollPosition > 0);
         };
 
+        const handleHeroLogoScroll = (event) => {
+            if (!isHomePage) return;
+            
+            const { opacity } = event.detail;
+            setHeaderLogoOpacity(1 - opacity);
+        };
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        window.addEventListener('heroLogoScroll', handleHeroLogoScroll);
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('heroLogoScroll', handleHeroLogoScroll);
+        };
+    }, [isHomePage]);
+
+    useEffect(() => {
+        setHeaderLogoOpacity(isHomePage ? 0 : 1);
+    }, [isHomePage]);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -26,40 +50,56 @@ function Header() {
 
     return (
         <nav className={`w-full fixed top-0 z-50 transition-all duration-500 ease-in-out
-            ${hasScrolled
-                ? 'bg-[#DBD0C6] shadow-lg backdrop-blur-sm bg-opacity-90'
-                : 'bg-transparent'}`}>
+            ${hasScrolled ? 'bg-[#000] shadow-lg backdrop-blur-sm bg-opacity-90' : 'bg-transparent'}`}>
             <div className="max-w-[95%] mx-auto px-4">
-                <div className="flex items-center justify-between h-28">
-                    <Link to="/" className="flex-shrink-0 pl-0 transition-transform duration-300 hover:scale-105">
+                <div className={`flex items-center justify-between transition-all duration-500
+                    ${hasScrolled ? 'h-20' : 'h-28'}`}>
+                    <Link to="/" className="flex-shrink-0 pl-0">
                         <img
-                            className="h-14 w-auto sm:h-11 md:h-10 lg:h-14 transition-all duration-300"
-                            src={hasScrolled ? logoNegro : logoBlanco}
+                            className={`w-auto transition-all duration-500
+                                ${hasScrolled ? 'h-10 sm:h-8 md:h-8 lg:h-10' : 'h-14 sm:h-11 md:h-10 lg:h-14'}`}
+                            style={{
+                                opacity: isHomePage ? headerLogoOpacity : 1,
+                                transform: isHomePage ? `translate3d(0, ${(1 - headerLogoOpacity) * 20}px, 0) 
+                                          rotate(${(1 - headerLogoOpacity) * -10}deg)
+                                          scale(${0.8 + (headerLogoOpacity * 0.2)})` : 'none',
+                                visibility: isHomePage && headerLogoOpacity === 0 ? 'hidden' : 'visible',
+                                pointerEvents: isHomePage && headerLogoOpacity === 0 ? 'none' : 'auto'
+                            }}
+                            src={isHomePage ? logoBlanco : (hasScrolled ? logoBlanco : logoNegro)}
                             alt="Logo"
                         />
                     </Link>
 
                     {/* Hamburger button */}
                     <button
-                        className="md:hidden p-2 relative z-50 transition-all duration-300 hover:scale-105"
+                        className={`md:hidden p-2 relative z-50 transition-all duration-300 hover:scale-105 
+                            ${isHomePage && headerLogoOpacity === 0 ? 'opacity-0' : ''}`}
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
                     >
-                        <div className={`w-6 h-0.5 bg-black mb-1.5 transition-all duration-300 transform
+                        <div className={`w-6 h-0.5 mb-1.5 transition-all duration-300 transform
+                            ${hasScrolled ? 'bg-white' : 'bg-black'}
                             ${isMenuOpen ? 'rotate-45 translate-y-2' : 'hover:w-5'}`}></div>
-                        <div className={`w-6 h-0.5 bg-black mb-1.5 transition-all duration-300
+                        <div className={`w-6 h-0.5 mb-1.5 transition-all duration-300
+                            ${hasScrolled ? 'bg-white' : 'bg-black'}
                             ${isMenuOpen ? 'opacity-0' : 'hover:w-4'}`}></div>
-                        <div className={`w-6 h-0.5 bg-black transition-all duration-300 transform
+                        <div className={`w-6 h-0.5 transition-all duration-300 transform
+                            ${hasScrolled ? 'bg-white' : 'bg-black'}
                             ${isMenuOpen ? '-rotate-45 -translate-y-2' : 'hover:w-3'}`}></div>
                     </button>
 
                     {/* Desktop menu */}
-                    <div className="hidden md:flex items-center justify-end space-x-4 flex-1">
+                    <div className={`hidden md:flex items-center justify-end space-x-4 flex-1 
+                        ${isHomePage && headerLogoOpacity === 0 ? 'opacity-0' : ''}`}>
                         {navigationLinks.map(({ path, label }) => (
                             <NavLink
                                 key={path}
                                 to={path}
                                 isHomePage={isHomePage}
+                                headerLogoOpacity={headerLogoOpacity}
+                                isInitialLoad={isInitialLoad}
+                                hasScrolled={hasScrolled}
                             >
                                 {label}
                             </NavLink>
@@ -67,7 +107,7 @@ function Header() {
                     </div>
 
                     {/* Mobile menu */}
-                    <div className={`md:hidden absolute top-28 left-0 w-full bg-[#DBD0C6] transition-all duration-500 ease-in-out backdrop-blur-sm bg-opacity-95
+                    <div className={`md:hidden absolute top-28 left-0 w-full bg-[#000] transition-all duration-500 ease-in-out backdrop-blur-sm bg-opacity-95
                         ${isMenuOpen
                             ? 'opacity-100 visible translate-y-0'
                             : 'opacity-0 invisible -translate-y-4'}`}>
@@ -77,7 +117,10 @@ function Header() {
                                     key={path}
                                     to={path}
                                     isHomePage={isHomePage}
+                                    headerLogoOpacity={headerLogoOpacity}
                                     onClick={() => setIsMenuOpen(false)}
+                                    isInitialLoad={isInitialLoad}
+                                    hasScrolled={hasScrolled}
                                 >
                                     {label}
                                 </MobileNavLink>
@@ -90,28 +133,39 @@ function Header() {
     )
 }
 
-function NavLink({ to, children, isHomePage }) {
+function NavLink({ to, children, isHomePage, headerLogoOpacity, isInitialLoad, hasScrolled }) {
     return (
         <Link
             to={to}
-            className={`flex items-center justify-center rounded-full font-normal transition-all duration-300 ease-in-out uppercase font-acumin 
+            className={`flex items-center justify-center rounded-full font-normal transition-all duration-500 ease-in-out uppercase font-acumin 
                 w-[13.43vw] sm:w-[10vw] md:w-[9.5vw] lg:w-[13.43vw] 
                 min-w-[120px] sm:min-w-[110px] md:min-w-[115px] lg:min-w-[150px] max-w-[193px]
-                h-[4.2vh] min-h-[32px] md:min-h-[30px] lg:min-h-[35px] max-h-[38px] text-center
                 text-[1.04vw] sm:text-[13px] md:text-[13px] lg:text-[16px] leading-[1.25] tracking-normal
                 px-2 sm:px-2 md:px-2 lg:px-4
-                transform hover:scale-105 hover:shadow-md
+                transform hover:scale-105 hover:shadow-md hover:rotate-2
+                ${hasScrolled 
+                    ? 'h-[3.5vh] min-h-[28px] md:min-h-[26px] lg:min-h-[30px] max-h-[32px]' 
+                    : 'h-[4.2vh] min-h-[32px] md:min-h-[30px] lg:min-h-[35px] max-h-[38px]'}
                 ${isHomePage
-                    ? 'bg-[#fff] text-black hover:bg-white'
-                    : 'bg-[#1E1E1E] text-white hover:bg-[#E2A07E] hover:text-white'
+                    ? 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-black'
+                    : hasScrolled
+                        ? 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-black'
+                        : 'bg-transparent border-2 border-black text-black hover:bg-black hover:text-white'
                 }`}
+            style={isHomePage ? {
+                opacity: isInitialLoad ? 0 : headerLogoOpacity,
+                transform: `translate3d(0, ${(1 - headerLogoOpacity) * 15}px, 0) 
+                          rotate(${(1 - headerLogoOpacity) * 5}deg)
+                          scale(${0.9 + (headerLogoOpacity * 0.1)})`,
+                visibility: headerLogoOpacity === 0 ? 'hidden' : 'visible'
+            } : undefined}
         >
             {children}
         </Link>
     )
 }
 
-function MobileNavLink({ to, children, isHomePage, onClick }) {
+function MobileNavLink({ to, children, isHomePage, headerLogoOpacity, onClick, isInitialLoad, hasScrolled }) {
     return (
         <Link
             to={to}
@@ -120,14 +174,21 @@ function MobileNavLink({ to, children, isHomePage, onClick }) {
                 transition-all duration-300 ease-in-out
                 border-b-2 border-transparent
                 ${isHomePage
-                    ? 'text-black hover:border-black'
-                    : 'text-[#1E1E1E] hover:border-[#E2A07E]'
+                    ? 'text-white hover:border-white'
+                    : hasScrolled
+                        ? 'text-white hover:border-white'
+                        : 'text-black hover:border-black'
                 }
                 after:content-[''] after:absolute after:bottom-0 after:left-0
                 after:w-full after:h-[2px] after:bg-current
                 after:transform after:scale-x-0 after:origin-right
                 after:transition-transform after:duration-300 after:ease-in-out
                 hover:after:scale-x-100 hover:after:origin-left`}
+            style={isHomePage ? {
+                opacity: isInitialLoad ? 0 : headerLogoOpacity,
+                transform: `scale(${Math.max(0.95, headerLogoOpacity)})`,
+                visibility: headerLogoOpacity === 0 ? 'hidden' : 'visible'
+            } : undefined}
         >
             {children}
         </Link>

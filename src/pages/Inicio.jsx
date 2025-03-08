@@ -1,19 +1,26 @@
 import { useRef, useEffect, useCallback } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import '../styles/carousel.css';
 import StorySection from '../components/StorySection';
 import story1 from '../assets/images/story1.jpg';
 import story2 from '../assets/images/story2.jpg';
 import story3 from '../assets/images/story3.jpg';
 import coffeeCup from '../assets/images/coffee-cup.png';
-import iceLeft from '../assets/images/ice-left.png';
-import iceRight from '../assets/images/ice-right.png';
 import logoPortada from '../assets/images/logo-online-blanco.svg'
-import portadaImg from '../assets/images/portada.jpg'
-import buttonContactanos from '../assets/images/button-contactanos.png'
+import portadaImg from '../assets/images/portada-horizontal.png'
+import carrusel1 from '../assets/images/carrusel-inicio-1.png';
+import carrusel2 from '../assets/images/carrusel-inicio-2.png';
+import carrusel3 from '../assets/images/carrusel-inicio-3.png';
 
 function Inicio() {
     const cupRef = useRef(null);
     const storiesContainerRef = useRef(null);
     const sectionsRef = useRef([]);
+    const heroLogoRef = useRef(null);
 
     const cupPositions = [
         { x: 66, y: 72, scale: 0.5, rotate: 25 },
@@ -46,6 +53,39 @@ function Inicio() {
         return () => window.removeEventListener('scroll', throttledScroll);
     }, [handleCupAnimation]);
 
+    useEffect(() => {
+        const updateHeaderLogo = () => {
+            if (!heroLogoRef.current) return;
+            
+            const logoRect = heroLogoRef.current.getBoundingClientRect();
+            const scrollPosition = window.scrollY;
+            const logoCenter = logoRect.top + (logoRect.height / 2);
+            const viewportCenter = window.innerHeight / 2;
+            
+            // Calculate opacity based on scroll position - fade out faster
+            const opacity = Math.max(0, Math.min(1, 1 - (scrollPosition / (window.innerHeight * 0.3))));
+            
+            // Update hero logo opacity
+            if (heroLogoRef.current) {
+                heroLogoRef.current.style.opacity = opacity;
+            }
+            
+            // Dispatch custom event with logo information
+            window.dispatchEvent(new CustomEvent('heroLogoScroll', {
+                detail: {
+                    opacity,
+                    isVisible: opacity > 0,
+                    distanceFromCenter: Math.abs(logoCenter - viewportCenter)
+                }
+            }));
+        };
+
+        window.addEventListener('scroll', updateHeaderLogo);
+        updateHeaderLogo(); // Initial call
+        
+        return () => window.removeEventListener('scroll', updateHeaderLogo);
+    }, []);
+
     return (
         <>
             {/* Wrapper solo para la hero section */}
@@ -53,9 +93,11 @@ function Inicio() {
                 <div className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
                     style={{ backgroundImage: `url(${portadaImg})` }}>
                     <img
+                        ref={heroLogoRef}
                         src={logoPortada}
                         alt="Logo Portada"
-                        className="max-w-[90%] md:max-w-xl w-auto px-4"
+                        className="max-w-[90%] md:max-w-xl w-auto px-4 transition-opacity duration-200 animate-heroLogo"
+                        style={{ opacity: 1 }}
                     />
                 </div>
             </div>
@@ -120,40 +162,43 @@ function Inicio() {
                 ))}
             </div>
 
-            {/* Wrapper para la última sección */}
-            <div className="overflow-x-hidden">
-                <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-[#DBD0C6] text-black py-20">
-                    <div className="flex flex-col items-center">
-                        <p className="font-perfect text-3xl md:text-4xl lg:text-6xl">Hagamos que tu marca</p>
-                        <p className="font-akira text-4xl md:text-6xl lg:text-8xl text-transparent -mt-4" style={{
-                            WebkitTextStroke: '2px black',
-                            '@media (min-width: 768px)': {
-                                WebkitTextStroke: '3px black'
-                            }
-                        }}>CREZCA</p>
-                    </div>
-
-                    {/* Nuevo contenedor para el botón y el hielo */}
-                    <div className="relative group w-[400px] h-[250px] flex items-center justify-center">
-                        <img
-                            src={buttonContactanos}
-                            alt="Contactanos"
-                            className="relative z-10 w-[250px] h-auto opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
-                        />
-                        <img
-                            src={iceLeft}
-                            alt="Ice Left"
-                            className="absolute -left-10 z-20 w-[65%] h-full object-contain object-right transition-transform duration-300 group-hover:-translate-x-full"
-                        />
-                        <img
-                            src={iceRight}
-                            alt="Ice Right"
-                            className="absolute -right-10 -top-3 z-20 w-[65%] h-full object-contain object-left transition-transform duration-300 group-hover:translate-x-full"
-                        />
-                    </div>
-
-                    <p className="font-acumin text-5xl">ROMPAMOS EL HIELO</p>
-                </div>
+            {/* Carousel Section */}
+            <div className="h-screen w-full">
+                <Swiper
+                    modules={[Autoplay, Navigation]}
+                    slidesPerView={3}
+                    spaceBetween={0}
+                    loop={true}
+                    loopedSlides={3}
+                    speed={800}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    navigation={true}
+                    className="w-full h-full"
+                    slideToClickedSlide={true}
+                    centeredSlides={true}
+                >
+                    <SwiperSlide className="h-full">
+                        <img src={carrusel1} alt="Carrusel 1" className="w-full h-full object-cover" />
+                    </SwiperSlide>
+                    <SwiperSlide className="h-full">
+                        <img src={carrusel2} alt="Carrusel 2" className="w-full h-full object-cover" />
+                    </SwiperSlide>
+                    <SwiperSlide className="h-full">
+                        <img src={carrusel3} alt="Carrusel 3" className="w-full h-full object-cover" />
+                    </SwiperSlide>
+                    <SwiperSlide className="h-full">
+                        <img src={carrusel1} alt="Carrusel 1" className="w-full h-full object-cover" />
+                    </SwiperSlide>
+                    <SwiperSlide className="h-full">
+                        <img src={carrusel2} alt="Carrusel 2" className="w-full h-full object-cover" />
+                    </SwiperSlide>
+                    <SwiperSlide className="h-full">
+                        <img src={carrusel3} alt="Carrusel 3" className="w-full h-full object-cover" />
+                    </SwiperSlide>
+                </Swiper>
             </div>
         </>
     );

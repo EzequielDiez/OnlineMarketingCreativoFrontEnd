@@ -37,7 +37,7 @@ function Contacto() {
     };
 
     return (
-        <div className="min-h-screen bg-[#DBD0C6]">
+        <div className="min-h-screen bg-[#fff]">
             <div className="h-[40vh] xs:h-[45vh] sm:h-[55vh] md:h-[60vh] lg:h-[70vh] xl:h-screen flex items-center justify-center">
                 <div className="w-full mx-auto px-4 xs:px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 pt-20">
                     <img

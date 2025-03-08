@@ -33,3 +33,94 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-THIN.TTF') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-THINITALIC.TTF') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-EXTRALIGHT.TTF') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-EXTRALIGHTITALIC.TTF') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-LIGHT.TTF') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-LIGHTITALIC.TTF') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-REGULAR.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-MEDIUM.TTF') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-MEDIUMITALIC.TTF') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-BOLD.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/ARCHIVO-BOLDITALIC.TTF') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Advercase';
+  src: url('/fonts/ADVERCASEFONT-DEMO-REGULAR.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Advercase';
+  src: url('/fonts/ADVERCASEFONT-DEMO-BOLD.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
