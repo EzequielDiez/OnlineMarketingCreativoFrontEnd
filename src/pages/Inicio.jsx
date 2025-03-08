@@ -1,4 +1,4 @@
-import { useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect, useCallback, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -15,12 +15,15 @@ import portadaImg from '../assets/images/portada-horizontal.png'
 import carrusel1 from '../assets/images/carrusel-inicio-1.png';
 import carrusel2 from '../assets/images/carrusel-inicio-2.png';
 import carrusel3 from '../assets/images/carrusel-inicio-3.png';
+import TypewriterText from '../components/TypewriterText';
 
 function Inicio() {
     const cupRef = useRef(null);
     const storiesContainerRef = useRef(null);
     const sectionsRef = useRef([]);
     const heroLogoRef = useRef(null);
+    const typewriterSectionRef = useRef(null);
+    const [startTyping, setStartTyping] = useState(false);
 
     const cupPositions = [
         { x: 66, y: 72, scale: 0.5, rotate: 25 },
@@ -84,6 +87,26 @@ function Inicio() {
         updateHeaderLogo(); // Initial call
         
         return () => window.removeEventListener('scroll', updateHeaderLogo);
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                    setStartTyping(true);
+                    observer.disconnect(); // Solo necesitamos activarlo una vez
+                }
+            },
+            {
+                threshold: 0.5 // Activa cuando el 50% de la sección es visible
+            }
+        );
+
+        if (typewriterSectionRef.current) {
+            observer.observe(typewriterSectionRef.current);
+        }
+
+        return () => observer.disconnect();
     }, []);
 
     return (
@@ -160,6 +183,30 @@ function Inicio() {
                         />
                     </div>
                 ))}
+            </div>
+
+            {/* Nueva sección con frase */}
+            <div 
+                ref={typewriterSectionRef}
+                className="h-screen w-full bg-[#055749] flex items-center justify-center px-6"
+            >
+                <div className="text-white text-4xl md:text-6xl lg:text-7xl text-center max-w-5xl leading-relaxed">
+                    <div className="relative min-h-[2.4em]">
+                        <TypewriterText
+                            phrases={[
+                                "No vendemos café, pero si tu marca fuera un café, queremos que sea el mejor despertar para tus clientes"
+                            ]}
+                            className="text-white"
+                            words={[
+                                { text: "No vendemos café, pero ", font: "font-['Archivo']" },
+                                { text: "si tu marca fuera un café, ", font: "font-['Advercase']" },
+                                { text: "queremos que sea ", font: "font-['Archivo']" },
+                                { text: "el mejor despertar para tus clientes", font: "font-['Advercase']" }
+                            ]}
+                            start={startTyping}
+                        />
+                    </div>
+                </div>
             </div>
 
             {/* Carousel Section */}
