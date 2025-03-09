@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import servicesImage from '../assets/images/services-communitymanager.jpg';
+import servicesImage from '../assets/images/banner-servicios.png';
 import arrowLeft from '../assets/images/arrow-left.svg'
 import arrowRight from '../assets/images/arrow-right.svg'
 import buttonContactanos from '../assets/images/button-contactanos2.png'
 import iceLeft from '../assets/images/ice-left2.png'
 import iceRight from '../assets/images/ice-right2.png'
 
-function Servicios() {
+function Servicios({ handleWhatsAppClick }) {
     const [currentService, setCurrentService] = useState(0);
 
     const services = [
@@ -61,18 +61,8 @@ function Servicios() {
             image: servicesImage
         },
         {
-            title: "COACHING",
-            description: "Potenciamos tu desarrollo profesional y el de tu equipo con sesiones personalizadas para mejorar la gestión, la creatividad y la estrategia digital.",
-            image: servicesImage
-        },
-        {
             title: "ANALISIS DIGITAL",
             description: "Tomamos decisiones basadas en datos. Analizamos métricas clave, identificamos oportunidades de mejora y optimizamos tu estrategia digital para lograr mejores resultados.",
-            image: servicesImage
-        },
-        {
-            title: "CONTACTO CON INFLUENCERS",
-            description: "Conectamos tu marca con los influencers adecuados para amplificar tu mensaje y llegar a nuevas audiencias de manera auténtica y efectiva.",
             image: servicesImage
         }
     ];
@@ -88,8 +78,8 @@ function Servicios() {
     return (
         <>
             <div className="bg-[#fff] h-screen flex flex-col">
-                {/* Contenedor de imagen con transición */}
-                <div className="w-full pt-28 sm:pt-28 md:pt-28 lg:pt-28 xl:pt-28 2xl:pt-24">
+                {/* Contenedor de imagen con transición - ajustamos el padding superior */}
+                <div className="w-full mt-28">
                     <img
                         key={currentService}
                         src={services[currentService].image}
@@ -98,8 +88,8 @@ function Servicios() {
                     />
                 </div>
 
-                {/* Título con flechas */}
-                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 pt-16 sm:pt-16 md:pt-12 lg:pt-16 xl:pt-20 2xl:pt-24">
+                {/* Título con flechas - Ajustamos el padding superior */}
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 pt-20 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24 2xl:pt-28">
                     <div className="flex items-center justify-between">
                         <button
                             onClick={handlePrevService}
@@ -132,8 +122,8 @@ function Servicios() {
                     </p>
                 </div>
 
-                {/* Botones de servicios en la parte inferior */}
-                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-8 mt-auto sm:mt-10 md:mt-8 lg:mt-12 xl:mt-16 2xl:mt-16">
+                {/* Botones de servicios en la parte inferior - Ajustamos el margin superior */}
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-8 mt-auto sm:mt-12 md:mt-10 lg:mt-14 xl:mt-18 2xl:mt-20">
                     <div className="flex flex-wrap gap-2 sm:gap-2 md:gap-4 justify-center">
                         {services.map((service, index) => (
                             <button
@@ -229,11 +219,17 @@ function Servicios() {
                 </div>
 
                 <div className="relative group w-[400px] h-[250px] flex items-center justify-center">
-                    <img
-                        src={buttonContactanos}
-                        alt="Contactanos"
-                        className="relative z-10 w-[250px] h-auto opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
-                    />
+                    <a 
+                        href="#"
+                        onClick={handleWhatsAppClick}
+                        className="relative z-10"
+                    >
+                        <img
+                            src={buttonContactanos}
+                            alt="Contactanos"
+                            className="relative z-10 w-[250px] h-auto opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-150"
+                        />
+                    </a>
                     <img
                         src={iceLeft}
                         alt="Ice Left"

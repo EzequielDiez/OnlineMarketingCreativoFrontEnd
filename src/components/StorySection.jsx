@@ -59,11 +59,11 @@ function StorySection({
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-['Advercase'] font-bold text-5xl md:text-6xl lg:text-6xl relative block group !leading-[1.2] mb-8">
+          <h2 className="font-['Advercase'] font-bold text-5xl md:text-6xl lg:text-5xl xl:text-6xl relative block group !leading-[1.2] mb-8">
             {title}
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-custom-beige to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
           </h2>
-          <p className="font-['Archivo'] font-medium text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl">
+          <p className="font-['Archivo'] font-medium text-lg md:text-xl lg:text-xl xl:text-2xl leading-relaxed max-w-2xl">
             {description}
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-custom-beige to-transparent rounded-full mx-auto md:mx-0 transform origin-left scale-x-0 animate-scaleIn" />

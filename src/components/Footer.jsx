@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { navigationLinks } from '../config/navigation';
 import logoFooter from '../assets/images/logo-online-blanco.svg'
+import { useScrollTop } from '../hooks/useScrollTop';
 
 const Footer = () => {
+    useScrollTop();
+
     return (
         <footer className="bg-[#000] text-white py-8">
             <div className="container mx-auto px-2">
@@ -17,7 +20,7 @@ const Footer = () => {
                             <img
                                 src={logoFooter}
                                 alt="Logo Footer"
-                                className="h-16 lg:h-20 filter hover:brightness-90"
+                                className="h-16 lg:h-16 xl:h-20 filter hover:brightness-90"
                             />
                         </Link>
                     </div>
@@ -28,7 +31,7 @@ const Footer = () => {
                             <Link
                                 key={path}
                                 to={path}
-                                className="relative hover:text-[#ACC7CC] font-acumin text-lg lg:text-[22px] lowercase first-letter:uppercase mx-2 transition-all duration-300 hover:-translate-y-0.5 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#ACC7CC] after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
+                                className="relative hover:text-[#ACC7CC] font-archivo font-medium text-lg lg:text-xl xl:text-[22px] lowercase first-letter:uppercase mx-2 transition-all duration-300 hover:-translate-y-0.5 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#ACC7CC] after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
                             >
                                 {label}
                             </Link>
@@ -46,7 +49,7 @@ const Footer = () => {
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"
                                 >
-                                    <i className="fab fa-instagram text-2xl lg:text-3xl"></i>
+                                    <i className="fab fa-instagram text-2xl lg:text-2xl xl:text-3xl"></i>
                                 </a>
                                 <a
                                     href="https://facebook.com/online_marketingcreativo"
@@ -54,7 +57,7 @@ const Footer = () => {
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"
                                 >
-                                    <i className="fab fa-facebook text-2xl lg:text-3xl"></i>
+                                    <i className="fab fa-facebook text-2xl lg:text-2xl xl:text-3xl"></i>
                                 </a>
                                 <a
                                     href="https://www.tiktok.com/@online_marketingcreativo"
@@ -62,7 +65,7 @@ const Footer = () => {
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"
                                 >
-                                    <i className="fab fa-tiktok text-2xl lg:text-3xl"></i>
+                                    <i className="fab fa-tiktok text-2xl lg:text-2xl xl:text-3xl"></i>
                                 </a>
                                 <a
                                     href="https://ar.pinterest.com/online_marketingcreativo/"
@@ -70,7 +73,7 @@ const Footer = () => {
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"
                                 >
-                                    <i className="fab fa-pinterest text-2xl lg:text-3xl"></i>
+                                    <i className="fab fa-pinterest text-2xl lg:text-2xl xl:text-3xl"></i>
                                 </a>
                                 <a
                                     href="https://linkedin.com/company/online_marketingcreativo"
@@ -78,7 +81,7 @@ const Footer = () => {
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"
                                 >
-                                    <i className="fab fa-linkedin text-2xl lg:text-3xl"></i>
+                                    <i className="fab fa-linkedin text-2xl lg:text-2xl xl:text-3xl"></i>
                                 </a>
                             </div>
                         </div>
@@ -86,7 +89,7 @@ const Footer = () => {
 
                     {/* Copyright - Segunda fila, segunda columna */}
                     <div className="text-center">
-                        <p className="text-sm lg:text-base text-[#ACC7CC] transition-opacity duration-300 hover:opacity-75">&copy; {new Date().getFullYear()} Online Marketing Creativo. Todos los derechos reservados.</p>
+                        <p className="text-sm lg:text-sm xl:text-base font-archivo font-normal text-[#ACC7CC] transition-opacity duration-300 hover:opacity-75">&copy; {new Date().getFullYear()} Online Marketing Creativo. Todos los derechos reservados.</p>
                     </div>
                 </div>
             </div>

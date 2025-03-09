@@ -189,9 +189,10 @@ function Inicio() {
             {/* Nueva sección con frase */}
             <div 
                 ref={typewriterSectionRef}
+                data-section="typewriter"
                 className="h-screen w-full bg-[#055749] flex items-center justify-center px-6"
             >
-                <div className="text-white text-4xl md:text-6xl lg:text-7xl text-center max-w-5xl leading-relaxed">
+                <div className="text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center max-w-5xl leading-relaxed">
                     <div className="relative min-h-[2.4em]">
                         <TypewriterText
                             phrases={[
