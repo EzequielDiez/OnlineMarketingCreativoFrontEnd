@@ -24,6 +24,9 @@ function Header() {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             setHasScrolled(scrollPosition > 0);
+            if (scrollPosition === 0) {
+                setIsMenuOpen(false);
+            }
         };
 
         const handleHeroLogoScroll = (event) => {
@@ -109,7 +112,7 @@ function Header() {
                     </div>
 
                     {/* Mobile menu */}
-                    <div className={`md:hidden absolute top-28 left-0 w-full bg-[#000] transition-all duration-500 ease-in-out backdrop-blur-sm bg-opacity-95
+                    <div className={`md:hidden absolute top-16 left-0 w-full bg-[#000] transition-all duration-500 ease-in-out backdrop-blur-sm bg-opacity-95
                         ${isMenuOpen
                             ? 'opacity-100 visible translate-y-0'
                             : 'opacity-0 invisible -translate-y-4'}`}>
@@ -142,7 +145,7 @@ function NavLink({ to, children, isHomePage, headerLogoOpacity, isInitialLoad, h
             className={`flex items-center justify-center rounded-full font-normal transition-all duration-500 ease-in-out uppercase font-archivo 
                 w-[13.43vw] sm:w-[10vw] md:w-[9.5vw] lg:w-[13.43vw] 
                 min-w-[120px] sm:min-w-[110px] md:min-w-[115px] lg:min-w-[150px] max-w-[193px]
-                text-[1.04vw] sm:text-[13px] md:text-[13px] lg:text-[12px] xl:text-[14px] 2xl:text-[16px] leading-[1.25] tracking-normal
+                text-[1.04vw] sm:text-[13px] md:text-[11px] lg:text-[12px] xl:text-[14px] 2xl:text-[16px] leading-[1.25] tracking-normal
                 px-2 sm:px-2 md:px-2 lg:px-4
                 transform hover:scale-105 hover:shadow-md hover:rotate-2
                 ${hasScrolled 

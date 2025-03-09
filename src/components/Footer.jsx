@@ -44,7 +44,7 @@ const Footer = () => {
                             <div className="flex justify-center lg:justify-end gap-4 relative py-2">
                                 <div className="absolute -bottom-2 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 w-4/5 h-[2px] bg-gradient-to-r from-transparent via-gray-600/70 to-transparent lg:bg-gradient-to-l"></div>
                                 <a
-                                    href="https://instagram.com/online_marketingcreativo"
+                                    href="https://www.instagram.com/onlineagenciacreativa/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"
@@ -52,7 +52,7 @@ const Footer = () => {
                                     <i className="fab fa-instagram text-2xl lg:text-2xl xl:text-3xl"></i>
                                 </a>
                                 <a
-                                    href="https://facebook.com/online_marketingcreativo"
+                                    href="https://www.facebook.com/onlineagenciacreativa"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"
@@ -60,7 +60,7 @@ const Footer = () => {
                                     <i className="fab fa-facebook text-2xl lg:text-2xl xl:text-3xl"></i>
                                 </a>
                                 <a
-                                    href="https://www.tiktok.com/@online_marketingcreativo"
+                                    href="https://www.tiktok.com/@onlineagenciacreativa"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"
@@ -68,7 +68,7 @@ const Footer = () => {
                                     <i className="fab fa-tiktok text-2xl lg:text-2xl xl:text-3xl"></i>
                                 </a>
                                 <a
-                                    href="https://ar.pinterest.com/online_marketingcreativo/"
+                                    href="https://ar.pinterest.com/onlineagenciacreativa/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"
@@ -76,7 +76,7 @@ const Footer = () => {
                                     <i className="fab fa-pinterest text-2xl lg:text-2xl xl:text-3xl"></i>
                                 </a>
                                 <a
-                                    href="https://linkedin.com/company/online_marketingcreativo"
+                                    href="https://www.linkedin.com/company/onlineagenciacreativa"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-white hover:text-[#ACC7CC] transition-all duration-300 hover:scale-110 hover:-translate-y-1"

@@ -12,6 +12,7 @@ import story3 from '../assets/images/story3.jpg';
 import coffeeCup from '../assets/images/coffee-cup.png';
 import logoPortada from '../assets/images/logo-online-blanco.svg'
 import portadaImg from '../assets/images/portada-horizontal.png'
+import portadaVertical from '../assets/images/portada-vertical.png'
 import carrusel1 from '../assets/images/carrusel-inicio-1.png';
 import carrusel2 from '../assets/images/carrusel-inicio-2.png';
 import carrusel3 from '../assets/images/carrusel-inicio-3.png';
@@ -113,13 +114,13 @@ function Inicio() {
         <>
             {/* Wrapper solo para la hero section */}
             <div className="overflow-x-hidden">
-                <div className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
-                    style={{ backgroundImage: `url(${portadaImg})` }}>
+                <div 
+                    className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center bg-[url('/src/assets/images/portada-vertical.png')] xs:bg-[url('/src/assets/images/portada-vertical.png')] sm:bg-[url('/src/assets/images/portada-horizontal.png')]">
                     <img
                         ref={heroLogoRef}
                         src={logoPortada}
                         alt="Logo Portada"
-                        className="max-w-[90%] md:max-w-xl w-auto px-4 transition-opacity duration-200 animate-heroLogo"
+                        className="max-w-[70%] sm:max-w-[70%] md:max-w-xl w-auto px-4 transition-opacity duration-200 animate-heroLogo"
                         style={{ opacity: 1 }}
                     />
                 </div>
@@ -192,7 +193,7 @@ function Inicio() {
                 data-section="typewriter"
                 className="h-screen w-full bg-[#055749] flex items-center justify-center px-6"
             >
-                <div className="text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center max-w-5xl leading-relaxed">
+                <div className="text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-center max-w-5xl leading-relaxed">
                     <div className="relative min-h-[2.4em]">
                         <TypewriterText
                             phrases={[
@@ -215,7 +216,12 @@ function Inicio() {
             <div className="h-screen w-full">
                 <Swiper
                     modules={[Autoplay, Navigation]}
-                    slidesPerView={3}
+                    slidesPerView={1}
+                    breakpoints={{
+                        768: {  // md breakpoint
+                            slidesPerView: 3
+                        }
+                    }}
                     spaceBetween={0}
                     loop={true}
                     loopedSlides={3}
