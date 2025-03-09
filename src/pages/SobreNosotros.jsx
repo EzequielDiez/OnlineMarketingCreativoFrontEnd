@@ -12,19 +12,19 @@ import ayluImage from "../assets/images/aylen.png";
 function SobreNosotros() {
     return (
         <>
-            <div className="bg-[#fff] min-h-screen flex items-center justify-center px-4 py-8 pt-28 xs:pt-20 sm:pt-16 md:pt-20 lg:pt-32">
+            <div className="bg-[#fff] min-h-screen flex items-center justify-center px-4 py-8 pt-20 xs:pt-20 sm:pt-16 md:pt-20 lg:pt-32">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-advercase mb-8 md:mb-10 lg:mb-20">
                         ¿QUIENES SOMOS?
                     </h1>
                     <div className="max-w-7xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl mx-auto px-4 sm:pt-6">
-                        <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl font-archivo font-thin mb-6 md:mb-12">
+                        <p className="text-base sm:text-xl md:text-2xl lg:text-2xl font-archivo font-thin mb-6 md:mb-12">
                             Somos una agencia creativa que nació con la pasión de transformar marcas y hacerlas crecer en el mundo digital. Lo que comenzó como un proyecto personal se convirtió en un equipo de profesionales comprometidos con la innovación, la estrategia y el impacto.
                         </p>
-                        <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl font-archivo font-thin mb-6 md:mb-12">
+                        <p className="text-base sm:text-xl md:text-2xl lg:text-2xl font-archivo font-thin mb-6 md:mb-12">
                             Creemos en el poder de las ideas bien ejecutadas, en la importancia de conectar con las audiencias correctas y en el valor de cada marca que confía en nosotros. Nuestro equipo está formado por especialistas en diversas áreas.
                         </p>
-                        <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl font-archivo font-thin">
+                        <p className="text-base sm:text-xl md:text-2xl lg:text-2xl font-archivo font-thin">
                             Nos destacamos por nuestra creatividad, nuestra cercanía con cada cliente y nuestro enfoque estratégico. No solo brindamos servicios, sino que nos involucramos en cada proyecto como si fuera propio, trabajando con pasión, compromiso y una visión clara hacia el crecimiento.
                         </p>
                     </div>

@@ -62,7 +62,7 @@ function Header() {
                     <Link to="/" className="flex-shrink-0 pl-0">
                         <img
                             className={`w-auto transition-all duration-500
-                                ${hasScrolled ? 'h-10 sm:h-8 md:h-8 lg:h-10' : 'h-14 sm:h-11 md:h-10 lg:h-14'}`}
+                                ${hasScrolled ? 'h-8 xs:h-6 sm:h-8 md:h-8 lg:h-10' : 'h-9 xs:h-10 sm:h-11 md:h-10 lg:h-14'}`}
                             style={{
                                 opacity: isHomePage ? headerLogoOpacity : 1,
                                 transform: isHomePage ? `translate3d(0, ${(1 - headerLogoOpacity) * 20}px, 0) 
@@ -83,15 +83,15 @@ function Header() {
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
                     >
-                        <div className={`w-6 h-0.5 mb-1.5 transition-all duration-300 transform
+                        <div className={`w-5 xs:w-4 h-0.5 mb-1.5 transition-all duration-300 transform
                             ${hasScrolled ? 'bg-white' : 'bg-black'}
-                            ${isMenuOpen ? 'rotate-45 translate-y-2' : 'hover:w-5'}`}></div>
-                        <div className={`w-6 h-0.5 mb-1.5 transition-all duration-300
+                            ${isMenuOpen ? 'rotate-45 translate-y-2' : 'hover:w-4 xs:hover:w-3'}`}></div>
+                        <div className={`w-5 xs:w-4 h-0.5 mb-1.5 transition-all duration-300
                             ${hasScrolled ? 'bg-white' : 'bg-black'}
-                            ${isMenuOpen ? 'opacity-0' : 'hover:w-4'}`}></div>
-                        <div className={`w-6 h-0.5 transition-all duration-300 transform
+                            ${isMenuOpen ? 'opacity-0' : 'hover:w-3 xs:hover:w-2'}`}></div>
+                        <div className={`w-5 xs:w-4 h-0.5 transition-all duration-300 transform
                             ${hasScrolled ? 'bg-white' : 'bg-black'}
-                            ${isMenuOpen ? '-rotate-45 -translate-y-2' : 'hover:w-3'}`}></div>
+                            ${isMenuOpen ? '-rotate-45 -translate-y-2' : 'hover:w-2 xs:hover:w-1'}`}></div>
                     </button>
 
                     {/* Desktop menu */}
