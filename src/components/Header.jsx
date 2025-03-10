@@ -31,14 +31,14 @@ function Header() {
 
         const handleHeroLogoScroll = (event) => {
             if (!isHomePage) return;
-            
+
             const { opacity } = event.detail;
             setHeaderLogoOpacity(1 - opacity);
         };
 
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('heroLogoScroll', handleHeroLogoScroll);
-        
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('heroLogoScroll', handleHeroLogoScroll);
@@ -54,7 +54,7 @@ function Header() {
     };
 
     return (
-        <nav className={`w-full fixed top-0 z-50 transition-all duration-500 ease-in-out
+        <nav className={`w-full fixed top-0 z-[60] transition-all duration-500 ease-in-out
             ${hasScrolled ? 'bg-[#000] shadow-lg backdrop-blur-sm bg-opacity-90' : 'bg-transparent'}`}>
             <div className="max-w-[95%] mx-auto px-4">
                 <div className={`flex items-center justify-between transition-all duration-500
@@ -112,11 +112,14 @@ function Header() {
                     </div>
 
                     {/* Mobile menu */}
-                    <div className={`md:hidden absolute top-16 left-0 w-full bg-[#000] transition-all duration-500 ease-in-out backdrop-blur-sm bg-opacity-95
+                    <div className={`md:hidden absolute top-full left-0 right-0 transition-all duration-500 ease-in-out
+                        ${hasScrolled
+                            ? 'bg-[#000] text-white backdrop-blur-sm bg-opacity-95'
+                            : 'bg-[#fff] text-black'}
                         ${isMenuOpen
                             ? 'opacity-100 visible translate-y-0'
                             : 'opacity-0 invisible -translate-y-4'}`}>
-                        <div className="flex flex-col items-center gap-6 py-8">
+                        <div className="flex flex-col items-center py-6">
                             {navigationLinks.map(({ path, label }) => (
                                 <MobileNavLink
                                     key={path}
@@ -148,8 +151,8 @@ function NavLink({ to, children, isHomePage, headerLogoOpacity, isInitialLoad, h
                 text-[1.04vw] sm:text-[13px] md:text-[11px] lg:text-[12px] xl:text-[14px] 2xl:text-[16px] leading-[1.25] tracking-normal
                 px-2 sm:px-2 md:px-2 lg:px-4
                 transform hover:scale-105 hover:shadow-md hover:rotate-2
-                ${hasScrolled 
-                    ? 'h-[3.5vh] min-h-[28px] md:min-h-[26px] lg:min-h-[30px] max-h-[32px]' 
+                ${hasScrolled
+                    ? 'h-[3.5vh] min-h-[28px] md:min-h-[26px] lg:min-h-[30px] max-h-[32px]'
                     : 'h-[4.2vh] min-h-[32px] md:min-h-[30px] lg:min-h-[35px] max-h-[38px]'}
                 ${isHomePage
                     ? 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-black'
@@ -175,25 +178,11 @@ function MobileNavLink({ to, children, isHomePage, headerLogoOpacity, onClick, i
         <Link
             to={to}
             onClick={onClick}
-            className={`relative overflow-hidden font-archivo uppercase text-lg w-4/5 text-center py-3
-                transition-all duration-300 ease-in-out
-                border-b-2 border-transparent
-                ${isHomePage
-                    ? 'text-white hover:border-white'
-                    : hasScrolled
-                        ? 'text-white hover:border-white'
-                        : 'text-black hover:border-black'
-                }
-                after:content-[''] after:absolute after:bottom-0 after:left-0
-                after:w-full after:h-[2px] after:bg-current
-                after:transform after:scale-x-0 after:origin-right
-                after:transition-transform after:duration-300 after:ease-in-out
-                hover:after:scale-x-100 hover:after:origin-left`}
-            style={isHomePage ? {
-                opacity: isInitialLoad ? 0 : headerLogoOpacity,
-                transform: `scale(${Math.max(0.95, headerLogoOpacity)})`,
-                visibility: headerLogoOpacity === 0 ? 'hidden' : 'visible'
-            } : undefined}
+            className={`w-full py-4 text-center font-archivo uppercase text-base
+                hover:bg-opacity-10
+                ${hasScrolled
+                    ? 'hover:bg-white'
+                    : 'hover:bg-black'}`}
         >
             {children}
         </Link>
