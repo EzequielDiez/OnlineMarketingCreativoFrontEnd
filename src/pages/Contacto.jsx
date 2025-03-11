@@ -43,12 +43,12 @@ function Contacto() {
                     <img
                         src={contactoImage}
                         alt="Contacto"
-                        className="w-auto h-auto max-w-[90vw] max-h-[100vh] xs:max-w-[90vw] xs:max-h-[90vh] sm:max-w-[90vw] sm:max-h-[90vh] md:max-w-[90vw] md:max-h-[90vh] lg:max-w-[80vw] lg:max-h-[80vh] xl:max-w-[85vw] xl:max-h-[85vh] 2xl:max-w-[80vw] 2xl:max-h-[70vh] object-contain mx-auto"
+                        className="w-auto h-auto max-w-[90vw] max-h-[100vh] xs:max-w-[90vw] xs:max-h-[90vh] sm:max-w-[90vw] sm:max-h-[90vh] md:max-w-[90vw] md:max-h-[90vh] lg:max-w-[80vw] lg:max-h-[80vh] xl:max-w-[85vw] xl:max-h-[85vh] 2xl:max-w-[80vw] 2xl:max-h-[70vh] object-contain mx-auto mt-10 xs:mt-28 sm:mt-24 md:mt-28 lg:mt-30 xl:mt-6 2xl:mt-6"
                     />
                 </div>
             </div>
             <div className="flex justify-center w-full">
-                <form onSubmit={handleSubmit} className="py-8 xs:py-2 sm:py-6 md:py-16 lg:py-12 xl:py-12 2xl:py-24 px-4 xs:pl-16 sm:pl-24 md:pl-20 lg:pl-40 xl:pl-40 2xl:pl-40 text-base xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-light space-y-3 xs:space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-6 xl:space-y-6 2xl:space-y-6 w-full xs:w-[90%] sm:w-[90%] md:w-[80%] lg:w-[80%] xl:w-[70%] 2xl:w-[70%]">
+                <form onSubmit={handleSubmit} className="py-8 xs:py-16 sm:py-16 md:py-28 lg:py-20 xl:py-12 2xl:py-24 px-4 xs:pl-16 sm:pl-24 md:pl-20 lg:pl-40 xl:pl-40 2xl:pl-40 text-base xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-light space-y-3 xs:space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-6 xl:space-y-6 2xl:space-y-6 w-full xs:w-[90%] sm:w-[90%] md:w-[80%] lg:w-[80%] xl:w-[70%] 2xl:w-[70%]">
                     <p>Hola!</p>
                     <p className="flex flex-col xs:flex-row xs:items-center gap-2 xs:gap-0">
                         <span>Me llamo</span>

@@ -79,7 +79,7 @@ function Servicios({ handleWhatsAppClick }) {
     return (
         <>
             <div className="bg-[#fff] min-h-screen flex flex-col py-8 xs:py-12">
-                <div className="w-full mt-16 xs:mt-20 lg:mt-28">
+                <div className="w-full mt-20 xs:mt-20 lg:mt-28">
                     <img
                         src={servicesImageVertical}
                         alt="Servicios"
