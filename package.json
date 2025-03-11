@@ -9,13 +9,16 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "postbuild": "react-snap"
   },
   "dependencies": {
     "framer-motion": "^12.4.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.0",
     "react-router-dom": "^6.26.2",
+    "react-snap": "^1.23.0",
     "swiper": "^11.2.5"
   },
   "devDependencies": {
@@ -33,5 +36,8 @@
     "postcss": "^8.4.x",
     "tailwindcss": "^3.4.x",
     "vite": "^5.4.1"
+  },
+  "reactSnap": {
+    "source": "docs"
   }
 }

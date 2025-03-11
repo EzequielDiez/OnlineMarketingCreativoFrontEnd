@@ -1,0 +1,20 @@
+# Reglas globales para todos los robots
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /api/
+
+# Bloquear bots específicos que pueden consumir recursos
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://onlineagenciacreativa.com/sitemap.xml 

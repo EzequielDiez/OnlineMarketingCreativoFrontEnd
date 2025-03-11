@@ -52,28 +52,39 @@ function Inicio() {
     }, []);
 
     useEffect(() => {
-        const throttledScroll = throttle(handleCupAnimation, 16); // ~60fps
-        window.addEventListener('scroll', throttledScroll);
-        return () => window.removeEventListener('scroll', throttledScroll);
+        // Usar requestAnimationFrame para optimizar el rendimiento del scroll
+        let rafId;
+        const handleScroll = () => {
+            cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(() => {
+                handleCupAnimation();
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            cancelAnimationFrame(rafId);
+        };
     }, [handleCupAnimation]);
 
     useEffect(() => {
         const updateHeaderLogo = () => {
             if (!heroLogoRef.current) return;
-            
+
             const logoRect = heroLogoRef.current.getBoundingClientRect();
             const scrollPosition = window.scrollY;
             const logoCenter = logoRect.top + (logoRect.height / 2);
             const viewportCenter = window.innerHeight / 2;
-            
+
             // Calculate opacity based on scroll position - fade out faster
             const opacity = Math.max(0, Math.min(1, 1 - (scrollPosition / (window.innerHeight * 0.3))));
-            
+
             // Update hero logo opacity
             if (heroLogoRef.current) {
                 heroLogoRef.current.style.opacity = opacity;
             }
-            
+
             // Dispatch custom event with logo information
             window.dispatchEvent(new CustomEvent('heroLogoScroll', {
                 detail: {
@@ -86,7 +97,7 @@ function Inicio() {
 
         window.addEventListener('scroll', updateHeaderLogo);
         updateHeaderLogo(); // Initial call
-        
+
         return () => window.removeEventListener('scroll', updateHeaderLogo);
     }, []);
 
@@ -114,7 +125,7 @@ function Inicio() {
         <>
             {/* Wrapper solo para la hero section */}
             <div className="overflow-x-hidden">
-                <div 
+                <div
                     className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center bg-[url('/src/assets/images/portada-vertical.png')] xs:bg-[url('/src/assets/images/portada-vertical.png')] sm:bg-[url('/src/assets/images/portada-horizontal.png')]">
                     <img
                         ref={heroLogoRef}
@@ -162,7 +173,7 @@ function Inicio() {
                     {
                         image: story2,
                         title: "Siempre hay algo que mejorar",
-                        
+
                         description: "Pero, ¿qué pasaría si te dijeran que no estás solo? Esa confusión, esa sensación de caos, es más común de lo que parece."
                     },
                     {
@@ -188,7 +199,7 @@ function Inicio() {
             </div>
 
             {/* Nueva sección con frase */}
-            <div 
+            <div
                 ref={typewriterSectionRef}
                 data-section="typewriter"
                 className="h-screen w-full bg-[#055749] flex items-center justify-center px-6"

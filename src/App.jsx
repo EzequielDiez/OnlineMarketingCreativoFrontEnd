@@ -1,13 +1,30 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, memo, useCallback, lazy, Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Inicio from './pages/Inicio';
-import SobreNosotros from './pages/SobreNosotros';
-import Servicios from './pages/Servicios';
-import Contacto from './pages/Contacto';
-import Portfolio from './pages/Portfolio'; // Kept for future use
+
+// Lazy load de las páginas
+const Inicio = lazy(() => import('./pages/Inicio'));
+const SobreNosotros = lazy(() => import('./pages/SobreNosotros'));
+const Servicios = lazy(() => import('./pages/Servicios'));
+const Contacto = lazy(() => import('./pages/Contacto'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
+
+// Memoizar el botón de WhatsApp
+const WhatsAppButton = memo(({ onClick, showWhatsApp, inverseColors, whatsappButtonRef }) => (
+  <a
+    ref={whatsappButtonRef}
+    href="#"
+    onClick={onClick}
+    className={`fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center cursor-pointer
+      ${showWhatsApp ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20 pointer-events-none'}
+      ${inverseColors ? 'bg-white' : 'bg-[#055749] text-white'}`}
+    aria-label="Chat on WhatsApp"
+  >
+    <i className={`fab fa-whatsapp text-4xl ${inverseColors ? 'text-[#055749]' : 'text-white'}`}></i>
+  </a>
+));
 
 function App() {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
@@ -16,14 +33,15 @@ function App() {
   const whatsappButtonRef = useRef(null);
   const location = useLocation();
 
-  const handleWhatsAppClick = (e) => {
+  // Memoizar el handleWhatsAppClick
+  const memoizedHandleWhatsAppClick = useCallback((e) => {
     e.preventDefault();
     const phoneNumber = '5491124822378';
     const message = 'Hola, quiero más información de...';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${encodedMessage}&type=phone_number&app_absent=0`;
     window.location.href = whatsappUrl;
-  };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,13 +57,13 @@ function App() {
         if (greenSection) {
           const greenSectionRect = greenSection.getBoundingClientRect();
           const buttonRect = whatsappButtonRef.current.getBoundingClientRect();
-          
+
           // Verificar si el botón está dentro de la sección verde
           const buttonBottom = buttonRect.bottom;
-          const isButtonInGreenSection = 
-            buttonBottom >= greenSectionRect.top && 
+          const isButtonInGreenSection =
+            buttonBottom >= greenSectionRect.top &&
             buttonBottom <= greenSectionRect.bottom;
-            
+
           setInverseColors(isButtonInGreenSection);
         }
       } else {
@@ -54,7 +72,7 @@ function App() {
 
       // Mostrar/ocultar botón de WhatsApp
       setShowWhatsApp(
-        scrollPosition > 200 && 
+        scrollPosition > 200 &&
         footerTop > windowHeight - 100
       );
     };
@@ -74,33 +92,24 @@ function App() {
   return (
     <div className="relative">
       <Header />
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-        <Route path="/servicios" element={<Servicios handleWhatsAppClick={handleWhatsAppClick} />} />
-        {/* <Route path="/portfolio" element={<Portfolio />} /> */}
-        <Route path="/contacto" element={<Contacto />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+          <Route path="/servicios" element={<Servicios handleWhatsAppClick={memoizedHandleWhatsAppClick} />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </Suspense>
       <div ref={footerRef}>
         <Footer />
       </div>
-      
-      {/* WhatsApp floating button */}
-      <a
-        ref={whatsappButtonRef}
-        href="#"
-        onClick={handleWhatsAppClick}
-        className={`fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center cursor-pointer
-          ${showWhatsApp 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-20 pointer-events-none'}
-          ${inverseColors 
-            ? 'bg-white' 
-            : 'bg-[#055749] text-white'}`}
-        aria-label="Chat on WhatsApp"
-      >
-        <i className={`fab fa-whatsapp text-4xl ${inverseColors ? 'text-[#055749]' : 'text-white'}`}></i>
-      </a>
+
+      <WhatsAppButton
+        onClick={memoizedHandleWhatsAppClick}
+        showWhatsApp={showWhatsApp}
+        inverseColors={inverseColors}
+        whatsappButtonRef={whatsappButtonRef}
+      />
     </div>
   )
 }

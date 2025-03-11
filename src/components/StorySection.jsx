@@ -21,7 +21,7 @@ function StorySection({
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-custom-beige to-transparent rounded-full translate-x-1/2 translate-y-1/2" />
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -32,7 +32,7 @@ function StorySection({
           items-center gap-6 lg:gap-16 py-8 lg:py-8`}
       >
         {/* Contenedor de texto combinado para lg+ y separado para md- */}
-        <motion.div 
+        <motion.div
           className="w-full lg:w-[45%] text-gray-800 space-y-6 lg:space-y-8 text-center lg:text-left"
           initial={{ opacity: 0, x: align === 'left' ? 50 : -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -57,7 +57,7 @@ function StorySection({
         </motion.div>
 
         {/* Imagen */}
-        <motion.div 
+        <motion.div
           className="w-[85%] sm:w-[80%] md:w-[75%] lg:w-[55%] relative order-2 lg:order-none mx-auto lg:mx-0"
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}

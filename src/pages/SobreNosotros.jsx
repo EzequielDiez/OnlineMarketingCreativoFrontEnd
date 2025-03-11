@@ -31,7 +31,7 @@ function SobreNosotros() {
                 </div>
             </div>
             <div className="w-full bg-[#fff] pb-20 sm:pb-32">
-                <motion.div 
+                <motion.div
                     className="relative"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -53,7 +53,7 @@ function SobreNosotros() {
                     <img src={feliImage} alt="Feli Imagen" className="w-[95%] md:w-[90%] lg:w-[60%] 2xl:w-[60%]" />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="relative mt-20 xs:mt-4 sm:-mt-4 md:mt-8 lg:mt-2 xl:-mt-10 2xl:-mt-16"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -74,7 +74,7 @@ function SobreNosotros() {
                     <img src={nanoImage} alt="Nano Imagen" className="w-[95%] md:w-[90%] lg:w-[60%] 2xl:w-[60%]" />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="relative mt-28 xs:mt-10 sm:mt-4 md:mt-20 lg:mt-10 xl:mt-2 2xl:-mt-2"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -96,7 +96,7 @@ function SobreNosotros() {
                     <img src={nachoImage} alt="Nacho Imagen" className="w-[95%] md:w-[90%] lg:w-[60%] 2xl:w-[60%]" />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="relative mt-20 xs:mt-2 sm:-mt-4 md:mt-6 lg:mt-2 xl:-mt-10 2xl:-mt-16"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -117,7 +117,7 @@ function SobreNosotros() {
                     <img src={gastiImage} alt="Gasti Imagen" className="w-[95%] md:w-[90%] lg:w-[60%] 2xl:w-[60%]" />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="relative mt-32 xs:mt-16 sm:mt-12 md:mt-20 lg:mt-10 xl:mt-2 2xl:-mt-2"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -138,7 +138,7 @@ function SobreNosotros() {
                     <img src={luluImage} alt="Lulu Imagen" className="w-[95%] md:w-[90%] lg:w-[60%] 2xl:w-[60%]" />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="relative mt-32 xs:mt-16 sm:mt-2 md:mt-24 lg:mt-6 xl:-mt-2 2xl:-mt-6 mb-8 sm:mb-0"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -151,15 +151,15 @@ function SobreNosotros() {
                             <p className="text-lg sm:text-2xl md:text-3xl lg:text-3xl 2xl:text-5xl font-sweetie">(AGUS, AUSTIN, MARTITEGUI)</p>
                         </div>
                         <p className="text-base md:text-xl lg:text-2xl 2xl:text-2xl font-archivo font-medium mt-2 sm:mt-3 md:mt-4 text-[#6B6B6B]">
-                            Productor Audiovisual | Fotógrafo | Social Media Manager 
+                            Productor Audiovisual | Fotógrafo | Social Media Manager
                         </p>
                         <p className="text-sm md:text-lg lg:text-xl 2xl:text-xl font-archivo font-thin mt-2 sm:mt-3 md:mt-4 max-w-[400px] lg:max-w-[1000px]">
-                        La mente creativa de la agencia, siempre en busca de nuevos proyectos. Al que madruga, Dios lo ayuda… pero Agus ya había terminado su lista de pendientes antes de que Dios abriera los ojos.                            </p>
+                            La mente creativa de la agencia, siempre en busca de nuevos proyectos. Al que madruga, Dios lo ayuda… pero Agus ya había terminado su lista de pendientes antes de que Dios abriera los ojos.                            </p>
                     </div>
                     <img src={agusImage} alt="Agus Imagen" className="w-[95%] md:w-[90%] lg:w-[60%] 2xl:w-[60%]" />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="relative mt-32 xs:mt-12 sm:-mt-4 md:mt-10 lg:mt-4 xl:-mt-8 2xl:-mt-16 mb-12 sm:mb-0"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
