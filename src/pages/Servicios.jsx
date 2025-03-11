@@ -78,9 +78,8 @@ function Servicios({ handleWhatsAppClick }) {
 
     return (
         <>
-            <div className="bg-[#fff] h-screen flex flex-col">
-                {/* Contenedor de imagen con transición - ajustamos el padding superior */}
-                <div className="w-full mt-28">
+            <div className="bg-[#fff] min-h-screen flex flex-col py-8 xs:py-12">
+                <div className="w-full mt-16 xs:mt-20 lg:mt-28">
                     <img
                         src={servicesImageVertical}
                         alt="Servicios"
@@ -93,8 +92,7 @@ function Servicios({ handleWhatsAppClick }) {
                     />
                 </div>
 
-                {/* Título con flechas - Ajustamos el padding superior */}
-                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 pt-20 sm:pt-20 md:pt-20 lg:pt-20 xl:pt-24 2xl:pt-28">
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-8 xs:py-10 sm:py-12 lg:py-16 mt-8 xs:mt-12 sm:mt-16 lg:mt-20">
                     <div className="flex items-center justify-between">
                         <button
                             onClick={handlePrevService}
@@ -121,15 +119,13 @@ function Servicios({ handleWhatsAppClick }) {
                         </button>
                     </div>
 
-                    {/* Descripción */}
-                    <p className="max-w-[1200px] mx-auto text-sm xs:text-base sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] 2xl:text-[24px] font-archivo font-thin text-center mt-3 xs:mt-4 sm:mt-8 md:mt-6 lg:mt-8 xl:mt-12 2xl:mt-12">
+                    <p className="max-w-[1200px] mx-auto text-base xs:text-base sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[26px] font-archivo font-thin text-center mt-6 xs:mt-8 sm:mt-12 md:mt-14 lg:mt-16 xl:mt-20 2xl:mt-24">
                         {services[currentService].description}
                     </p>
                 </div>
 
-                {/* Botones de servicios */}
-                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-6 xs:py-8 mt-4 xs:mt-6 sm:mt-12 md:mt-10 lg:mt-14 xl:mt-18 2xl:mt-20">
-                    <div className="flex flex-wrap gap-1 xs:gap-1.5 sm:gap-2 md:gap-4 justify-center">
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-4 xs:py-6 mt-4 xs:mt-6 sm:mt-8 lg:mt-14">
+                    <div className="flex flex-wrap gap-2 xs:gap-3 sm:gap-4 md:gap-6 justify-center py-8 xs:py-10 sm:py-12 lg:py-16">
                         {services.map((service, index) => (
                             <button
                                 key={index}
@@ -154,10 +150,8 @@ function Servicios({ handleWhatsAppClick }) {
                 </div>
             </div>
 
-            {/* Sección de Servicio Estrella */}
-            <div className="bg-[#000] py-12 xs:py-16 sm:py-[60px] md:py-[80px] lg:py-[100px] xl:py-[115px] 2xl:py-[120px]">
+            <div className="bg-[#000] py-8 xs:py-12 sm:py-16 lg:py-[100px]">
                 <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto">
-                    {/* Título y descripción principal */}
                     <div className="text-center mb-8 xs:mb-12">
                         <h2 className="text-[#fff] font-advercase text-2xl xs:text-3xl sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] 2xl:text-[52px] mb-4 xs:mb-6">
                             GESTION INTEGRAL DE MARCA
@@ -170,7 +164,6 @@ function Servicios({ handleWhatsAppClick }) {
                         </p>
                     </div>
 
-                    {/* Lista de servicios incluidos */}
                     <div className="bg-[#fff] rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 2xl:p-16 max-w-[1200px] mx-auto">
                         <p className="text-[#000] font-advercase text-lg xs:text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-4 xs:mb-6">
                             Incluye:
@@ -211,8 +204,7 @@ function Servicios({ handleWhatsAppClick }) {
                 </div>
             </div>
 
-            {/* Nueva sección "Hagamos que tu marca crezca" */}
-            <div className="min-h-screen flex flex-col items-center justify-center gap-4 xs:gap-6 sm:gap-8 md:gap-10 lg:gap-12 bg-[#fff] text-black py-8 xs:py-12 sm:py-16 md:py-20">
+            <div className="min-h-[60vh] xs:min-h-screen flex flex-col items-center justify-center gap-4 xs:gap-6 sm:gap-8 bg-[#fff] text-black py-12 xs:py-16">
                 <div className="flex flex-col items-center px-4 text-center">
                     <p className="font-perfect text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Hagamos que tu marca</p>
                     <p className="font-akira text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl text-transparent -mt-1 xs:-mt-2 sm:-mt-3 md:-mt-3 lg:-mt-3 xl:-mt-4"
@@ -250,12 +242,12 @@ function Servicios({ handleWhatsAppClick }) {
                     <img
                         src={iceLeft}
                         alt="Ice Left"
-                        className="absolute -left-3 xs:-left-4 sm:-left-6 md:-left-6 lg:-left-10 z-20 w-[65%] h-full object-contain object-right transition-transform duration-300 group-hover:-translate-x-full"
+                        className="absolute -left-3 xs:-left-4 sm:-left-6 md:-left-6 lg:-left-10 xl:-left-8 z-20 w-[65%] h-full object-contain object-right transition-transform duration-300 group-hover:-translate-x-full"
                     />
                     <img
                         src={iceRight}
                         alt="Ice Right"
-                        className="absolute -right-4 xs:-right-6 sm:-right-9 md:-right-10 lg:-right-10 -top-1 sm:-top-1.5 z-20 w-[65%] h-full object-contain object-left transition-transform duration-300 group-hover:translate-x-full"
+                        className="absolute -right-4 xs:-right-6 sm:-right-9 md:-right-10 lg:-right-10 xl:-right-8 -top-1 sm:-top-1.5 z-20 w-[65%] h-full object-contain object-left transition-transform duration-300 group-hover:translate-x-full"
                     />
                 </div>
 
