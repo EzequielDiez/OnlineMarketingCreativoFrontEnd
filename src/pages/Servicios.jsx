@@ -124,7 +124,7 @@ function Servicios({ handleWhatsAppClick }) {
                     </p>
                 </div>
 
-                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-4 xs:py-6 mt-4 xs:mt-6 sm:mt-8 lg:mt-14">
+                <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto px-4 py-4 xs:py-6 mt-4 xs:mt-6 sm:mt-8 lg:mt-2">
                     <div className="flex flex-wrap gap-2 xs:gap-3 sm:gap-4 md:gap-6 justify-center py-8 xs:py-10 sm:py-12 lg:py-16">
                         {services.map((service, index) => (
                             <button
