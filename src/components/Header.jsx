@@ -59,7 +59,11 @@ function Header() {
             <div className="max-w-[95%] mx-auto px-4">
                 <div className={`flex items-center justify-between transition-all duration-500
                     ${hasScrolled ? 'h-20' : 'h-28'}`}>
-                    <Link to="/" className="flex-shrink-0 pl-0">
+                    <Link
+                        to="/"
+                        className="flex-shrink-0 pl-0"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
                         <img
                             className={`w-auto transition-all duration-500
                                 ${hasScrolled ? 'h-8 xs:h-6 sm:h-8 md:h-8 lg:h-10' : 'h-9 xs:h-10 sm:h-11 md:h-10 lg:h-14'}`}
