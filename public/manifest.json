@@ -1,0 +1,21 @@
+{
+  "name": "Online Agencia Creativa",
+  "short_name": "Online",
+  "description": "Transformamos marcas y las hacemos crecer en el mundo digital",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/src/assets/images/isologo-online-negro.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/src/assets/images/isologo-online-negro.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+} 

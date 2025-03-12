@@ -1,0 +1,217 @@
+{
+  "_proxy-YFS65XUQ.js": {
+    "file": "assets/proxy-YFS65XUQ.js",
+    "name": "proxy",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/main-C0S4jgLg.js",
+    "name": "main",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/pages/Inicio.jsx",
+      "src/pages/SobreNosotros.jsx",
+      "src/pages/Servicios.jsx",
+      "src/pages/Contacto.jsx",
+      "src/pages/Portfolio.jsx"
+    ],
+    "css": [
+      "assets/main-0t_LrSKn.css"
+    ],
+    "assets": [
+      "assets/logo-online-blanco-C7EQvBKR.svg",
+      "assets/portada-vertical-B1HJwk71.png",
+      "assets/portada-horizontal-BuIxsld3.png",
+      "assets/isologo-online-negro-D5rPuRHg.svg",
+      "assets/isologo-online-blanco-BsNgnjB5.svg"
+    ]
+  },
+  "src/assets/images/agustin.png": {
+    "file": "assets/agustin-CgLWH_Rx.png",
+    "src": "src/assets/images/agustin.png"
+  },
+  "src/assets/images/aylen.png": {
+    "file": "assets/aylen-e6ILLSMH.png",
+    "src": "src/assets/images/aylen.png"
+  },
+  "src/assets/images/banner-servicios-horizontal.png": {
+    "file": "assets/banner-servicios-horizontal-CB3Dd40P.png",
+    "src": "src/assets/images/banner-servicios-horizontal.png"
+  },
+  "src/assets/images/banner-servicios-vertical.png": {
+    "file": "assets/banner-servicios-vertical-CZTHtEvU.png",
+    "src": "src/assets/images/banner-servicios-vertical.png"
+  },
+  "src/assets/images/button-contactanos.png": {
+    "file": "assets/button-contactanos-D0XJzXKY.png",
+    "src": "src/assets/images/button-contactanos.png"
+  },
+  "src/assets/images/button-contactanos2.png": {
+    "file": "assets/button-contactanos2-CHX0IsDg.png",
+    "src": "src/assets/images/button-contactanos2.png"
+  },
+  "src/assets/images/carrusel-inicio-1.png": {
+    "file": "assets/carrusel-inicio-1-ttKS6usr.png",
+    "src": "src/assets/images/carrusel-inicio-1.png"
+  },
+  "src/assets/images/carrusel-inicio-2.png": {
+    "file": "assets/carrusel-inicio-2-Pbej-ukk.png",
+    "src": "src/assets/images/carrusel-inicio-2.png"
+  },
+  "src/assets/images/carrusel-inicio-3.png": {
+    "file": "assets/carrusel-inicio-3-BDrzSlE_.png",
+    "src": "src/assets/images/carrusel-inicio-3.png"
+  },
+  "src/assets/images/coffee-cup.png": {
+    "file": "assets/coffee-cup-CoRbxG5E.png",
+    "src": "src/assets/images/coffee-cup.png"
+  },
+  "src/assets/images/ezequiel.png": {
+    "file": "assets/ezequiel-B7sr5n7W.png",
+    "src": "src/assets/images/ezequiel.png"
+  },
+  "src/assets/images/felicitas.png": {
+    "file": "assets/felicitas-Od-qy34c.png",
+    "src": "src/assets/images/felicitas.png"
+  },
+  "src/assets/images/gaston.png": {
+    "file": "assets/gaston-D9BVTLf0.png",
+    "src": "src/assets/images/gaston.png"
+  },
+  "src/assets/images/ice-left2.png": {
+    "file": "assets/ice-left2-BBQWVEkd.png",
+    "src": "src/assets/images/ice-left2.png"
+  },
+  "src/assets/images/ice-right2.png": {
+    "file": "assets/ice-right2-DbBW6RFw.png",
+    "src": "src/assets/images/ice-right2.png"
+  },
+  "src/assets/images/ignacio.png": {
+    "file": "assets/ignacio-BtRvQCDy.png",
+    "src": "src/assets/images/ignacio.png"
+  },
+  "src/assets/images/imagen-contacto.png": {
+    "file": "assets/imagen-contacto-CPiJI_nE.png",
+    "src": "src/assets/images/imagen-contacto.png"
+  },
+  "src/assets/images/isologo-online-blanco.svg": {
+    "file": "assets/isologo-online-blanco-BsNgnjB5.svg",
+    "src": "src/assets/images/isologo-online-blanco.svg"
+  },
+  "src/assets/images/isologo-online-negro.svg": {
+    "file": "assets/isologo-online-negro-D5rPuRHg.svg",
+    "src": "src/assets/images/isologo-online-negro.svg"
+  },
+  "src/assets/images/logo-online-blanco.svg": {
+    "file": "assets/logo-online-blanco-C7EQvBKR.svg",
+    "src": "src/assets/images/logo-online-blanco.svg"
+  },
+  "src/assets/images/lourdes.png": {
+    "file": "assets/lourdes-DEv8vLgS.png",
+    "src": "src/assets/images/lourdes.png"
+  },
+  "src/assets/images/portada-horizontal.png": {
+    "file": "assets/portada-horizontal-BuIxsld3.png",
+    "src": "src/assets/images/portada-horizontal.png"
+  },
+  "src/assets/images/portada-vertical.png": {
+    "file": "assets/portada-vertical-B1HJwk71.png",
+    "src": "src/assets/images/portada-vertical.png"
+  },
+  "src/assets/images/story1.jpg": {
+    "file": "assets/story1-kvM0uKWo.jpg",
+    "src": "src/assets/images/story1.jpg"
+  },
+  "src/assets/images/story2.jpg": {
+    "file": "assets/story2-GRQthLrf.jpg",
+    "src": "src/assets/images/story2.jpg"
+  },
+  "src/assets/images/story3.jpg": {
+    "file": "assets/story3-CKz7RDrv.jpg",
+    "src": "src/assets/images/story3.jpg"
+  },
+  "src/pages/Contacto.jsx": {
+    "file": "assets/Contacto-xrVcFgON.js",
+    "name": "Contacto",
+    "src": "src/pages/Contacto.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "assets": [
+      "assets/imagen-contacto-CPiJI_nE.png"
+    ]
+  },
+  "src/pages/Inicio.jsx": {
+    "file": "assets/Inicio-BL7wE_on.js",
+    "name": "Inicio",
+    "src": "src/pages/Inicio.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_proxy-YFS65XUQ.js"
+    ],
+    "css": [
+      "assets/Inicio-DuKL_TpO.css"
+    ],
+    "assets": [
+      "assets/coffee-cup-CoRbxG5E.png",
+      "assets/story1-kvM0uKWo.jpg",
+      "assets/story2-GRQthLrf.jpg",
+      "assets/story3-CKz7RDrv.jpg",
+      "assets/carrusel-inicio-1-ttKS6usr.png",
+      "assets/carrusel-inicio-2-Pbej-ukk.png",
+      "assets/carrusel-inicio-3-BDrzSlE_.png"
+    ]
+  },
+  "src/pages/Portfolio.jsx": {
+    "file": "assets/Portfolio-CwSrj-n0.js",
+    "name": "Portfolio",
+    "src": "src/pages/Portfolio.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "assets": [
+      "assets/button-contactanos-D0XJzXKY.png"
+    ]
+  },
+  "src/pages/Servicios.jsx": {
+    "file": "assets/Servicios-jo0rIeyW.js",
+    "name": "Servicios",
+    "src": "src/pages/Servicios.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "assets": [
+      "assets/banner-servicios-horizontal-CB3Dd40P.png",
+      "assets/banner-servicios-vertical-CZTHtEvU.png",
+      "assets/button-contactanos2-CHX0IsDg.png",
+      "assets/ice-left2-BBQWVEkd.png",
+      "assets/ice-right2-DbBW6RFw.png"
+    ]
+  },
+  "src/pages/SobreNosotros.jsx": {
+    "file": "assets/SobreNosotros-B6obfTQs.js",
+    "name": "SobreNosotros",
+    "src": "src/pages/SobreNosotros.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_proxy-YFS65XUQ.js"
+    ],
+    "assets": [
+      "assets/felicitas-Od-qy34c.png",
+      "assets/ezequiel-B7sr5n7W.png",
+      "assets/ignacio-BtRvQCDy.png",
+      "assets/gaston-D9BVTLf0.png",
+      "assets/lourdes-DEv8vLgS.png",
+      "assets/agustin-CgLWH_Rx.png",
+      "assets/aylen-e6ILLSMH.png"
+    ]
+  }
+}

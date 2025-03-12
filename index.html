@@ -49,6 +49,21 @@
       media="(prefers-color-scheme: dark)" 
     />
     
+    <script type="text/javascript">
+      // Script de fallback para manejar recargas de página
+      (function() {
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect && redirect != location.href) {
+          sessionStorage.removeItem('redirect');
+          history.replaceState(null, null, redirect);
+        }
+        
+        window.addEventListener('beforeunload', function() {
+          sessionStorage.setItem('redirect', location.href);
+        });
+      })();
+    </script>
+    
     <title>Online Agencia Creativa | Marketing Digital y Diseño Web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     

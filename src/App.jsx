@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useEffect, useRef, memo, useCallback, lazy, Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './components/Header';
@@ -98,6 +98,7 @@ function App() {
           <Route path="/sobre-nosotros" element={<SobreNosotros />} />
           <Route path="/servicios" element={<Servicios handleWhatsAppClick={memoizedHandleWhatsAppClick} />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
       <div ref={footerRef}>
