@@ -77,7 +77,7 @@ function Servicios({ handleWhatsAppClick }) {
     };
 
     return (
-        <>
+        <div className="opacity-0 animate-fadeIn">
             <div className="bg-[#fff] min-h-screen flex flex-col py-8 xs:py-12">
                 <div className="w-full mt-20 xs:mt-20 lg:mt-20">
                     <img
@@ -176,7 +176,7 @@ function Servicios({ handleWhatsAppClick }) {
                                 ✔ SEO y optimización constante – Mejoramos tu posicionamiento para que te encuentren fácilmente.
                             </p>
                             <p className="text-[#000] font-archivo font-light text-base xs:text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
-                                ✔ Gestión y desarrollo de publicidad – Creamos campañas estratégicas que convierten.
+                                ✔ Gestión y desarrollo de publicidad – Creamos campañas estratégicas que generan conversiones.
                             </p>
                             <p className="text-[#000] font-archivo font-light text-base xs:text-lg sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[22px]">
                                 ✔ Producción audiovisual – Contenido de alto impacto para redes y web.
@@ -253,7 +253,7 @@ function Servicios({ handleWhatsAppClick }) {
 
                 <p className="font-archivo text-xl xs:text-2xl sm:text-xl md:text-2xl lg:text-2xl xl:text-4xl text-center px-4">ROMPAMOS EL HIELO</p>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -66,8 +66,8 @@ export default {
           }
         },
         fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
         blink: {
           'from, to': { opacity: '1' },
@@ -78,7 +78,7 @@ export default {
         'fadeSlide': 'fadeSlide 0.5s ease-out',
         'heroLogo': 'heroLogo 1.5s cubic-bezier(0.4, 0, 0.2, 1)',
         'scaleIn': 'scaleIn 0.6s ease-out forwards 0.5s',
-        'fadeIn': 'fadeIn 1.5s ease-in forwards',
+        'fadeIn': 'fadeIn 0.5s ease-in forwards',
         'blink': 'blink 1s step-end infinite',
       }
     },

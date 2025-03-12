@@ -17,7 +17,7 @@
     RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$
     
     # Entonces redirige a index.html manteniendo la URL original
-    RewriteRule ^ index.html [L]
+    RewriteRule ^(.*)$ /index.html [QSA,L]
 </IfModule>
 
 # Prevenir el listado de directorios

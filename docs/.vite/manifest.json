@@ -1,13 +1,13 @@
 {
-  "_proxy-YFS65XUQ.js": {
-    "file": "assets/proxy-YFS65XUQ.js",
+  "_proxy-C4gr4MuA.js": {
+    "file": "assets/proxy-C4gr4MuA.js",
     "name": "proxy",
     "imports": [
       "index.html"
     ]
   },
   "index.html": {
-    "file": "assets/main-C0S4jgLg.js",
+    "file": "assets/main-CsikLswN.js",
     "name": "main",
     "src": "index.html",
     "isEntry": true,
@@ -15,11 +15,10 @@
       "src/pages/Inicio.jsx",
       "src/pages/SobreNosotros.jsx",
       "src/pages/Servicios.jsx",
-      "src/pages/Contacto.jsx",
-      "src/pages/Portfolio.jsx"
+      "src/pages/Contacto.jsx"
     ],
     "css": [
-      "assets/main-0t_LrSKn.css"
+      "assets/main-D2WrkSNB.css"
     ],
     "assets": [
       "assets/logo-online-blanco-C7EQvBKR.svg",
@@ -44,10 +43,6 @@
   "src/assets/images/banner-servicios-vertical.png": {
     "file": "assets/banner-servicios-vertical-CZTHtEvU.png",
     "src": "src/assets/images/banner-servicios-vertical.png"
-  },
-  "src/assets/images/button-contactanos.png": {
-    "file": "assets/button-contactanos-D0XJzXKY.png",
-    "src": "src/assets/images/button-contactanos.png"
   },
   "src/assets/images/button-contactanos2.png": {
     "file": "assets/button-contactanos2-CHX0IsDg.png",
@@ -117,6 +112,10 @@
     "file": "assets/portada-horizontal-BuIxsld3.png",
     "src": "src/assets/images/portada-horizontal.png"
   },
+  "src/assets/images/portada-horizontal.webp": {
+    "file": "assets/portada-horizontal-B200jMb8.webp",
+    "src": "src/assets/images/portada-horizontal.webp"
+  },
   "src/assets/images/portada-vertical.png": {
     "file": "assets/portada-vertical-B1HJwk71.png",
     "src": "src/assets/images/portada-vertical.png"
@@ -134,7 +133,7 @@
     "src": "src/assets/images/story3.jpg"
   },
   "src/pages/Contacto.jsx": {
-    "file": "assets/Contacto-xrVcFgON.js",
+    "file": "assets/Contacto-DpXz2dGV.js",
     "name": "Contacto",
     "src": "src/pages/Contacto.jsx",
     "isDynamicEntry": true,
@@ -146,13 +145,13 @@
     ]
   },
   "src/pages/Inicio.jsx": {
-    "file": "assets/Inicio-BL7wE_on.js",
+    "file": "assets/Inicio-CNbuHhsX.js",
     "name": "Inicio",
     "src": "src/pages/Inicio.jsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_proxy-YFS65XUQ.js"
+      "_proxy-C4gr4MuA.js"
     ],
     "css": [
       "assets/Inicio-DuKL_TpO.css"
@@ -167,20 +166,8 @@
       "assets/carrusel-inicio-3-BDrzSlE_.png"
     ]
   },
-  "src/pages/Portfolio.jsx": {
-    "file": "assets/Portfolio-CwSrj-n0.js",
-    "name": "Portfolio",
-    "src": "src/pages/Portfolio.jsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "index.html"
-    ],
-    "assets": [
-      "assets/button-contactanos-D0XJzXKY.png"
-    ]
-  },
   "src/pages/Servicios.jsx": {
-    "file": "assets/Servicios-jo0rIeyW.js",
+    "file": "assets/Servicios-4CwdTdew.js",
     "name": "Servicios",
     "src": "src/pages/Servicios.jsx",
     "isDynamicEntry": true,
@@ -196,13 +183,13 @@
     ]
   },
   "src/pages/SobreNosotros.jsx": {
-    "file": "assets/SobreNosotros-B6obfTQs.js",
+    "file": "assets/SobreNosotros-DNk6KHRj.js",
     "name": "SobreNosotros",
     "src": "src/pages/SobreNosotros.jsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_proxy-YFS65XUQ.js"
+      "_proxy-C4gr4MuA.js"
     ],
     "assets": [
       "assets/felicitas-Od-qy34c.png",

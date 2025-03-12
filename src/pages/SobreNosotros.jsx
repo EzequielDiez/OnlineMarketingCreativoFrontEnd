@@ -11,7 +11,7 @@ import ayluImage from "../assets/images/aylen.png";
 
 function SobreNosotros() {
     return (
-        <>
+        <div className="opacity-0 animate-fadeIn">
             <div className="bg-[#fff] min-h-screen flex items-center justify-center px-4 py-8 pt-20 xs:pt-20 sm:pt-16 md:pt-20 lg:pt-32">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-advercase mb-8 md:mb-10 lg:mb-20">
@@ -180,7 +180,7 @@ function SobreNosotros() {
                     <img src={ayluImage} alt="Aylu Imagen" className="w-[95%] md:w-[90%] lg:w-[60%] 2xl:w-[60%]" />
                 </motion.div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -9,7 +9,6 @@ const Inicio = lazy(() => import('./pages/Inicio'));
 const SobreNosotros = lazy(() => import('./pages/SobreNosotros'));
 const Servicios = lazy(() => import('./pages/Servicios'));
 const Contacto = lazy(() => import('./pages/Contacto'));
-const Portfolio = lazy(() => import('./pages/Portfolio'));
 
 // Memoizar el botón de WhatsApp
 const WhatsAppButton = memo(({ onClick, showWhatsApp, inverseColors, whatsappButtonRef }) => (
@@ -27,11 +26,22 @@ const WhatsAppButton = memo(({ onClick, showWhatsApp, inverseColors, whatsappBut
 ));
 
 function App() {
+  const [pageLoaded, setPageLoaded] = useState(false);
   const [showWhatsApp, setShowWhatsApp] = useState(false);
   const [inverseColors, setInverseColors] = useState(false);
   const footerRef = useRef(null);
   const whatsappButtonRef = useRef(null);
   const location = useLocation();
+
+  // Reset pageLoaded state on route change
+  useEffect(() => {
+    setPageLoaded(false);
+    const timer = setTimeout(() => {
+      setPageLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   // Memoizar el handleWhatsAppClick
   const memoizedHandleWhatsAppClick = useCallback((e) => {
@@ -92,27 +102,41 @@ function App() {
   return (
     <div className="relative">
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-          <Route path="/servicios" element={<Servicios handleWhatsAppClick={memoizedHandleWhatsAppClick} />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Suspense>
-      <div ref={footerRef}>
-        <Footer />
+
+      {/* Main content with Suspense */}
+      <div className="min-h-screen">
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+            <Route path="/servicios" element={
+              <Servicios handleWhatsAppClick={memoizedHandleWhatsAppClick} />
+            } />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
       </div>
 
-      <WhatsAppButton
-        onClick={memoizedHandleWhatsAppClick}
-        showWhatsApp={showWhatsApp}
-        inverseColors={inverseColors}
-        whatsappButtonRef={whatsappButtonRef}
-      />
+      {/* Footer and WhatsApp button wrapper */}
+      <div
+        className={`transition-opacity duration-500 ease-in-out
+          ${pageLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+        style={{ transitionDelay: '200ms' }}
+      >
+        <div ref={footerRef}>
+          <Footer />
+        </div>
+
+        <WhatsAppButton
+          onClick={memoizedHandleWhatsAppClick}
+          showWhatsApp={showWhatsApp}
+          inverseColors={inverseColors}
+          whatsappButtonRef={whatsappButtonRef}
+        />
+      </div>
     </div>
-  )
+  );
 }
 
 export default App;

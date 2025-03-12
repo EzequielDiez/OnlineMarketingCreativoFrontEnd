@@ -11,7 +11,7 @@ import story2 from '../assets/images/story2.jpg';
 import story3 from '../assets/images/story3.jpg';
 import coffeeCup from '../assets/images/coffee-cup.png';
 import logoPortada from '../assets/images/logo-online-blanco.svg'
-import portadaImg from '../assets/images/portada-horizontal.png'
+import portadaImg from '../assets/images/portada-horizontal.webp'
 import portadaVertical from '../assets/images/portada-vertical.png'
 import carrusel1 from '../assets/images/carrusel-inicio-1.png';
 import carrusel2 from '../assets/images/carrusel-inicio-2.png';
