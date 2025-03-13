@@ -1,13 +1,13 @@
 {
-  "_proxy-D6V2Ely3.js": {
-    "file": "assets/proxy-D6V2Ely3.js",
+  "_proxy-D6ujPSGJ.js": {
+    "file": "assets/proxy-D6ujPSGJ.js",
     "name": "proxy",
     "imports": [
       "index.html"
     ]
   },
   "index.html": {
-    "file": "assets/main-BR270BCA.js",
+    "file": "assets/main-DfKGP2E3.js",
     "name": "main",
     "src": "index.html",
     "isEntry": true,
@@ -18,7 +18,7 @@
       "src/pages/Contacto.jsx"
     ],
     "css": [
-      "assets/main-cjc0oR-z.css"
+      "assets/main-DkCRcKnT.css"
     ],
     "assets": [
       "assets/logo-online-blanco-C7EQvBKR.svg",
@@ -129,7 +129,7 @@
     "src": "src/assets/images/story3.webp"
   },
   "src/pages/Contacto.jsx": {
-    "file": "assets/Contacto-fbPu6pq-.js",
+    "file": "assets/Contacto-DmBYcmeD.js",
     "name": "Contacto",
     "src": "src/pages/Contacto.jsx",
     "isDynamicEntry": true,
@@ -141,13 +141,13 @@
     ]
   },
   "src/pages/Inicio.jsx": {
-    "file": "assets/Inicio-CLd8ktTt.js",
+    "file": "assets/Inicio-DByNxslO.js",
     "name": "Inicio",
     "src": "src/pages/Inicio.jsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_proxy-D6V2Ely3.js"
+      "_proxy-D6ujPSGJ.js"
     ],
     "css": [
       "assets/Inicio-DuKL_TpO.css"
@@ -162,7 +162,7 @@
     ]
   },
   "src/pages/Servicios.jsx": {
-    "file": "assets/Servicios-CwqkisYA.js",
+    "file": "assets/Servicios-D_alhqnx.js",
     "name": "Servicios",
     "src": "src/pages/Servicios.jsx",
     "isDynamicEntry": true,
@@ -178,13 +178,13 @@
     ]
   },
   "src/pages/SobreNosotros.jsx": {
-    "file": "assets/SobreNosotros-DpEcXsiP.js",
+    "file": "assets/SobreNosotros-CXrTx3RH.js",
     "name": "SobreNosotros",
     "src": "src/pages/SobreNosotros.jsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_proxy-D6V2Ely3.js"
+      "_proxy-D6ujPSGJ.js"
     ],
     "assets": [
       "assets/felicitas-D9QRiWct.webp",

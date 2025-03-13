@@ -221,7 +221,7 @@ function Inicio() {
                             phrases={[
                                 "No vendemos café,\npero si tu marca fuera un café,\nqueremos que sea\nel mejor despertar para tus clientes."
                             ]}
-                            className="text-white whitespace-pre-line"
+                            className="text-white whitespace-pre-line leading-[1.2em]"
                             words={[
                                 { text: "No vendemos café,\n", font: "font-['Archivo'] font-thin" },
                                 { text: "pero si tu marca fuera un café,\n", font: "font-['Advercase']" },

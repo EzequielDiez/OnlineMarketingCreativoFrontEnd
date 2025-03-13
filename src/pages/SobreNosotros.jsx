@@ -105,7 +105,7 @@ function SobreNosotros() {
                 >
                     <div className="absolute top-[55%] ml-[30%] lg:ml-[20%] z-10">
                         <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                            <p className="text-xl sm:text-2xl md:text-3xl lg:text-3xl 2xl:text-5xl font-advercase">GASTON</p>
+                            <p className="text-xl sm:text-2xl md:text-3xl lg:text-3xl 2xl:text-5xl font-advercase">GASTÓN</p>
                             <p className="text-lg sm:text-2xl md:text-3xl lg:text-3xl 2xl:text-5xl font-sweetie">(GASI, GASTY, TIGAS, GASTIN, GAS, TONGA...)</p>
                         </div>
                         <p className="text-base md:text-xl lg:text-2xl 2xl:text-2xl font-archivo font-medium mt-2 sm:mt-3 md:mt-4 text-[#6B6B6B]">
@@ -147,7 +147,7 @@ function SobreNosotros() {
                 >
                     <div className="absolute top-[50%] ml-[30%] lg:ml-[20%] z-10">
                         <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                            <p className="text-xl sm:text-2xl md:text-3xl lg:text-3xl 2xl:text-5xl font-advercase">AGUSTIN</p>
+                            <p className="text-xl sm:text-2xl md:text-3xl lg:text-3xl 2xl:text-5xl font-advercase">AGUSTÍN</p>
                             <p className="text-lg sm:text-2xl md:text-3xl lg:text-3xl 2xl:text-5xl font-sweetie">(AGUS, AUSTIN, MARTITEGUI)</p>
                         </div>
                         <p className="text-base md:text-xl lg:text-2xl 2xl:text-2xl font-archivo font-medium mt-2 sm:mt-3 md:mt-4 text-[#6B6B6B]">

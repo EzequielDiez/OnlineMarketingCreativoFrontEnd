@@ -1,4 +1,4 @@
-import{r as c,j as e}from"./main-BR270BCA.js";const p="/assets/imagen-contacto-C-VB8JRp.webp";function d(){const[l,n]=c.useState({nombre:"",email:"",telefono:"",ubicacion:""}),o=t=>{t.preventDefault();const s="5491124822378",a=`Nuevo mensaje de contacto:
+import{r as c,j as e}from"./main-DfKGP2E3.js";const p="/assets/imagen-contacto-C-VB8JRp.webp";function d(){const[l,n]=c.useState({nombre:"",email:"",telefono:"",ubicacion:""}),o=t=>{t.preventDefault();const s="5491124822378",a=`Nuevo mensaje de contacto:
 
 Nombre: ${l.nombre}
 Email: ${l.email}
