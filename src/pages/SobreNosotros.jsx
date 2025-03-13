@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import feliImage from "../assets/images/felicitas.png";
-import nanoImage from "../assets/images/ezequiel.png";
-import nachoImage from "../assets/images/ignacio.png";
-import gastiImage from "../assets/images/gaston.png";
-import luluImage from "../assets/images/lourdes.png";
-import agusImage from "../assets/images/agustin.png";
-import ayluImage from "../assets/images/aylen.png";
+import feliImage from "../assets/images/felicitas.webp";
+import nanoImage from "../assets/images/ezequiel.webp";
+import nachoImage from "../assets/images/ignacio.webp";
+import gastiImage from "../assets/images/gaston.webp";
+import luluImage from "../assets/images/lourdes.webp";
+import agusImage from "../assets/images/agustin.webp";
+import ayluImage from "../assets/images/aylen.webp";
 
 
 function SobreNosotros() {
@@ -15,7 +15,7 @@ function SobreNosotros() {
             <div className="bg-[#fff] min-h-screen flex items-center justify-center px-4 py-8 pt-20 xs:pt-20 sm:pt-16 md:pt-20 lg:pt-32">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-advercase mb-8 md:mb-10 lg:mb-20">
-                        ¿QUIENES SOMOS?
+                        ¿QUIÉNES SOMOS?
                     </h1>
                     <div className="max-w-7xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl mx-auto px-4 sm:pt-6">
                         <p className="text-base sm:text-xl md:text-2xl lg:text-2xl font-archivo font-thin mb-6 md:mb-12">

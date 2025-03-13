@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import contactoImage from '../assets/images/imagen-contacto.png';
+import contactoImage from '../assets/images/imagen-contacto.webp';
 
 function Contacto() {
     const [formData, setFormData] = useState({

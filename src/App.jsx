@@ -57,46 +57,39 @@ function App() {
     const handleScroll = () => {
       if (!footerRef.current || !whatsappButtonRef.current) return;
 
-      const footerTop = footerRef.current.getBoundingClientRect().top;
+      const footerRect = footerRef.current.getBoundingClientRect();
       const scrollPosition = window.scrollY;
+      const buttonRect = whatsappButtonRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
+
+      // Mostrar el botón después de 200px de scroll y ocultarlo cerca del footer
+      const shouldShowWhatsApp = scrollPosition > 200 &&
+        (footerRect.top - buttonRect.height - 32) > windowHeight;
+
+      setShowWhatsApp(shouldShowWhatsApp);
 
       // Solo buscar la sección verde si estamos en la página de inicio
       if (location.pathname === '/') {
         const greenSection = document.querySelector('[data-section="typewriter"]');
         if (greenSection) {
           const greenSectionRect = greenSection.getBoundingClientRect();
-          const buttonRect = whatsappButtonRef.current.getBoundingClientRect();
 
           // Verificar si el botón está dentro de la sección verde
-          const buttonBottom = buttonRect.bottom;
           const isButtonInGreenSection =
-            buttonBottom >= greenSectionRect.top &&
-            buttonBottom <= greenSectionRect.bottom;
+            buttonRect.bottom >= greenSectionRect.top &&
+            buttonRect.bottom <= greenSectionRect.bottom;
 
           setInverseColors(isButtonInGreenSection);
         }
       } else {
         setInverseColors(false);
       }
-
-      // Mostrar/ocultar botón de WhatsApp
-      setShowWhatsApp(
-        scrollPosition > 200 &&
-        footerTop > windowHeight - 100
-      );
     };
 
-    // Configurar el observer para cambios inmediatos
-    const timeoutId = setTimeout(() => {
-      handleScroll();
-      window.addEventListener('scroll', handleScroll);
-    }, 100);
+    handleScroll(); // Llamada inicial
+    window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [location.pathname]);
 
   return (
@@ -118,7 +111,7 @@ function App() {
         </Suspense>
       </div>
 
-      {/* Footer and WhatsApp button wrapper */}
+      {/* Footer wrapper */}
       <div
         className={`transition-opacity duration-500 ease-in-out
           ${pageLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
@@ -127,14 +120,15 @@ function App() {
         <div ref={footerRef}>
           <Footer />
         </div>
-
-        <WhatsAppButton
-          onClick={memoizedHandleWhatsAppClick}
-          showWhatsApp={showWhatsApp}
-          inverseColors={inverseColors}
-          whatsappButtonRef={whatsappButtonRef}
-        />
       </div>
+
+      {/* WhatsApp button fuera del wrapper del footer */}
+      <WhatsAppButton
+        onClick={memoizedHandleWhatsAppClick}
+        showWhatsApp={showWhatsApp}
+        inverseColors={inverseColors}
+        whatsappButtonRef={whatsappButtonRef}
+      />
     </div>
   );
 }

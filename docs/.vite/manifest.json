@@ -1,13 +1,13 @@
 {
-  "_proxy-C4gr4MuA.js": {
-    "file": "assets/proxy-C4gr4MuA.js",
+  "_proxy-D6V2Ely3.js": {
+    "file": "assets/proxy-D6V2Ely3.js",
     "name": "proxy",
     "imports": [
       "index.html"
     ]
   },
   "index.html": {
-    "file": "assets/main-CsikLswN.js",
+    "file": "assets/main-BR270BCA.js",
     "name": "main",
     "src": "index.html",
     "isEntry": true,
@@ -18,79 +18,79 @@
       "src/pages/Contacto.jsx"
     ],
     "css": [
-      "assets/main-D2WrkSNB.css"
+      "assets/main-cjc0oR-z.css"
     ],
     "assets": [
       "assets/logo-online-blanco-C7EQvBKR.svg",
-      "assets/portada-vertical-B1HJwk71.png",
-      "assets/portada-horizontal-BuIxsld3.png",
+      "assets/portada-vertical-B4YFKqre.webp",
+      "assets/portada-horizontal-B200jMb8.webp",
       "assets/isologo-online-negro-D5rPuRHg.svg",
       "assets/isologo-online-blanco-BsNgnjB5.svg"
     ]
   },
-  "src/assets/images/agustin.png": {
-    "file": "assets/agustin-CgLWH_Rx.png",
-    "src": "src/assets/images/agustin.png"
+  "src/assets/images/agustin.webp": {
+    "file": "assets/agustin-Do09-3yi.webp",
+    "src": "src/assets/images/agustin.webp"
   },
-  "src/assets/images/aylen.png": {
-    "file": "assets/aylen-e6ILLSMH.png",
-    "src": "src/assets/images/aylen.png"
+  "src/assets/images/aylen.webp": {
+    "file": "assets/aylen-DbLRtQXM.webp",
+    "src": "src/assets/images/aylen.webp"
   },
-  "src/assets/images/banner-servicios-horizontal.png": {
-    "file": "assets/banner-servicios-horizontal-CB3Dd40P.png",
-    "src": "src/assets/images/banner-servicios-horizontal.png"
+  "src/assets/images/banner-servicios-horizontal.webp": {
+    "file": "assets/banner-servicios-horizontal-5BFH_Nrx.webp",
+    "src": "src/assets/images/banner-servicios-horizontal.webp"
   },
-  "src/assets/images/banner-servicios-vertical.png": {
-    "file": "assets/banner-servicios-vertical-CZTHtEvU.png",
-    "src": "src/assets/images/banner-servicios-vertical.png"
+  "src/assets/images/banner-servicios-vertical.webp": {
+    "file": "assets/banner-servicios-vertical-BOC1S4kw.webp",
+    "src": "src/assets/images/banner-servicios-vertical.webp"
   },
-  "src/assets/images/button-contactanos2.png": {
-    "file": "assets/button-contactanos2-CHX0IsDg.png",
-    "src": "src/assets/images/button-contactanos2.png"
+  "src/assets/images/button-contactanos.webp": {
+    "file": "assets/button-contactanos-B8DLjloF.webp",
+    "src": "src/assets/images/button-contactanos.webp"
   },
-  "src/assets/images/carrusel-inicio-1.png": {
-    "file": "assets/carrusel-inicio-1-ttKS6usr.png",
-    "src": "src/assets/images/carrusel-inicio-1.png"
+  "src/assets/images/carrusel-inicio-1.webp": {
+    "file": "assets/carrusel-inicio-1-C2XKNawG.webp",
+    "src": "src/assets/images/carrusel-inicio-1.webp"
   },
-  "src/assets/images/carrusel-inicio-2.png": {
-    "file": "assets/carrusel-inicio-2-Pbej-ukk.png",
-    "src": "src/assets/images/carrusel-inicio-2.png"
+  "src/assets/images/carrusel-inicio-2.webp": {
+    "file": "assets/carrusel-inicio-2-DcfP-G-T.webp",
+    "src": "src/assets/images/carrusel-inicio-2.webp"
   },
-  "src/assets/images/carrusel-inicio-3.png": {
-    "file": "assets/carrusel-inicio-3-BDrzSlE_.png",
-    "src": "src/assets/images/carrusel-inicio-3.png"
+  "src/assets/images/carrusel-inicio-3.webp": {
+    "file": "assets/carrusel-inicio-3-CakLKcFi.webp",
+    "src": "src/assets/images/carrusel-inicio-3.webp"
   },
   "src/assets/images/coffee-cup.png": {
     "file": "assets/coffee-cup-CoRbxG5E.png",
     "src": "src/assets/images/coffee-cup.png"
   },
-  "src/assets/images/ezequiel.png": {
-    "file": "assets/ezequiel-B7sr5n7W.png",
-    "src": "src/assets/images/ezequiel.png"
+  "src/assets/images/ezequiel.webp": {
+    "file": "assets/ezequiel-sgxgVG3N.webp",
+    "src": "src/assets/images/ezequiel.webp"
   },
-  "src/assets/images/felicitas.png": {
-    "file": "assets/felicitas-Od-qy34c.png",
-    "src": "src/assets/images/felicitas.png"
+  "src/assets/images/felicitas.webp": {
+    "file": "assets/felicitas-D9QRiWct.webp",
+    "src": "src/assets/images/felicitas.webp"
   },
-  "src/assets/images/gaston.png": {
-    "file": "assets/gaston-D9BVTLf0.png",
-    "src": "src/assets/images/gaston.png"
+  "src/assets/images/gaston.webp": {
+    "file": "assets/gaston-0R9hLC-n.webp",
+    "src": "src/assets/images/gaston.webp"
   },
-  "src/assets/images/ice-left2.png": {
-    "file": "assets/ice-left2-BBQWVEkd.png",
-    "src": "src/assets/images/ice-left2.png"
+  "src/assets/images/ice-left.webp": {
+    "file": "assets/ice-left-vge-5VuZ.webp",
+    "src": "src/assets/images/ice-left.webp"
   },
-  "src/assets/images/ice-right2.png": {
-    "file": "assets/ice-right2-DbBW6RFw.png",
-    "src": "src/assets/images/ice-right2.png"
+  "src/assets/images/ice-right.webp": {
+    "file": "assets/ice-right-ToUu5CJj.webp",
+    "src": "src/assets/images/ice-right.webp"
   },
-  "src/assets/images/ignacio.png": {
-    "file": "assets/ignacio-BtRvQCDy.png",
-    "src": "src/assets/images/ignacio.png"
+  "src/assets/images/ignacio.webp": {
+    "file": "assets/ignacio-CuRUOgv4.webp",
+    "src": "src/assets/images/ignacio.webp"
   },
-  "src/assets/images/imagen-contacto.png": {
-    "file": "assets/imagen-contacto-CPiJI_nE.png",
-    "src": "src/assets/images/imagen-contacto.png"
+  "src/assets/images/imagen-contacto.webp": {
+    "file": "assets/imagen-contacto-C-VB8JRp.webp",
+    "src": "src/assets/images/imagen-contacto.webp"
   },
   "src/assets/images/isologo-online-blanco.svg": {
     "file": "assets/isologo-online-blanco-BsNgnjB5.svg",
@@ -104,36 +104,32 @@
     "file": "assets/logo-online-blanco-C7EQvBKR.svg",
     "src": "src/assets/images/logo-online-blanco.svg"
   },
-  "src/assets/images/lourdes.png": {
-    "file": "assets/lourdes-DEv8vLgS.png",
-    "src": "src/assets/images/lourdes.png"
-  },
-  "src/assets/images/portada-horizontal.png": {
-    "file": "assets/portada-horizontal-BuIxsld3.png",
-    "src": "src/assets/images/portada-horizontal.png"
+  "src/assets/images/lourdes.webp": {
+    "file": "assets/lourdes-q_JBlXe-.webp",
+    "src": "src/assets/images/lourdes.webp"
   },
   "src/assets/images/portada-horizontal.webp": {
     "file": "assets/portada-horizontal-B200jMb8.webp",
     "src": "src/assets/images/portada-horizontal.webp"
   },
-  "src/assets/images/portada-vertical.png": {
-    "file": "assets/portada-vertical-B1HJwk71.png",
-    "src": "src/assets/images/portada-vertical.png"
+  "src/assets/images/portada-vertical.webp": {
+    "file": "assets/portada-vertical-B4YFKqre.webp",
+    "src": "src/assets/images/portada-vertical.webp"
   },
-  "src/assets/images/story1.jpg": {
-    "file": "assets/story1-kvM0uKWo.jpg",
-    "src": "src/assets/images/story1.jpg"
+  "src/assets/images/story1.webp": {
+    "file": "assets/story1-D_x_S0JV.webp",
+    "src": "src/assets/images/story1.webp"
   },
-  "src/assets/images/story2.jpg": {
-    "file": "assets/story2-GRQthLrf.jpg",
-    "src": "src/assets/images/story2.jpg"
+  "src/assets/images/story2.webp": {
+    "file": "assets/story2-B5UdPic7.webp",
+    "src": "src/assets/images/story2.webp"
   },
-  "src/assets/images/story3.jpg": {
-    "file": "assets/story3-CKz7RDrv.jpg",
-    "src": "src/assets/images/story3.jpg"
+  "src/assets/images/story3.webp": {
+    "file": "assets/story3-DQxjXftN.webp",
+    "src": "src/assets/images/story3.webp"
   },
   "src/pages/Contacto.jsx": {
-    "file": "assets/Contacto-DpXz2dGV.js",
+    "file": "assets/Contacto-fbPu6pq-.js",
     "name": "Contacto",
     "src": "src/pages/Contacto.jsx",
     "isDynamicEntry": true,
@@ -141,33 +137,32 @@
       "index.html"
     ],
     "assets": [
-      "assets/imagen-contacto-CPiJI_nE.png"
+      "assets/imagen-contacto-C-VB8JRp.webp"
     ]
   },
   "src/pages/Inicio.jsx": {
-    "file": "assets/Inicio-CNbuHhsX.js",
+    "file": "assets/Inicio-CLd8ktTt.js",
     "name": "Inicio",
     "src": "src/pages/Inicio.jsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_proxy-C4gr4MuA.js"
+      "_proxy-D6V2Ely3.js"
     ],
     "css": [
       "assets/Inicio-DuKL_TpO.css"
     ],
     "assets": [
-      "assets/coffee-cup-CoRbxG5E.png",
-      "assets/story1-kvM0uKWo.jpg",
-      "assets/story2-GRQthLrf.jpg",
-      "assets/story3-CKz7RDrv.jpg",
-      "assets/carrusel-inicio-1-ttKS6usr.png",
-      "assets/carrusel-inicio-2-Pbej-ukk.png",
-      "assets/carrusel-inicio-3-BDrzSlE_.png"
+      "assets/story1-D_x_S0JV.webp",
+      "assets/story2-B5UdPic7.webp",
+      "assets/story3-DQxjXftN.webp",
+      "assets/carrusel-inicio-1-C2XKNawG.webp",
+      "assets/carrusel-inicio-2-DcfP-G-T.webp",
+      "assets/carrusel-inicio-3-CakLKcFi.webp"
     ]
   },
   "src/pages/Servicios.jsx": {
-    "file": "assets/Servicios-4CwdTdew.js",
+    "file": "assets/Servicios-CwqkisYA.js",
     "name": "Servicios",
     "src": "src/pages/Servicios.jsx",
     "isDynamicEntry": true,
@@ -175,30 +170,30 @@
       "index.html"
     ],
     "assets": [
-      "assets/banner-servicios-horizontal-CB3Dd40P.png",
-      "assets/banner-servicios-vertical-CZTHtEvU.png",
-      "assets/button-contactanos2-CHX0IsDg.png",
-      "assets/ice-left2-BBQWVEkd.png",
-      "assets/ice-right2-DbBW6RFw.png"
+      "assets/banner-servicios-horizontal-5BFH_Nrx.webp",
+      "assets/banner-servicios-vertical-BOC1S4kw.webp",
+      "assets/button-contactanos-B8DLjloF.webp",
+      "assets/ice-left-vge-5VuZ.webp",
+      "assets/ice-right-ToUu5CJj.webp"
     ]
   },
   "src/pages/SobreNosotros.jsx": {
-    "file": "assets/SobreNosotros-DNk6KHRj.js",
+    "file": "assets/SobreNosotros-DpEcXsiP.js",
     "name": "SobreNosotros",
     "src": "src/pages/SobreNosotros.jsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_proxy-C4gr4MuA.js"
+      "_proxy-D6V2Ely3.js"
     ],
     "assets": [
-      "assets/felicitas-Od-qy34c.png",
-      "assets/ezequiel-B7sr5n7W.png",
-      "assets/ignacio-BtRvQCDy.png",
-      "assets/gaston-D9BVTLf0.png",
-      "assets/lourdes-DEv8vLgS.png",
-      "assets/agustin-CgLWH_Rx.png",
-      "assets/aylen-e6ILLSMH.png"
+      "assets/felicitas-D9QRiWct.webp",
+      "assets/ezequiel-sgxgVG3N.webp",
+      "assets/ignacio-CuRUOgv4.webp",
+      "assets/gaston-0R9hLC-n.webp",
+      "assets/lourdes-q_JBlXe-.webp",
+      "assets/agustin-Do09-3yi.webp",
+      "assets/aylen-DbLRtQXM.webp"
     ]
   }
 }

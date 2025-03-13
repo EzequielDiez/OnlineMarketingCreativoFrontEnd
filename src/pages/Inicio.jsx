@@ -6,19 +6,21 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import '../styles/carousel.css';
 import StorySection from '../components/StorySection';
-import story1 from '../assets/images/story1.jpg';
-import story2 from '../assets/images/story2.jpg';
-import story3 from '../assets/images/story3.jpg';
-import coffeeCup from '../assets/images/coffee-cup.png';
+import story1 from '../assets/images/story1.webp';
+import story2 from '../assets/images/story2.webp';
+import story3 from '../assets/images/story3.webp';
+// TODO: Import para futura implementación de animación de taza
+// import coffeeCup from '../assets/images/coffee-cup.png';
 import logoPortada from '../assets/images/logo-online-blanco.svg'
 import portadaImg from '../assets/images/portada-horizontal.webp'
-import portadaVertical from '../assets/images/portada-vertical.png'
-import carrusel1 from '../assets/images/carrusel-inicio-1.png';
-import carrusel2 from '../assets/images/carrusel-inicio-2.png';
-import carrusel3 from '../assets/images/carrusel-inicio-3.png';
+import portadaVertical from '../assets/images/portada-vertical.webp'
+import carrusel1 from '../assets/images/carrusel-inicio-1.webp';
+import carrusel2 from '../assets/images/carrusel-inicio-2.webp';
+import carrusel3 from '../assets/images/carrusel-inicio-3.webp';
 import TypewriterText from '../components/TypewriterText';
 
 function Inicio() {
+    // TODO: Referencias para futura animación de taza
     const cupRef = useRef(null);
     const storiesContainerRef = useRef(null);
     const sectionsRef = useRef([]);
@@ -26,13 +28,20 @@ function Inicio() {
     const typewriterSectionRef = useRef(null);
     const [startTyping, setStartTyping] = useState(false);
 
+    // TODO: Posiciones para futura animación de taza
+    /* 
     const cupPositions = [
         { x: 66, y: 72, scale: 0.5, rotate: 25 },
         { x: 53, y: 52, scale: 0.65, rotate: -10 },
         { x: 50, y: 60, scale: 1.5, rotate: 0 }
     ];
+    */
 
+    // TODO: Función para futura animación de taza
     const handleCupAnimation = useCallback(() => {
+        // Función temporalmente deshabilitada
+        return;
+        /* 
         if (!cupRef.current || !storiesContainerRef.current) return;
 
         const scrollPosition = window.scrollY;
@@ -49,6 +58,7 @@ function Inicio() {
         } else {
             cupRef.current.style.opacity = '0';
         }
+        */
     }, []);
 
     useEffect(() => {
@@ -126,7 +136,7 @@ function Inicio() {
             {/* Wrapper solo para la hero section */}
             <div className="overflow-x-hidden">
                 <div
-                    className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center bg-[url('/src/assets/images/portada-vertical.png')] xs:bg-[url('/src/assets/images/portada-vertical.png')] sm:bg-[url('/src/assets/images/portada-horizontal.png')]">
+                    className="h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center bg-[url('/src/assets/images/portada-vertical.webp')] xs:bg-[url('/src/assets/images/portada-vertical.webp')] sm:bg-[url('/src/assets/images/portada-horizontal.webp')]">
                     <img
                         ref={heroLogoRef}
                         src={logoPortada}
@@ -137,7 +147,8 @@ function Inicio() {
                 </div>
             </div>
 
-            {/* Taza fija */}
+            {/* TODO: Componente de taza para futura implementación */}
+            {/* 
             <div
                 ref={cupRef}
                 className="fixed w-40 h-40 z-50"
@@ -154,6 +165,7 @@ function Inicio() {
                     className="w-full h-full object-contain"
                 />
             </div>
+            */}
 
             {/* Stories container sin overflow hidden */}
             <div
@@ -167,13 +179,12 @@ function Inicio() {
                 {[
                     {
                         image: story1,
-                        title: "¿QUE TANTO SABES DE TU MARCA?",
-                        description: "A veces, por más que tengamos acceso a toda la información, puede ser dificil encontrar la forma correcta de aplicarla para recibir resultados."
+                        title: "¿QUÉ TANTO SABÉS DE TU MARCA?",
+                        description: "A veces, por más que tengamos acceso a toda la información, puede ser difícil encontrar la forma correcta de aplicarla para recibir resultados."
                     },
                     {
                         image: story2,
                         title: "Siempre hay algo que mejorar",
-
                         description: "Pero, ¿qué pasaría si te dijeran que no estás solo? Esa confusión, esa sensación de caos, es más común de lo que parece."
                     },
                     {
@@ -205,17 +216,17 @@ function Inicio() {
                 className="h-screen w-full bg-[#055749] flex items-center justify-center px-6"
             >
                 <div className="text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-center max-w-5xl leading-relaxed">
-                    <div className="relative min-h-[2.4em]">
+                    <div className="relative min-h-[4.8em]">
                         <TypewriterText
                             phrases={[
-                                "No vendemos café, pero si tu marca fuera un café, queremos que sea el mejor despertar para tus clientes."
+                                "No vendemos café,\npero si tu marca fuera un café,\nqueremos que sea\nel mejor despertar para tus clientes."
                             ]}
-                            className="text-white"
+                            className="text-white whitespace-pre-line"
                             words={[
-                                { text: "No vendemos café, pero ", font: "font-['Archivo'] font-thin" },
-                                { text: "si tu marca fuera un café, ", font: "font-['Archivo'] font-bold italic" },
-                                { text: "queremos que sea ", font: "font-['Archivo'] font-thin" },
-                                { text: "el mejor despertar para tus clientes.", font: "font-['Archivo'] font-bold italic" }
+                                { text: "No vendemos café,\n", font: "font-['Archivo'] font-thin" },
+                                { text: "pero si tu marca fuera un café,\n", font: "font-['Advercase']" },
+                                { text: "queremos que sea\n", font: "font-['Archivo'] font-thin" },
+                                { text: "el mejor despertar para tus clientes.", font: "font-['Advercase']" }
                             ]}
                             start={startTyping}
                         />
@@ -235,7 +246,6 @@ function Inicio() {
                     }}
                     spaceBetween={0}
                     loop={true}
-                    loopedSlides={3}
                     speed={800}
                     autoplay={{
                         delay: 3000,
@@ -270,7 +280,8 @@ function Inicio() {
     );
 }
 
-// Utilidad para throttle
+// TODO: Utilidad para futura implementación de animación
+/*
 function throttle(func, limit) {
     let inThrottle;
     return function (...args) {
@@ -281,5 +292,6 @@ function throttle(func, limit) {
         }
     }
 }
+*/
 
 export default Inicio;

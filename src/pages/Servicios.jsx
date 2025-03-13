@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import servicesImage from '../assets/images/banner-servicios-horizontal.png';
-import servicesImageVertical from '../assets/images/banner-servicios-vertical.png';
+import servicesImage from '../assets/images/banner-servicios-horizontal.webp';
+import servicesImageVertical from '../assets/images/banner-servicios-vertical.webp';
 import arrowLeft from '../assets/images/arrow-left.svg'
 import arrowRight from '../assets/images/arrow-right.svg'
-import buttonContactanos from '../assets/images/button-contactanos2.png'
-import iceLeft from '../assets/images/ice-left2.png'
-import iceRight from '../assets/images/ice-right2.png'
+import buttonContactanos from '../assets/images/button-contactanos.webp'
+import iceLeft from '../assets/images/ice-left.webp'
+import iceRight from '../assets/images/ice-right.webp'
 
 function Servicios({ handleWhatsAppClick }) {
     const [currentService, setCurrentService] = useState(0);
@@ -32,7 +32,7 @@ function Servicios({ handleWhatsAppClick }) {
             image: servicesImage
         },
         {
-            title: "DISEÑO GRAFICO",
+            title: "DISEÑO GRÁFICO",
             description: "Tu identidad visual es clave. Diseñamos piezas atractivas, creativas y alineadas con tu marca para generar impacto y reconocimiento en cada plataforma.",
             image: servicesImage
         },
@@ -52,7 +52,7 @@ function Servicios({ handleWhatsAppClick }) {
             image: servicesImage
         },
         {
-            title: "FOTOGRAFIA",
+            title: "FOTOGRAFÍA",
             description: "Imágenes que comunican. Desde fotografía de producto hasta sesiones corporativas, capturamos la esencia de tu marca con una estética profesional y creativa.",
             image: servicesImage
         },
@@ -62,7 +62,7 @@ function Servicios({ handleWhatsAppClick }) {
             image: servicesImage
         },
         {
-            title: "ANALISIS DIGITAL",
+            title: "ANÁLISIS DIGITAL",
             description: "Tomamos decisiones basadas en datos. Analizamos métricas clave, identificamos oportunidades de mejora y optimizamos tu estrategia digital para lograr mejores resultados.",
             image: servicesImage
         }
@@ -154,7 +154,7 @@ function Servicios({ handleWhatsAppClick }) {
                 <div className="w-[95%] md:w-[90%] lg:w-[90.4%] mx-auto">
                     <div className="text-center mb-8 xs:mb-12">
                         <h2 className="text-[#fff] font-advercase text-2xl xs:text-3xl sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] 2xl:text-[52px] mb-4 xs:mb-6">
-                            GESTION INTEGRAL DE MARCA
+                            GESTIÓN INTEGRAL DE MARCA
                         </h2>
                         <p className="text-[#fff] font-archivo font-medium italic text-lg xs:text-xl sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] mb-3 xs:mb-4">
                             (Nuestro servicio estrella)
